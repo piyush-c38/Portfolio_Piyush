@@ -12,7 +12,7 @@ const HeroSection = () => (
       </div>
       {/* Main Heading */}
       <div className="flex flex-col items-start w-full max-w-full sm:max-w-[600px]">
-        <h1 className="text-[44px] sm:text-[62px] md:text-[70px] lg:text-[92px] font-light font-inter tracking-tight mb-2 animate-fadeinup leading-[1.03] sm:leading-[0.95] text-black">
+        <h1 className="text-[44px] sm:text-[62px] md:text-[70px] lg:text-[130px] font-light font-inter tracking-tight mb-2 animate-fadeinup leading-[1.03] sm:leading-[0.95] text-black">
           Hello
         </h1>
         <p className="text-base sm:text-xl font-inter font-light text-black/60 mt-2 animate-fadeinup" style={{ animationDelay: "120ms" }}>
