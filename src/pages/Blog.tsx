@@ -1,97 +1,221 @@
-
+import React from 'react';
 import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import { Link } from "react-router-dom";
+import Footer from '../components/Footer';
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
-const BLOGS = [
-  {
-    title: "Minimalism in Modern UX: Why Less Is More",
-    date: "April 2024",
-    tags: ["UX", "Philosophy", "Trends"],
-    slug: "/blog/minimalism-in-modern-ux",
-    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
-    excerpt: "Explore how simplicity leads to clarity and UX excellence in modern product design.",
-  },
-  {
-    title: "Scaling Product Design for Startups",
-    date: "March 2024",
-    tags: ["Startups", "Product", "Design"],
-    slug: "/blog/scaling-product-design",
-    img: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80",
-    excerpt: "Tips, tools, and processes for building design culture from your MVP to scale.",
-  },
-  {
-    title: "Brand Identity: Crafting Digital Signatures",
-    date: "February 2024",
-    tags: ["Branding", "Identity"],
-    slug: "/blog/brand-identity-digital",
-    img: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=80",
-    excerpt: "Step-by-step guide to making your brand stand out and stay remembered.",
-  },
-  {
-    title: "Journey from Freelancer to Sr. Designer",
-    date: "January 2024",
-    tags: ["Career", "Freelance"],
-    slug: "/blog/freelancer-to-sr-designer",
-    img: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=600&q=80",
-    excerpt: "Follow my path from freelancing to becoming a senior designer, sharing lessons and tips for the journey.",
-  }
-];
+const Blog = () => {
+  const blogPosts = [
+    {
+      id: 1,
+      title: "Building Scalable React Applications",
+      excerpt: "Learn the best practices for creating React applications that can grow with your business needs. From component architecture to state management, we'll cover everything you need to know.",
+      content: "Full article content here...",
+      date: "Dec 15, 2024",
+      readTime: "5 min read",
+      category: "Development",
+      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
+      featured: true
+    },
+    {
+      id: 2,
+      title: "The Future of Web Development",
+      excerpt: "Exploring emerging technologies and trends that will shape the future of web development in the coming years.",
+      content: "Full article content here...",
+      date: "Dec 10, 2024",
+      readTime: "7 min read",
+      category: "Technology",
+      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
+      featured: false
+    },
+    {
+      id: 3,
+      title: "Design Systems That Scale",
+      excerpt: "How to create and maintain design systems that work across multiple products and teams effectively.",
+      content: "Full article content here...",
+      date: "Dec 5, 2024",
+      readTime: "6 min read",
+      category: "Design",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
+      featured: false
+    },
+    {
+      id: 4,
+      title: "Modern JavaScript Best Practices",
+      excerpt: "Essential JavaScript patterns and practices for writing maintainable and efficient code in 2024.",
+      content: "Full article content here...",
+      date: "Nov 28, 2024",
+      readTime: "8 min read",
+      category: "Development",
+      image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600&h=400&fit=crop",
+      featured: false
+    },
+    {
+      id: 5,
+      title: "CSS Grid vs Flexbox: When to Use What",
+      excerpt: "A comprehensive guide to understanding when to use CSS Grid versus Flexbox for your layouts.",
+      content: "Full article content here...",
+      date: "Nov 20, 2024",
+      readTime: "4 min read",
+      category: "CSS",
+      image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&h=400&fit=crop",
+      featured: false
+    },
+    {
+      id: 6,
+      title: "API Design Best Practices",
+      excerpt: "Learn how to design RESTful APIs that are intuitive, maintainable, and developer-friendly.",
+      content: "Full article content here...",
+      date: "Nov 15, 2024",
+      readTime: "9 min read",
+      category: "Backend",
+      image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+      featured: false
+    }
+  ];
 
-const Blog = () => (
-  <div className="bg-white min-h-screen font-inter text-black flex flex-col">
-    <Navbar />
-    <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-4">
-      <section className="w-full max-w-2xl text-center mb-8">
-        <h1 className="text-3xl sm:text-5xl font-light mb-3">Blog</h1>
-        <p className="text-base sm:text-lg text-black/70 mb-7">
-          Insights, experiments, and lessons learned from my journey as a designer. Selected posts — more coming soon.
-        </p>
-      </section>
-      <section className="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7">
-        {BLOGS.map(blog => (
-          <Link
-            to={blog.slug}
-            key={blog.slug}
-            className="group rounded-2xl border border-gray-200 bg-white shadow-sm hover:shadow-md transition cursor-pointer flex flex-col"
-          >
-            <img
-              src={blog.img}
-              alt={blog.title}
-              className="w-full h-[140px] object-cover rounded-t-2xl"
-              loading="lazy"
-            />
-            <div className="p-4 flex-1 flex flex-col">
-              <h3 className="text-lg font-bold mb-2 group-hover:underline">{blog.title}</h3>
-              <div className="text-xs text-gray-500 mb-1">{blog.date}</div>
-              <p className="text-black/70 text-sm mb-2 flex-1">{blog.excerpt}</p>
-              <div className="flex gap-2 flex-wrap mb-2">
-                {blog.tags.map(t => (
-                  <span key={t} className="bg-gray-100 px-2 py-0.5 rounded text-xs text-gray-900">
-                    {t}
-                  </span>
-                ))}
+  const categories = ["All", "Development", "Technology", "Design", "CSS", "Backend"];
+  const [selectedCategory, setSelectedCategory] = React.useState("All");
+
+  const filteredPosts = selectedCategory === "All" 
+    ? blogPosts 
+    : blogPosts.filter(post => post.category === selectedCategory);
+
+  const featuredPost = blogPosts.find(post => post.featured);
+  const regularPosts = blogPosts.filter(post => !post.featured);
+
+  return (
+    <div className="min-h-screen bg-white">
+      <Navbar />
+      
+      <main className="pt-20">
+        {/* Hero Section */}
+        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 className="text-5xl font-bold text-gray-900 mb-6">Blog</h1>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Thoughts, insights, and experiences from my journey in web development. 
+              Sharing knowledge about modern technologies, best practices, and industry trends.
+            </p>
+          </div>
+        </section>
+
+        {/* Featured Post */}
+        {featuredPost && (
+          <section className="py-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
+              <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <div className="md:flex">
+                  <div className="md:w-1/2">
+                    <img 
+                      src={featuredPost.image} 
+                      alt={featuredPost.title}
+                      className="w-full h-64 md:h-full object-cover"
+                    />
+                  </div>
+                  <div className="md:w-1/2 p-8">
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-sm font-medium text-white bg-gray-900 px-3 py-1 rounded-full">
+                        {featuredPost.category}
+                      </span>
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Clock size={14} className="mr-1" />
+                        {featuredPost.readTime}
+                      </div>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      {featuredPost.title}
+                    </h3>
+                    <p className="text-gray-600 mb-6">
+                      {featuredPost.excerpt}
+                    </p>
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center text-gray-500 text-sm">
+                        <Calendar size={14} className="mr-1" />
+                        {featuredPost.date}
+                      </div>
+                      <button className="flex items-center text-gray-900 hover:text-gray-700 transition-colors">
+                        Read More <ArrowRight size={16} className="ml-1" />
+                      </button>
+                    </div>
+                  </div>
+                </div>
               </div>
-              <span className="inline-block mt-auto text-xs text-black/70 underline font-medium hover:text-black">
-                Read More
-              </span>
             </div>
-          </Link>
-        ))}
-      </section>
-      <div className="mt-10 text-center">
-        <a
-          href="https://calendly.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block px-6 py-2 rounded-full bg-black text-white font-medium hover:bg-black/80 transition"
-        >
-          Want to collaborate? Book a call
-        </a>
-      </div>
-    </main>
-    <Footer />
-  </div>
-);
+          </section>
+        )}
+
+        {/* Category Filter */}
+        <section className="py-8">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              {categories.map((category) => (
+                <button
+                  key={category}
+                  onClick={() => setSelectedCategory(category)}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
+                    selectedCategory === category
+                      ? 'bg-gray-900 text-white'
+                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                  }`}
+                >
+                  {category}
+                </button>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Blog Posts Grid */}
+        <section className="pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredPosts.filter(post => !post.featured).map((post) => (
+                <article key={post.id} className="group cursor-pointer">
+                  <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                    <div className="h-48 overflow-hidden">
+                      <img 
+                        src={post.image} 
+                        alt={post.title}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="text-sm font-medium text-gray-900 bg-gray-100 px-3 py-1 rounded-full">
+                          {post.category}
+                        </span>
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Clock size={14} className="mr-1" />
+                          {post.readTime}
+                        </div>
+                      </div>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 line-clamp-3">
+                        {post.excerpt}
+                      </p>
+                      <div className="flex items-center justify-between">
+                        <div className="flex items-center text-gray-500 text-sm">
+                          <Calendar size={14} className="mr-1" />
+                          {post.date}
+                        </div>
+                        <ArrowRight size={16} className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+};
+
 
 export default Blog;
