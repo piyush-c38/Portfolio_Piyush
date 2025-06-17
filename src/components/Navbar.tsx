@@ -6,7 +6,6 @@ import clsx from "clsx";
 
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
-  { name: "About Me", href: "/about" },
   { name: "Portfolio", href: "/portfolio" },
   { name: "Services", href: "/services" },
   { name: "Blog", href: "/blog" }
