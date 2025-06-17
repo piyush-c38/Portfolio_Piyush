@@ -9,7 +9,7 @@ const PROFILE = {
   img: "https://randomuser.me/api/portraits/men/32.jpg", // Placeholder; replace with your image
   name: "Alex Johnson",
   tagline: "Transforming ideas into engaging visuals.",
-  bio: "I'm a multidisciplinary designer focused on branding, UI/UX, and web experiences. Passionate about building products that delight users and achieve real business impact. Open to collaboration and new challenges.",
+  bio: "ADD TECH STACK BLOCKS HERE",
 };
 
 const ABOUT_ME = `
