@@ -29,7 +29,7 @@ const BLOGS = [
 ];
 
 const BlogCards = () => (
-  <section>
+  <section className="px-2 sm:px-0">
     <div className="flex flex-row justify-between items-end mb-5">
       <h2 className="text-lg sm:text-[2rem] font-light font-inter leading-tight">
         Latest Blog Posts

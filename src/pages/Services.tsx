@@ -86,8 +86,8 @@ const Services = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">Services</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Services</h1>
+            <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Comprehensive digital solutions tailored to your needs. From web development 
               to mobile apps, I deliver high-quality results that drive your business forward.
             </p>

@@ -10,7 +10,7 @@ const NAVS = [
 ];
 
 const Footer = () => (
-  <footer className="w-full mt-24 pt-10 sm:pt-16 pb-7 bg-[#18181b] border-t border-gray-200/20 text-white">
+  <footer className="w-full px-8 sm:px-12 mt-24 pt-10 sm:pt-16 pb-7 bg-[#18181b] border-t border-gray-200/20 text-white">
     {/* CTA section */}
     <div className="max-w-[1100px] mx-auto px-2 flex flex-col md:flex-row md:justify-between md:items-center gap-3 md:gap-0 pb-7 sm:pb-9 border-b border-gray-700">
       <div>

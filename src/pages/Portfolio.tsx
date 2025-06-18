@@ -22,7 +22,7 @@ const Portfolio = () => (
   <div className="bg-white min-h-screen font-inter text-black flex flex-col">
     <Navbar />
 
-    <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-2 mt-20 sm:px-4 md:px-8">
+    <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-8 mt-20 sm:px-4 md:px-8">
       <div className="w-full max-w-5xl flex flex-col md:flex-row gap-12 md:gap-8">
         {/* --- Left Sidebar --- */}
         <aside className="md:w-1/3 w-full md:max-w-xs flex flex-col items-center md:items-start bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mb-4 md:mb-0">

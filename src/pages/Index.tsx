@@ -14,7 +14,7 @@ const Index = () => {
         <section className="w-full max-w-[1200px] my-12 px-4 sm:px-6 md:px-8">
           <HeroSection />
         </section>
-        <section className="w-full max-w-[1000px] px-4 sm:px-6 md:px-8 mt-24">
+        <section className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24">
           <JourneySection />
         </section>
         <section className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24">
