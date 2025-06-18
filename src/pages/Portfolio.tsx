@@ -7,15 +7,20 @@ import Timeline from "@/components/Timeline";
 
 const PROFILE = {
   img: "https://randomuser.me/api/portraits/men/32.jpg", // Placeholder; replace with your image
-  name: "Alex Johnson",
-  tagline: "Transforming ideas into engaging visuals.",
-  bio: "ADD TECH STACK BLOCKS HERE",
+  name: "Piyush Chandrakar",
+  tagline: "Full-Stack Product Developer",
+  techKeyWords: ["Java", "Python", "JavaScript","TypeScript", "React", "React Native", "NextJS", "NodeJS","ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch","SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
 const ABOUT_ME = `
-Hi! I'm Alex, a product and UI/UX designer passionate about building delightful user experiences. My core expertise lies in crafting visually compelling, functional, and user-centered designs for web and mobile platforms.
+Hi, I’m Piyush — a curious tech enthusiast who thrives on innovation and continuous growth. I believe in becoming the best version of myself and living life to the fullest, both professionally and personally.
 
-I value clear communication, continuous learning, and thoughtful problem-solving. Let’s connect and bring your next big idea to life!
+For me, experience matters the most. 
+With hands-on experience as a Software Developer, Product Engineer, and Treasurer, I bring a unique blend of technical expertise and strategic thinking. This journey has given me deep insight into how the world of product development, finance, and team building work together to drive meaningful results.
+
+I’m skilled in Application Development, Coding & Problem Solving, Team Building, User Experience, Market & Tech Trend Analysis.
+
+In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
 `;
 
 const Portfolio = () => {
@@ -38,7 +43,17 @@ const Portfolio = () => {
             <div className="text-center md:text-left w-full">
               <h2 className="text-lg font-semibold mb-1">{PROFILE.name}</h2>
               <div className="text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
-              <div className="text-black/70 text-sm mb-3">{PROFILE.bio}</div>
+              <h2 className="text-lg font-semibold mt-8 mb-2">Tech Key Words</h2>
+              <div className="flex flex-wrap">
+                {PROFILE.techKeyWords.map((tech, idx) => (
+                  <span
+                    key={idx}
+                    className="text-[14px] sm:text-xs font-bold text-white bg-slate-800 px-2 py-1 rounded-sm m-1"
+                  >
+                    {tech}
+                  </span>
+                ))}
+              </div>
             </div>
             <div className="w-full flex justify-center md:justify-start mt-2">
               <SocialIcons />

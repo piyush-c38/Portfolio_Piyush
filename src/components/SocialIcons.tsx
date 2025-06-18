@@ -1,5 +1,5 @@
 
-import { Youtube, Instagram, Linkedin, X, Facebook } from "lucide-react";
+import { Mail, Instagram, Linkedin, X, School } from "lucide-react";
 
 type Props = {
   variant?: "footer" | "sidebar";
@@ -8,29 +8,29 @@ type Props = {
 
 const ICONS = [
   {
-    icon: Youtube,
-    label: "YouTube",
-    href: "https://youtube.com/"
+    icon: Mail,
+    label: "Personal Email",
+    href: "mailto:chandrakarpiyush36@gmail.com"
   },
   {
-    icon: Instagram,
-    label: "Instagram",
-    href: "https://instagram.com/"
+    icon: School,
+    label: "Student Email",
+    href: "mailto:piyushc@iitbhilai.ac.in"
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://linkedin.com/"
+    href: "https://www.linkedin.com/in/piyush-chandrakar"
   },
   {
     icon: X,
     label: "X",
-    href: "https://x.com/"
+    href: "https://x.com/piyush_c38"
   },
   {
-    icon: Facebook,
-    label: "Facebook",
-    href: "https://facebook.com/"
+    icon: Instagram,
+    label: "Instagram",
+    href: "https://instagram.com/piyush_c38"
   }
 ];
 
