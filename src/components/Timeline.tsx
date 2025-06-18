@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
   {
@@ -5,22 +6,41 @@ const TIMELINE = [
     date: "May 2025 - Present",
     role: "Full-Stack Product Developer",
     desc: "Designed and Implemented the Productivity tracking system using real-time OSnet person tracking and IoT product counting.",
-    color: "bg-[#222]"
+    color: "bg-[#0f172a]",
+    projectLink:"",
   },
   {
-    label: "EE Department, IIT Bhilai",
+    label: "EE Department IIT Bhilai",
     date: "Jan 2025 – March 2025",
     role: "Research Student",
     desc: "Developed gunshot detection and direction estimation device using VGGish embeddings and Random Forest, integrated with MEMS array on Jetson Nano.",
-    color: "bg-[#A8A8A8]"
+    color: "bg-[#334155]",
+    projectLink:"https://github.com/piyush-c38/Gunshot_Direction_Estimation",
+  },
+  {
+    label: "Self-Project",
+    date: "Feb 2025 – March 2025",
+    role: "Computer Vision",
+    desc: "Developed a deep learning pipeline with PSPNet for concrete crack segmentation, achieving 84.85% recall and custom loss design.",
+    color: "bg-[#64748b]",
+    projectLink:"https://github.com/piyush-c38/Crack_Detection_CV",
   },
   {
     label: "IIT Indore",
     date: "May 2024 - Oct 2024",
     role: "Mobile App Developer",
     desc: "Developed cross-platform inventory app for TracExpert, using React-Native, Docker, CI/CD, Bitbucket, and JWT security.",
-    color: "bg-[#E4E4E4]"
-  }
+    color: "bg-[#94a3b8]",
+    projectLink:"https://github.com/piyush-c38/TracExpert_T"
+  },
+  {
+    label: "IBITF IIT Bhilai",
+    date: "Jan 2024 - April 2024",
+    role: "Web Developer",
+    desc: "Developed a Web-IoT cashless payment solution with React and Node.js, serving 1,200+ institute users for daily transactions.",
+    color: "bg-[#cbd5e1]",
+    projectLink:"https://github.com/piyush-c38/Multifunctional_ID_Card",
+  },
 ];
 const Timeline = () => (
   <div className="relative pl-4 max-w-xl mx-auto sm:pl-4">
@@ -42,6 +62,12 @@ const Timeline = () => (
               {item.date} — <span className="text-black/50">{item.role}</span>
             </div>
             <div className="text-[12px] sm:text-[15px] text-black/65 font-light max-w-xs sm:max-w-lg">{item.desc}</div>
+            {item.projectLink && <a
+              href={item.projectLink}
+              className="text-[12px] sm:text-[15px] flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              View Project <ExternalLink size={14} className="ml-1" />
+            </a>}
           </div>
         </div>
       ))}

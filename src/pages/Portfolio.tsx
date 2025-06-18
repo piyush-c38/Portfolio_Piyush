@@ -13,15 +13,38 @@ const PROFILE = {
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
-const ABOUT_ME = `
-Hi, I’m Piyush — an experienced Developer. Here's the PDF version of my resume
+const handleReachOut = ()=>{
+  window.scrollTo({top:document.body.scrollHeight, left:0, behavior:"smooth"});
+}
 
-For me, experience matters the most. With hands-on experience as a Software Developer, Product Engineer, and Treasurer, I bring a unique blend of technical expertise and strategic thinking. 
-
-I’m skilled in Application Development, Coding & Problem Solving, Team Building, User Experience, Market & Tech Trend Analysis.
-
-In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
-`;
+const ABOUT_ME = (<>
+  <p>Hi, I’m Piyush — an experienced developer.</p>
+  <p className="mt-4">For me, product planning and the final produced product matter the most. I believe in teamwork and enjoy innovating with like-minded friends.</p>
+  <p className="mt-4">
+    Currently, I am working with 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. My previous work at{" "}
+    <a
+      href="https://github.com/piyush-c38/TracExpert_T"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 underline hover:text-blue-800"
+    >
+      IIT Indore
+    </a>{" "}
+    gave me valuable experience in app development, delivering successful industry management software.
+  </p>
+  <p className="mt-4">
+    To be precise, I’m skilled in application development, coding & problem solving, team building, and market & tech trend analysis. In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
+  </p>
+  <p className="mt-4">
+    <a
+      href="#"
+      onClick={handleReachOut}
+      className="text-blue-600 underline hover:text-blue-800"
+    >
+      Reach out 
+    </a>{" "}
+    if you have any interesting ideas to collaborate on!</p>
+</>);
 
 const Portfolio = () => {
 
@@ -45,11 +68,11 @@ const Portfolio = () => {
               <div className="text-center text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
               <div className="flex justify-center">
                 <Link
-                  to="https://drive.google.com/file/d/1GUB3kdUBnplD74F1NqwCKGGSKqSsAOvV/view?usp=sharing"
+                  to="https://drive.google.com/file/d/1a8hIkQllUGVg-7cESHi2Wx4RL7IHkPNQ/view?usp=sharing"
                   target="_blank"
                   className="text-[14px] sm:text-s font-bold text-white bg-slate-800 px-6 py-2 rounded-full m-1"
                 >
-                  Resume: PDFv
+                  My Resume: PDFv
                 </Link>
               </div>
               <h2 className="text-lg font-semibold mt-8 mb-2">Tools & Technologies</h2>
@@ -75,9 +98,7 @@ const Portfolio = () => {
             <div>
               <h2 className="text-2xl font-semibold mb-3">About Me</h2>
               <div className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90">
-                {ABOUT_ME.split("\n").map((line, i) =>
-                  line.trim() === "" ? <br key={i} /> : <p key={i}>{line}</p>
-                )}
+                {ABOUT_ME}
               </div>
             </div>
             {/* Experience Timeline */}
