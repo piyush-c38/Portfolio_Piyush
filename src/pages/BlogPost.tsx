@@ -129,7 +129,7 @@ const BlogPost = () => {
     <div className="bg-white min-h-screen font-inter text-black flex flex-col">
       <Navbar />
       <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-4">
-        <article className="w-full max-w-2xl bg-white rounded-2xl shadow p-6 sm:p-9">
+        <article className="w-full max-w-2xl bg-white p-6 sm:p-9">
           <Link to="/blog" className="text-sm text-black/55 hover:text-black mb-5 inline-block">
             ← Back to Blog
           </Link>

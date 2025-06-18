@@ -130,8 +130,8 @@ const ServiceDetail = () => {
         {/* Service Header */}
         <section className="py-12 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6">{currentService.title}</h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">{currentService.title}</h1>
+            <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
               {currentService.description}
             </p>
           </div>
@@ -198,10 +198,10 @@ const ServiceDetail = () => {
         {/* CTA Section */}
         <section className="py-20 bg-gray-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
               Interested in {currentService.title}?
             </h2>
-            <p className="text-xl text-gray-600 mb-8">
+            <p className="text-l sm:text-xl text-gray-600 mb-8">
               Let's discuss your project and create something amazing together.
             </p>
             <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200">
