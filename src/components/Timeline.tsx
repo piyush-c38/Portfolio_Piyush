@@ -18,7 +18,7 @@ const TIMELINE = [
     label: "IIT Indore",
     date: "May 2024 - Oct 2024",
     role: "Mobile App Developer",
-    desc: "Developed cross-platform inventory app for TracExpert, using Docker, CI/CD, Bitbucket, and JWT security.",
+    desc: "Developed cross-platform inventory app for TracExpert, using React-Native, Docker, CI/CD, Bitbucket, and JWT security.",
     color: "bg-[#E4E4E4]"
   }
 ];

@@ -4,19 +4,19 @@ import Footer from "@/components/Footer";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import SocialIcons from "@/components/SocialIcons";
 import Timeline from "@/components/Timeline";
+import { Link } from "react-router-dom";
 
 const PROFILE = {
-  img: "https://randomuser.me/api/portraits/men/32.jpg", // Placeholder; replace with your image
+  img: "src/data/dp.png", // Placeholder; replace with your image
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Product Developer",
-  techKeyWords: ["Java", "Python", "JavaScript","TypeScript", "React", "React Native", "NextJS", "NodeJS","ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch","SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
+  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
 const ABOUT_ME = `
-Hi, I’m Piyush — a curious tech enthusiast who thrives on innovation and continuous growth. I believe in becoming the best version of myself and living life to the fullest, both professionally and personally.
+Hi, I’m Piyush — an experienced Developer. Here's the PDF version of my resume
 
-For me, experience matters the most. 
-With hands-on experience as a Software Developer, Product Engineer, and Treasurer, I bring a unique blend of technical expertise and strategic thinking. This journey has given me deep insight into how the world of product development, finance, and team building work together to drive meaningful results.
+For me, experience matters the most. With hands-on experience as a Software Developer, Product Engineer, and Treasurer, I bring a unique blend of technical expertise and strategic thinking. 
 
 I’m skilled in Application Development, Coding & Problem Solving, Team Building, User Experience, Market & Tech Trend Analysis.
 
@@ -36,14 +36,23 @@ const Portfolio = () => {
       <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-8 mt-20 sm:px-4 md:px-8">
         <div className="w-full max-w-5xl flex flex-col md:flex-row gap-12 md:gap-8">
           {/* --- Left Sidebar --- */}
-          <aside className="md:w-1/3 w-full md:max-w-xs flex flex-col items-center md:items-start bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mb-4 md:mb-0">
-            <Avatar className="h-28 w-28 mx-auto mb-4 shadow">
+          <aside className="md:w-1/3 w-full md:max-w-xs flex flex-col items-center bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mb-4 md:mb-0">
+            <Avatar className="h-48 w-48 mx-auto mb-4 shadow">
               <AvatarImage src={PROFILE.img} alt={PROFILE.name} />
             </Avatar>
             <div className="text-center md:text-left w-full">
-              <h2 className="text-lg font-semibold mb-1">{PROFILE.name}</h2>
-              <div className="text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
-              <h2 className="text-lg font-semibold mt-8 mb-2">Tech Key Words</h2>
+              <h2 className="text-center text-lg font-semibold mb-1">{PROFILE.name}</h2>
+              <div className="text-center text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
+              <div className="flex justify-center">
+                <Link
+                  to="https://drive.google.com/file/d/1GUB3kdUBnplD74F1NqwCKGGSKqSsAOvV/view?usp=sharing"
+                  target="_blank"
+                  className="text-[14px] sm:text-s font-bold text-white bg-slate-800 px-6 py-2 rounded-full m-1"
+                >
+                  Resume: PDFv
+                </Link>
+              </div>
+              <h2 className="text-lg font-semibold mt-8 mb-2">Tools & Technologies</h2>
               <div className="flex flex-wrap">
                 {PROFILE.techKeyWords.map((tech, idx) => (
                   <span
