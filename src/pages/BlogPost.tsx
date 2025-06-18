@@ -3,7 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Clock, Calendar } from 'lucide-react';
-import Blogs from "../data/blog.tsx"
+import Blogs from "../../public/data/blog.tsx"
 
 const BlogPost = () => {
   const params = useParams();

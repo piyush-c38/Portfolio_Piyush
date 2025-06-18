@@ -2,10 +2,10 @@
 import React from "react";
 
 const placeholders = [
-  "src/data/WrkExp1.png",
-  // "src/data/WrkExp2.png",
-  "src/data/WrkExp3.png",
-  "src/data/WrkExp4.png",
+  "data/WrkExp1.png",
+  // "data/WrkExp2.png",
+  "data/WrkExp3.png",
+  "data/WrkExp4.png",
 ];
 
 const ImageCarousel = () => {
@@ -35,7 +35,7 @@ const ImageCarousel = () => {
             style={{ scrollSnapAlign: "center" }}
           >
             <img
-              src={img}
+              src="data/WrkExp1.png"
               alt={`carousel-${i + 1}`}
               className="w-full h-full object-cover rounded-2xl"
               loading="lazy"

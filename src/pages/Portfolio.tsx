@@ -7,7 +7,7 @@ import Timeline from "@/components/Timeline";
 import { Link } from "react-router-dom";
 
 const PROFILE = {
-  img: "src/data/dp.png", // Placeholder; replace with your image
+  img: "data/dp.png", // Placeholder; replace with your image
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Product Developer",
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],

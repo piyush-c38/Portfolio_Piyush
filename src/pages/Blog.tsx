@@ -3,7 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Blogs from "../data/blog.tsx"
+import Blogs from "../../public/data/blog.tsx"
 
 const Blog = () => {
   const categories = ["All", "Development", "Technology", "Design", "Backend", "Life"];

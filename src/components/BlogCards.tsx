@@ -1,6 +1,6 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-import Blogs from "../data/blog.tsx"
+import Blogs from "../../public/data/blog.tsx"
 
 const BlogCards = () => (
   <section className="px-2 sm:px-0">
