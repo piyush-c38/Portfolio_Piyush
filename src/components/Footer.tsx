@@ -6,8 +6,8 @@ import { Mail } from "lucide-react";
 const NAVS = [
   { label: "Home", to: "/" },
   { label: "Portfolio", to: "/portfolio" },
-  { label: "Services", to: "/services" },
   { label: "Blog", to: "/blog" },
+  // { label: "Services", to: "/services" },
 ];
 
 const Footer = () => (
