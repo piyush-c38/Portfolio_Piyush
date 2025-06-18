@@ -46,7 +46,7 @@ const TechStack = ({ className, direction = "horizontal", crissCross }: Props) =
             title={name}
           >
             <Icon
-              size={28}
+              size={42}
               className="mb-1 drop-shadow-sm group-hover:text-black/90 transition"
             />
             <span className="text-[10px] sm:text-xs tracking-widest font-light mt-0.5">

@@ -24,7 +24,7 @@ const TIMELINE = [
 ];
 
 const Timeline = () => (
-  <div className="relative pl-4 max-w-2xl mx-auto sm:pl-4">
+  <div className="relative pl-4 max-w-xl mx-auto sm:pl-4">
     <div className="absolute top-5 left-3 bottom-4 w-0.5 bg-gray-200 rounded hidden sm:block"></div>
     <div className="flex flex-col gap-7">
       {TIMELINE.map((item, idx) => (

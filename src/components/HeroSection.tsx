@@ -7,7 +7,7 @@ const HeroSection = () => (
   <section className="relative w-full flex flex-col min-h-[420px] justify-center pb-8 md:min-h-[505px]">
     <div className="flex flex-col gap-12 lg:flex-row lg:gap-0 lg:justify-between items-center w-full relative">
       {/* Left - Stats */}
-      <div className="flex flex-col items-start w-full max-w-xs sm:max-w-[320px] mb-6 lg:mb-0">
+      <div className="flex flex-col items-start max-w-xs sm:max-w-[320px] mb-6 lg:mb-0">
         <StatsCounters />
       </div>
       {/* Main Heading */}

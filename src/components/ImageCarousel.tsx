@@ -17,7 +17,7 @@ const ImageCarousel = () => {
           scroll-snap-x
           px-2
           "
-        style={{ scrollSnapType: "x mandatory" }}
+        style={{ scrollSnapType: "x mandatory", scrollbarColor:"revert" }}
       >
         {placeholders.map((img, i) => (
           <div
