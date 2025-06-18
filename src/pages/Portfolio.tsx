@@ -68,7 +68,7 @@ const Portfolio = () => {
               <div className="text-center text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
               <div className="flex justify-center">
                 <Link
-                  to="https://drive.google.com/file/d/1a8hIkQllUGVg-7cESHi2Wx4RL7IHkPNQ/view?usp=sharing"
+                  to="https://drive.google.com/file/d/1hdIRK0R1IA5SWNT6mGVz5s8Di7IvOZFw/view?usp=sharing"
                   target="_blank"
                   className="text-[14px] sm:text-s font-bold text-white bg-slate-800 px-6 py-2 rounded-full m-1"
                 >
