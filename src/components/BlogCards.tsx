@@ -4,12 +4,12 @@ import { Link } from "react-router-dom";
 const BLOGS = [
   {
     id: 1,
-    title: "Building Scalable React Applications",
+    title: "What does a Blog mean?",
     excerpt: "Learn the best practices for creating React applications that can grow with your business needs. From component architecture to state management, we'll cover everything you need to know.",
-    content: "Full article content here...",
-    date: "Dec 15, 2024",
+    content: "Hey! This is my first Blog. And I want to start my blogging journey with my own style having transparency in my thoughts. So let's first understand what does Blog mean? So, a blog is content by which a person shares his/her knowledge with many people. It's basically sharing your Ideas, Knowledge and Thoughts that you have with a large community that can help them. We all have proficiency in one field or another. Sharing our ideas in articles or blogs can help others who want to know more about that field. Blogs can range from a simple idea-How to plant an excellent seed? to a complex solution like- What should be the specifications of my motherboard to install Intel i9 13th gen processor with DDR5 RAM? So it's basically information in the form of conversation. It's better if we keep Blog in a Simple and understandable manner. So that Readers can enjoy the content and get relevant answers. Following the same Ideology, ending this Blog here. Let's meet in the next Blog with another great content!",
+    date: "July 13, 2023",
     readTime: "5 min read",
-    category: "Development",
+    category: "Blogging",
     slug: "/blog/minimalism-in-modern-ux"
   },
   {

@@ -1,28 +1,27 @@
 
 const TIMELINE = [
   {
-    label: "Self-Employed, Brisbane",
-    date: "Sep 2016 - Aug 2016",
-    role: "Visual Designer",
-    desc: "Worked on diverse freelance projects, focusing on branding, user flows, and digital identities.",
+    label: "506 Army Base Workshop",
+    date: "May 2025 - Present",
+    role: "Full-Stack Product Developer",
+    desc: "Designed and Implemented the Productivity tracking system using real-time OSnet person tracking and IoT product counting.",
     color: "bg-[#222]"
   },
   {
-    label: "New Man Services",
-    date: "Jan 2017 - Mar 2018",
-    role: "UI/UX Designer",
-    desc: "Transformed user experiences, building intuitive interfaces for business clients across platforms.",
+    label: "EE Department, IIT Bhilai",
+    date: "Jan 2025 – March 2025",
+    role: "Research Student",
+    desc: "Developed gunshot detection and direction estimation device using VGGish embeddings and Random Forest, integrated with MEMS array on Jetson Nano.",
     color: "bg-[#A8A8A8]"
   },
   {
-    label: "Global Solution",
-    date: "Feb 2019 - Mar 2020",
-    role: "Sr. Product Designer",
-    desc: "Led product design vision and cross-functional teams to deliver impactful, scalable solutions.",
+    label: "IIT Indore",
+    date: "May 2024 - Oct 2024",
+    role: "Mobile App Developer",
+    desc: "Developed cross-platform inventory app for TracExpert, using Docker, CI/CD, Bitbucket, and JWT security.",
     color: "bg-[#E4E4E4]"
   }
 ];
-
 const Timeline = () => (
   <div className="relative pl-4 max-w-xl mx-auto sm:pl-4">
     <div className="absolute top-5 left-3 bottom-4 w-0.5 bg-gray-200 rounded hidden sm:block"></div>
