@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -62,7 +62,7 @@ const BLOGS = [
     content: (
       <>
         <p>
-          Your brand identity is more than a logo—it's the sum of your digital impressions. By crafting consistent visuals and messaging, brands become memorable and trustworthy. 
+          Your brand identity is more than a logo—it's the sum of your digital impressions. By crafting consistent visuals and messaging, brands become memorable and trustworthy.
         </p>
         <p className="mt-4">
           Successful brands treat every user touchpoint as an opportunity to reinforce identity. Use color, typography, and tone of voice to build a holistic digital signature.
@@ -104,6 +104,10 @@ const BlogPost = () => {
   const navigate = useNavigate();
   const slug = params["*"] || params["slug"];
   const blog = BLOGS.find((b) => `/blog/${b.slug}` === `/blog/${slug}` || b.slug === slug);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
 
   if (!blog) {
     return (

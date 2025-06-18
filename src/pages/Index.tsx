@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import TechStack from "@/components/TechStack";
@@ -6,7 +6,11 @@ import JourneySection from "@/components/JourneySection";
 import BlogCards from "@/components/BlogCards";
 import Footer from "@/components/Footer";
 
+
 const Index = () => {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
   return (
     <div className="bg-background min-h-screen font-inter text-foreground transition-colors">
       <Navbar />

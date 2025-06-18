@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
@@ -93,6 +93,10 @@ const ServiceDetail = () => {
 
   const currentService = serviceData[service as keyof typeof serviceData];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   if (!currentService) {
     return (
       <div className="min-h-screen bg-white">
@@ -114,12 +118,12 @@ const ServiceDetail = () => {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       <main className="pt-20">
         {/* Back Link */}
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <Link 
-            to="/services" 
+          <Link
+            to="/services"
             className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
           >
             <ArrowLeft size={16} className="mr-2" />
@@ -141,32 +145,32 @@ const ServiceDetail = () => {
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Previous Works</h2>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentService.projects.map((project) => (
                 <div key={project.id} className="group">
                   <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={project.image} 
+                      <img
+                        src={project.image}
                         alt={project.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
-                    
+
                     <div className="p-6">
                       <h3 className="text-xl font-semibold text-gray-900 mb-2">
                         {project.title}
                       </h3>
-                      
+
                       <p className="text-gray-600 mb-4 leading-relaxed">
                         {project.description}
                       </p>
-                      
+
                       {/* Technologies */}
                       <div className="flex flex-wrap gap-2 mb-4">
                         {project.technologies.map((tech) => (
-                          <span 
+                          <span
                             key={tech}
                             className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded"
                           >
@@ -174,13 +178,13 @@ const ServiceDetail = () => {
                           </span>
                         ))}
                       </div>
-                      
+
                       <div className="flex items-center justify-between">
                         <div className="flex items-center text-gray-500 text-sm">
                           <Calendar size={14} className="mr-1" />
                           {project.completedDate}
                         </div>
-                        <a 
+                        <a
                           href={project.link}
                           className="flex items-center text-gray-600 hover:text-gray-900 transition-colors"
                         >

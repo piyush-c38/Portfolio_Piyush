@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Code, Palette, Globe, Smartphone, Database, Zap } from 'lucide-react';
@@ -78,17 +78,21 @@ const Services = () => {
     }
   ];
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Services</h1>
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive digital solutions tailored to your needs. From web development 
+              Comprehensive digital solutions tailored to your needs. From web development
               to mobile apps, I deliver high-quality results that drive your business forward.
             </p>
           </div>
@@ -104,15 +108,15 @@ const Services = () => {
                     <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
                       <service.icon size={24} className="text-white" />
                     </div>
-                    
+
                     <h3 className="text-xl font-semibold text-gray-900 mb-4">
                       {service.title}
                     </h3>
-                    
+
                     <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
-                    
+
                     <ul className="space-y-2 mb-6">
                       {service.features.map((feature) => (
                         <li key={feature} className="flex items-center text-gray-600 text-sm">
@@ -121,7 +125,7 @@ const Services = () => {
                         </li>
                       ))}
                     </ul>
-                    
+
                     <div className="border-t border-gray-100 pt-6">
                       <div className="flex items-center justify-between">
                         <span className="text-lg font-semibold text-gray-900">

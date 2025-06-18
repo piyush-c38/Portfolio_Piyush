@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
@@ -76,24 +76,28 @@ const Blog = () => {
   const categories = ["All", "Development", "Technology", "Design", "CSS", "Backend"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
-  const filteredPosts = selectedCategory === "All" 
-    ? blogPosts 
+  const filteredPosts = selectedCategory === "All"
+    ? blogPosts
     : blogPosts.filter(post => post.category === selectedCategory);
 
   const featuredPost = blogPosts.find(post => post.featured);
   const regularPosts = blogPosts.filter(post => !post.featured);
 
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  }, []);
+  
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      
+
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Blog</h1>
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Thoughts, insights, and experiences from my journey in web development. 
+              Thoughts, insights, and experiences from my journey in web development.
               Sharing knowledge about modern technologies, best practices, and industry trends.
             </p>
           </div>
@@ -107,8 +111,8 @@ const Blog = () => {
               <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
                 <div className="md:flex">
                   <div className="md:w-1/2">
-                    <img 
-                      src={featuredPost.image} 
+                    <img
+                      src={featuredPost.image}
                       alt={featuredPost.title}
                       className="w-full h-64 md:h-full object-cover"
                     />
@@ -153,11 +157,10 @@ const Blog = () => {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${
-                    selectedCategory === category
-                      ? 'bg-gray-900 text-white'
-                      : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
-                  }`}
+                  className={`px-6 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${selectedCategory === category
+                    ? 'bg-gray-900 text-white'
+                    : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                    }`}
                 >
                   {category}
                 </button>
@@ -174,8 +177,8 @@ const Blog = () => {
                 <article key={post.id} className="group cursor-pointer">
                   <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                     <div className="h-48 overflow-hidden">
-                      <img 
-                        src={post.image} 
+                      <img
+                        src={post.image}
                         alt={post.title}
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
