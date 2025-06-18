@@ -35,7 +35,7 @@ const ImageCarousel = () => {
             style={{ scrollSnapAlign: "center" }}
           >
             <img
-              src="data/WrkExp1.png"
+              src={img}
               alt={`carousel-${i + 1}`}
               className="w-full h-full object-cover rounded-2xl"
               loading="lazy"
