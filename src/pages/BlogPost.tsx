@@ -138,7 +138,7 @@ const BlogPost = () => {
     <div className="bg-white min-h-screen font-inter text-black flex flex-col">
       <Navbar />
       <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-4">
-        <article className="w-full max-w-2xl bg-white p-6 sm:p-9">
+        <article className="w-full max-w-3xl bg-white p-6 sm:p-9">
           <Link to="/blog" className="text-sm text-black/55 hover:text-black mb-5 inline-block">
             ← Back to Blog
           </Link>
@@ -149,8 +149,8 @@ const BlogPost = () => {
             loading="lazy"
           />
           <h1 className="text-2xl sm:text-4xl font-light mb-2">{blog.title}</h1>
-          <div className="flex items-center justify-between mt-4 mb-10">
-            <span className="text-sm font-medium text-black bg-gray-200 px-3 py-1 rounded-full">
+          <div className="flex items-center justify-start gap-4 mt-4 mb-10">
+            <span className="text-sm font-medium text-black bg-gray-200 px-3 py-1 rounded-md">
               {blog.category}
             </span>
             <div className="flex items-center text-gray-500 text-sm">
