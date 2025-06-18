@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Code, Palette, Globe, Smartphone, Database, Zap } from 'lucide-react';
+import { Link } from "react-router-dom";
 
 const Services = () => {
   const services = [
@@ -11,7 +12,8 @@ const Services = () => {
       title: "Web Development",
       description: "Custom web applications built with modern technologies like React, Vue.js, and Node.js for optimal performance and user experience.",
       features: ["Responsive Design", "Modern Frameworks", "Performance Optimization", "SEO Friendly"],
-      price: "Starting at $2,500"
+      price: "Starting at $2,500",
+      slug: "web-development"
     },
     {
       id: 2,
@@ -19,7 +21,8 @@ const Services = () => {
       title: "Mobile Development",
       description: "Native and cross-platform mobile applications that deliver seamless experiences across iOS and Android devices.",
       features: ["React Native", "Cross-platform", "Native Performance", "App Store Deployment"],
-      price: "Starting at $5,000"
+      price: "Starting at $5,000",
+      slug: "mobile-development"
     },
     {
       id: 3,
@@ -27,7 +30,8 @@ const Services = () => {
       title: "UI/UX Design",
       description: "User-centered design solutions that combine aesthetics with functionality to create intuitive and engaging interfaces.",
       features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-      price: "Starting at $1,500"
+      price: "Starting at $1,500",
+      slug: "ui-ux-design"
     },
     {
       id: 4,
@@ -35,7 +39,8 @@ const Services = () => {
       icon: Globe,
       description: "Complete e-commerce platforms with payment integration, inventory management, and analytics to grow your online business.",
       features: ["Payment Gateway", "Inventory Management", "Analytics Dashboard", "Mobile Optimized"],
-      price: "Starting at $4,000"
+      price: "Starting at $4,000",
+      slug: "#"
     },
     {
       id: 5,
@@ -43,7 +48,8 @@ const Services = () => {
       title: "Backend Development",
       description: "Robust backend systems and APIs that power your applications with scalable architecture and secure data management.",
       features: ["RESTful APIs", "Database Design", "Cloud Integration", "Security Implementation"],
-      price: "Starting at $3,000"
+      price: "Starting at $3,000",
+      slug: "#"
     },
     {
       id: 6,
@@ -51,7 +57,8 @@ const Services = () => {
       title: "Performance Optimization",
       description: "Boost your application's speed and efficiency with comprehensive performance audits and optimization strategies.",
       features: ["Speed Optimization", "Code Refactoring", "SEO Improvement", "Analytics Setup"],
-      price: "Starting at $1,000"
+      price: "Starting at $1,000",
+      slug: "#"
     }
   ];
 
@@ -103,41 +110,43 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
-                <div key={service.id} className="group">
-                  <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
-                      <service.icon size={24} className="text-white" />
-                    </div>
+                <Link to={service.slug}>
+                  <div key={service.id} className="group">
+                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                      <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
+                        <service.icon size={24} className="text-white" />
+                      </div>
 
-                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                      {service.title}
-                    </h3>
+                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                        {service.title}
+                      </h3>
 
-                    <p className="text-gray-600 mb-6 leading-relaxed">
-                      {service.description}
-                    </p>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        {service.description}
+                      </p>
 
-                    <ul className="space-y-2 mb-6">
-                      {service.features.map((feature) => (
-                        <li key={feature} className="flex items-center text-gray-600 text-sm">
-                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-2 mb-6">
+                        {service.features.map((feature) => (
+                          <li key={feature} className="flex items-center text-gray-600 text-sm">
+                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
+                            {feature}
+                          </li>
+                        ))}
+                      </ul>
 
-                    <div className="border-t border-gray-100 pt-6">
-                      <div className="flex items-center justify-between">
-                        <span className="text-lg font-semibold text-gray-900">
-                          {service.price}
-                        </span>
-                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                          Learn More →
-                        </button>
+                      <div className="border-t border-gray-100 pt-6">
+                        <div className="flex items-center justify-between">
+                          <span className="text-lg font-semibold text-gray-900">
+                            {service.price}
+                          </span>
+                          <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                            Learn More →
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
