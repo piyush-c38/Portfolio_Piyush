@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { Clock } from 'lucide-react';
+import { Clock, Calendar } from 'lucide-react';
 import Blogs from "../data/blog.tsx"
 
 const BlogPost = () => {
@@ -59,6 +59,10 @@ const BlogPost = () => {
             <div className="flex items-center text-gray-500 text-sm">
               <Clock size={14} className="mr-1" />
               {blog.readTime}
+            </div>
+            <div className="flex items-center text-gray-500 text-sm">
+              <Calendar size={14} className="mr-1" />
+              {blog.date}
             </div>
           </div>
           <div className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2">

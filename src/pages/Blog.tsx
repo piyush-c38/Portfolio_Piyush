@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Blogs from "../data/blog.tsx"
 
 const Blog = () => {
-  const categories = ["All", "Development", "Technology", "Design", "CSS", "Backend"];
+  const categories = ["All", "Development", "Technology", "Design", "Backend", "Life"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All"
@@ -30,7 +30,7 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Blog</h1>
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Thoughts, insights, and experiences from my journey in web development.
+              Thoughts, insights, and experiences from my journey in Product development.
               Sharing knowledge about modern technologies, best practices, and industry trends.
             </p>
           </div>
