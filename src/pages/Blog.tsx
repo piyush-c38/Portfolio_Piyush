@@ -3,68 +3,18 @@ import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import Blogs from "../data/blog.tsx"
 
 const Blog = () => {
-  const blogPosts = [
-    {
-      id: 1,
-      title: "Building Scalable React Applications",
-      excerpt: "Learn the best practices for creating React applications that can grow with your business needs. From component architecture to state management, we'll cover everything you need to know.",
-      content: "Full article content here...",
-      date: "Dec 15, 2024",
-      readTime: "5 min read",
-      category: "Development",
-      image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-      featured: true,
-      slug: "/blog/minimalism-in-modern-ux"
-    },
-    {
-      id: 2,
-      title: "The Future of Web Development",
-      excerpt: "Exploring emerging technologies and trends that will shape the future of web development in the coming years.",
-      content: "Full article content here...",
-      date: "Dec 10, 2024",
-      readTime: "7 min read",
-      category: "Technology",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=600&h=400&fit=crop",
-      featured: false,
-      slug: "/blog/scaling-product-design"
-    },
-    {
-      id: 3,
-      title: "Design Systems That Scale",
-      excerpt: "How to create and maintain design systems that work across multiple products and teams effectively.",
-      content: "Full article content here...",
-      date: "Dec 5, 2024",
-      readTime: "6 min read",
-      category: "Design",
-      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-      featured: false,
-      slug: "/blog/brand-identity-digital"
-    },
-    {
-      id: 4,
-      title: "Modern JavaScript Best Practices",
-      excerpt: "Essential JavaScript patterns and practices for writing maintainable and efficient code in 2024.",
-      content: "Full article content here...",
-      date: "Nov 28, 2024",
-      readTime: "8 min read",
-      category: "Development",
-      image: "https://images.unsplash.com/photo-1579468118864-1b9ea3c0db4a?w=600&h=400&fit=crop",
-      featured: false,
-      slug: "/blog/freelancer-to-sr-designer"
-    }
-  ];
-
   const categories = ["All", "Development", "Technology", "Design", "CSS", "Backend"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All"
-    ? blogPosts
-    : blogPosts.filter(post => post.category === selectedCategory);
+    ? Blogs
+    : Blogs.filter(post => post.category === selectedCategory);
 
-  const featuredPost = blogPosts.find(post => post.featured);
-  const regularPosts = blogPosts.filter(post => !post.featured);
+  const featuredPost = Blogs.find(post => post.featured);
+  const regularPosts = Blogs.filter(post => !post.featured);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
