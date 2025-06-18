@@ -2,15 +2,17 @@ import { useEffect } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { Calendar, Clock, ArrowRight } from 'lucide-react';
 
 // Synchronized Blog Data with slugs & content
 const BLOGS = [
   {
     slug: "minimalism-in-modern-ux",
     title: "Minimalism in Modern UX: Why Less Is More",
-    date: "April 2024",
-    tags: ["UX", "Philosophy", "Trends"],
-    img: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
+    date: "Dec 10, 2024",
+    readTime: "7 min read",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
     content: (
       <>
         <p>
@@ -34,9 +36,10 @@ const BLOGS = [
   {
     slug: "scaling-product-design",
     title: "Scaling Product Design for Startups",
-    date: "March 2024",
-    tags: ["Startups", "Product", "Design"],
-    img: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80",
+    date: "Dec 10, 2024",
+    readTime: "7 min read",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=600&q=80",
     content: (
       <>
         <p>
@@ -56,9 +59,10 @@ const BLOGS = [
   {
     slug: "brand-identity-digital",
     title: "Brand Identity: Crafting Digital Signatures",
-    date: "February 2024",
-    tags: ["Branding", "Identity"],
-    img: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=80",
+    date: "Dec 10, 2024",
+    readTime: "7 min read",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1500673922987-e212871fec22?auto=format&fit=crop&w=600&q=80",
     content: (
       <>
         <p>
@@ -78,9 +82,10 @@ const BLOGS = [
   {
     slug: "freelancer-to-sr-designer",
     title: "Journey from Freelancer to Sr. Designer",
-    date: "January 2024",
-    tags: ["Career", "Freelance"],
-    img: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=600&q=80",
+    date: "Dec 10, 2024",
+    readTime: "7 min read",
+    category: "Technology",
+    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=600&q=80",
     content: (
       <>
         <p>
@@ -138,20 +143,21 @@ const BlogPost = () => {
             ← Back to Blog
           </Link>
           <img
-            src={blog.img}
+            src={blog.image}
             alt={blog.title}
             className="w-full h-[195px] sm:h-[260px] object-cover rounded-xl shadow mb-6"
             loading="lazy"
           />
           <h1 className="text-2xl sm:text-4xl font-light mb-2">{blog.title}</h1>
-          <div className="flex gap-2 mt-2 mb-4 flex-wrap">
-            {blog.tags.map((tag) => (
-              <span key={tag} className="bg-gray-100 px-2 py-0.5 rounded text-xs text-gray-900 shadow-sm">
-                {tag}
-              </span>
-            ))}
+          <div className="flex items-center justify-between mt-4 mb-10">
+            <span className="text-sm font-medium text-black bg-gray-200 px-3 py-1 rounded-full">
+              {blog.category}
+            </span>
+            <div className="flex items-center text-gray-500 text-sm">
+              <Clock size={14} className="mr-1" />
+              {blog.readTime}
+            </div>
           </div>
-          <div className="text-xs text-gray-400 mb-5">{blog.date}</div>
           <div className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2">
             {blog.content}
           </div>
