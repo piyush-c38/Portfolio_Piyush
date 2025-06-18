@@ -2,9 +2,10 @@
 import React from "react";
 
 const placeholders = [
-  "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1531297484001-80022131f5a1?auto=format&fit=crop&w=600&q=80",
-  "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&w=600&q=80"
+  "src/data/WrkExp1.png",
+  // "src/data/WrkExp2.png",
+  "src/data/WrkExp3.png",
+  "src/data/WrkExp4.png",
 ];
 
 const ImageCarousel = () => {
