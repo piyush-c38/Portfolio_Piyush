@@ -1,6 +1,7 @@
 
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
+import { Mail } from "lucide-react";
 
 const NAVS = [
   { label: "Home", to: "/" },
@@ -20,15 +21,19 @@ const Footer = () => (
         <div className="text-xs sm:text-base text-gray-200 font-light mb-3 sm:mb-4">
           I’m always excited to collaborate on new and innovative projects. Whether you’re starting from scratch or refining an existing idea.
         </div>
-        <a
-          href="https://calendly.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 sm:px-6 py-2 bg-white text-black font-inter font-medium rounded-full shadow hover:bg-gray-100 transition text-sm"
-        >
-          Book a Call
-          <span className="ml-0.5 font-normal text-[16px]">↗</span>
-        </a>
+        <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
+          <a
+            href={"mailto:chandrakarpiyush36@gmail.com"}
+            key={"Email"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-9 h-9 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
+            aria-label={"Email"}
+          >
+            <Mail size={19} strokeWidth={1.6} className="text-white" />
+          </a>
+          <div className="content-center"><b>Email :</b> chandrakarpiyush36@gmail.com</div>
+        </div>
       </div>
     </div>
     {/* Main Footer */}

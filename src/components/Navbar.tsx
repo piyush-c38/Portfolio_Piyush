@@ -7,9 +7,13 @@ import clsx from "clsx";
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "Services", href: "/services" },
-  { name: "Blog", href: "/blog" }
+  { name: "Blog", href: "/blog" },
+  { name: "Services", href: "/services" }
 ];
+
+const handleConnect = () => {
+  window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
+};
 
 const Navbar = () => {
   const location = useLocation();
@@ -40,12 +44,12 @@ const Navbar = () => {
         <div className="flex gap-3 items-center">
           {/* Desktop book a call */}
           <a
-            href="https://calendly.com/"
-            target="_blank"
+            href="#"
             rel="noopener noreferrer"
+            onClick={handleConnect}
             className="hidden md:flex ml-3 font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
           >
-            Book a Call
+            Connect
             <ExternalLink size={18} />
           </a>
         </div>
