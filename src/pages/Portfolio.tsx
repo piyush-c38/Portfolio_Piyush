@@ -5,6 +5,7 @@ import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import SocialIcons from "@/components/SocialIcons";
 import Timeline from "@/components/Timeline";
 import { Link } from "react-router-dom";
+import Links from "../../public/data/link.js"
 
 const PROFILE = {
   img: "data/dp.png", // Placeholder; replace with your image
@@ -68,7 +69,7 @@ const Portfolio = () => {
               <div className="text-center text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
               <div className="flex justify-center">
                 <Link
-                  to="https://drive.google.com/file/d/1hdIRK0R1IA5SWNT6mGVz5s8Di7IvOZFw/view?usp=sharing"
+                  to={Links.resumeLink}
                   target="_blank"
                   className="text-[14px] sm:text-s font-bold text-white bg-slate-800 px-6 py-2 rounded-full m-1"
                 >

@@ -2,6 +2,7 @@
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
 import { Mail, School } from "lucide-react";
+import Links from "../../public/data/link.js";
 
 const NAVS = [
   { label: "Home", to: "/" },
@@ -46,6 +47,15 @@ const Footer = () => (
             <School size={19} strokeWidth={1.6} className="text-white" />
           </a>
           <div className="content-center"><b>Student Email :</b> piyushc@iitbhilai.ac.in</div>
+        </div>
+        <div className="flex justify-center sm:justify-start">
+          <Link
+            to={Links.resumeLink}
+            target="_blank"
+            className="text-[14px] sm:text-s font-bold text-slate-800 bg-white px-6 py-2 rounded-full m-1"
+          >
+            My Resume: PDFv
+          </Link>
         </div>
       </div>
     </div>

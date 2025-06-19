@@ -1,5 +1,5 @@
 
-import { Mail, Instagram, Linkedin, X, School } from "lucide-react";
+import { Mail, Instagram, Linkedin, X, School, Github } from "lucide-react";
 
 type Props = {
   variant?: "footer" | "sidebar";
@@ -23,6 +23,11 @@ const ICONS = [
     href: "https://www.linkedin.com/in/piyush-chandrakar"
   },
   {
+    icon: Github,
+    label: "GitHub",
+    href: "https://github.com/piyush-c38"
+  },
+  {
     icon: X,
     label: "X",
     href: "https://x.com/piyush_c38"
@@ -31,7 +36,7 @@ const ICONS = [
     icon: Instagram,
     label: "Instagram",
     href: "https://instagram.com/piyush_c38"
-  }
+  },
 ];
 
 const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
