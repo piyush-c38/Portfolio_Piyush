@@ -19,7 +19,7 @@ const JourneySection = () => (
       </div>
     </div>
     <div className="mt-5 sm:mt-7 px-2 sm:px-0"><Timeline /></div>
-    <div className="mt-5 sm:mt-8"><ImageCarousel /></div>
+    {/* <div className="mt-5 sm:mt-8"><ImageCarousel /></div> */}
   </div>
 );
 
