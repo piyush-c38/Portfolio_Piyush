@@ -11,13 +11,15 @@ const NAV_ITEMS = [
   // { name: "Services", href: "/services" },
 ];
 
-const handleConnect = () => {
-  window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
-};
 
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  
+  const handleConnect = () => {
+    window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
+    setOpen(v => !v)
+  };
 
   return (
     <header className="fixed left-0 top-0 w-full z-30 bg-white border-b border-gray-200/50">
@@ -92,13 +94,12 @@ const Navbar = () => {
               ))}
               <li className="pt-3 border-t border-gray-200">
                 <a
-                  href="https://calendly.com/"
-                  target="_blank"
+                  href="#"
                   rel="noopener noreferrer"
-                  className="font-medium border border-black/15 px-5 py-2 rounded-full flex items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
-                  onClick={() => setOpen(false)}
+                  onClick={handleConnect}
+                  className="flex justify-center font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
                 >
-                  Book a Call
+                  Connect
                   <ExternalLink size={18} />
                 </a>
               </li>
