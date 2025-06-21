@@ -1,4 +1,3 @@
-
 import Timeline from "./Timeline";
 import ImageCarousel from "./ImageCarousel";
 

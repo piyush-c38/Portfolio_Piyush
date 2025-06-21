@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import Links from "../../public/data/link.js"
 
 const PROFILE = {
-  img: "data/dp.png", // Placeholder; replace with your image
+  img: "data/dp.png",
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Product Developer",
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],

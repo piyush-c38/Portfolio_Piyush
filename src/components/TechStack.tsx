@@ -1,4 +1,3 @@
-
 import { FaGithub, FaReact, FaNodeJs, FaPython, FaJava } from "react-icons/fa";
 import { SiJavascript, SiNextdotjs } from "react-icons/si";
 import clsx from "clsx";

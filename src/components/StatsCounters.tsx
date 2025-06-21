@@ -1,4 +1,3 @@
-
 const StatsCounters = () => (
   <div className="flex flex-row md:flex-col gap-7 md:gap-10 mt-0 md:mt-6 w-full justify-center md:justify-start">
     <div>

@@ -1,4 +1,3 @@
-
 import { Mail, Instagram, Linkedin, X, School, Github } from "lucide-react";
 
 type Props = {
