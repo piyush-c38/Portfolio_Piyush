@@ -1,4 +1,5 @@
 import { Mail, Instagram, Linkedin, X, School, Github } from "lucide-react";
+import Links from "../../public/data/link.js";
 
 type Props = {
   variant?: "footer" | "sidebar";
@@ -9,32 +10,32 @@ const ICONS = [
   {
     icon: Mail,
     label: "Personal Email",
-    href: "mailto:chandrakarpiyush36@gmail.com"
+    href: `mailto:${Links.personalEmail}`
   },
   {
     icon: School,
     label: "Student Email",
-    href: "mailto:piyushc@iitbhilai.ac.in"
+    href: `mailto:${Links.studentEmail}`
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: "https://www.linkedin.com/in/piyush-chandrakar"
+    href: `${Links.linkedin}`
   },
   {
     icon: Github,
     label: "GitHub",
-    href: "https://github.com/piyush-c38"
+    href: `${Links.github}`
   },
   {
     icon: X,
     label: "X",
-    href: "https://x.com/piyush_c38"
+    href: `${Links.x}`  
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: "https://instagram.com/piyush_c38"
+    href: `${Links.instagram}`
   },
 ];
 

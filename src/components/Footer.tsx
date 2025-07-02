@@ -24,7 +24,7 @@ const Footer = () => (
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-3">
           <a
-            href={"mailto:chandrakarpiyush36@gmail.com"}
+            href={`mailto:${Links.personalEmail}`}
             key={"PersonalEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -33,11 +33,11 @@ const Footer = () => (
           >
             <Mail size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Personal Email:</b> chandrakarpiyush36@gmail.com</div>
+          <div className="content-center"><b>Personal Email:</b> {Links.personalEmail}</div>
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
           <a
-            href={"mailto:piyushc@iitbhilai.ac.in"}
+            href={`mailto:${Links.studentEmail}`}
             key={"StudentEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,7 +46,7 @@ const Footer = () => (
           >
             <School size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Student Email :</b> piyushc@iitbhilai.ac.in</div>
+          <div className="content-center"><b>Student Email :</b> {Links.studentEmail}</div>
         </div>
         <div className="flex justify-center sm:justify-start">
           <Link
