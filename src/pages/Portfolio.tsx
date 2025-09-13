@@ -22,7 +22,7 @@ const ABOUT_ME = (<>
   <p>Hi, I’m Piyush — an experienced developer.</p>
   <p className="mt-4">For me, product planning and the final produced product matter the most. I believe in teamwork and enjoy innovating with like-minded friends.</p>
   <p className="mt-4">
-    Currently, I am working with 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. My previous work at{" "}
+   Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. Prior to that, my work at{" "}
     <a
       href="https://github.com/piyush-c38/TracExpert_T"
       target="_blank"
@@ -31,10 +31,10 @@ const ABOUT_ME = (<>
     >
       IIT Indore
     </a>{" "}
-    gave me valuable experience in app development, delivering successful industry management software.
+    gave me valuable experience in app development, where I delivered robust industry management software.
   </p>
   <p className="mt-4">
-    To be precise, I’m skilled in application development, coding & problem solving, team building, and market & tech trend analysis. In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
+    To be precise, I’m skilled in application development, coding & problem solving, team building, and market analysis. In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
   </p>
   <p className="mt-4">
     <a
