@@ -73,7 +73,7 @@ const Blogs: {
             readTime: "1 min read",
             category: "Technology",
             image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop",
-            featured: true,
+            featured: false,
             slug: "5g-revolution-paving-the-way-for-a-limitless-future"
         },
         {
@@ -136,7 +136,7 @@ const Blogs: {
             readTime: "2 min read",
             category: "Development",
             image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop",
-            featured: false,
+            featured: true,
             slug: "open-source-software-and-community"
         },
         {
