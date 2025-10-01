@@ -13,7 +13,7 @@ const StatsCounters = () => (
         <span className="font-semibold text-[26px] sm:text-[32px] md:text-[36px]">+3</span>
       </div>
       <div className="text-xs sm:text-base font-light text-black/50">
-        Years of Development Experience
+        Years of Dev Experience
       </div>
     </div>
   </div>
