@@ -108,7 +108,7 @@ const Blogs: {
                     <p className="mt-5">Let’s dive into the world of Open Source and discover how it’s shaping the global tech community.</p>
                     <h3 className="mt-5 font-semibold">What is Open Source Software (OSS)?</h3>
                     <p className="mt-5">Open-Source Software (OSS) is like a group project—everyone can see it, change it, and sometimes mess up your whole work! Just kidding. 😆</p>
-                    <p className="mt-5">OSS means the source code is <strong>publicly available</strong> and can be modified by anyone. However, major changes usually require the <strong>author’s approval</strong>.</p>
+                    <p className="mt-5">OSS means the source code is <strong>publicly available</strong> and can be <strong>modified by anyone</strong>. However, major changes usually require the <strong>author’s approval</strong>.</p>
                     <h3 className="mt-5 font-semibold">Common Open Source Licenses</h3>
                     <p className="mt-5">Open-source projects follow specific licenses that define their usage rights. Some of the most popular ones include:</p>
                     <ul className="list-disc list-inside mt-3">
@@ -117,11 +117,10 @@ const Blogs: {
                         <li>GNU GPL – Requires derivative works to remain open-source</li>
                         <li>BSD License – Flexible and business-friendly</li>
                     </ul>
-                    <p className="mt-5">The maintainers or organisations host the projects on platforms like GitHub and GitLab, where developers collaborate, report issues, and discuss improvements through mailing lists, forums, and chat groups.</p>
-                    <ul className="list-disc list-inside mt-3">
-                        <li>This whole ecosystem creates transparency among organisations and users.</li>
-                        <li>The competitive environment sets meritocracy, encouraging participation and attracting new contributors to challenge and win the game!</li>
-                    </ul>
+                    <p className="mt-5">The maintainers or organisations host the projects on platforms like <strong>GitHub</strong> and <strong>GitLab</strong>, where developers collaborate, report issues, and discuss improvements through mailing lists, forums, and chat groups.</p>
+
+                    <p className="mt-5"> This whole ecosystem creates transparency among organisations and users.The competitive environment sets meritocracy, encouraging participation and attracting new contributors to challenge and win the game!</p>
+
                     <h3 className="mt-5 font-semibold">Open Source Impact on Our Daily Lives</h3>
                     <p className="mt-5">Open Source has given rise to mega projects that impact our daily lives. Linux OS, VS Code, Git, TensorFlow, PyTorch, Go, JavaScript – all of these are built by the open-source community. Operating systems, Programming languages, Development tools, AI, and Data science, Open source has impacted the whole software industry giving the advantages of:</p>
                     <ul className="list-disc list-inside mt-3">
@@ -129,8 +128,8 @@ const Blogs: {
                         <li>Security</li>
                         <li>Cost-effectiveness</li>
                     </ul>
-                    <p className="mt-5">&quot;Open Source is like a treasure chest that never runs empty&quot;. It’s a free platform where individuals can showcase their skills, contribute to projects, and even win various community competitions like FOSS Overflow, C4GT and GSoC, ultimately gaining both merit and, yeah, money too! Who doesn’t need that? Maybe for building your ultimate PC setup. 😉</p>
-                    <p className="mt-5">Open Source is the future of software development. It’s open to the world, bringing the ideas together from across the globe. Push your ideas too and start contributing today!</p>
+                    <p className="mt-5"><strong className="italic">&quot;Open Source is like a treasure chest that never runs empty&quot;</strong>. It’s a free platform where individuals can showcase their skills, contribute to projects, and even win various community competitions like <strong>FOSS Overflow</strong>, <strong>C4GT</strong> and <strong>GSoC</strong>, ultimately gaining both merit and, yeah, money too! Who doesn’t need that? Maybe for building your ultimate PC setup. 😉</p>
+                    <p className="mt-5">Open Source is the future of software development. It’s open to the world, bringing the ideas together from across the globe. <strong>Push your ideas too and start contributing today!</strong></p>
                 </>
             ),
             date: "Jan 20, 2025",
@@ -149,29 +148,29 @@ const Blogs: {
                     <p>"Robots," "Automation," "AI" – these terms are no longer confined to science fiction. We're in an era where machines not only assist us, but are becoming integral to our lives. Let us explore the latest trends in robotics and automation, highlight innovations from industry leaders and recent showcases like CES 2025.</p>
 
                     <h2 className="mt-5 font-semibold">Humanoid Robots</h2>
-                    <p>Imagine a world where robots walk among us, performing tasks with human-like perfection. Sounds futuristic, right?</p>
-                    <p>NVIDIA, renowned for its AI advancements, is accelerating humanoid robotics development. They have introduced the Isaac GR00T blueprint, a collection of robot foundation models, data pipelines, and simulation frameworks to encourage next-generation humanoid robot development. This initiative aims to supercharge the creation of general-purpose humanoid robots, making them more adaptable and efficient. [1]</p>
-                    <p>Elon Musk's Tesla is not far behind. At CES 2025 [2], Musk announced plans to produce 500,000 humanoid robots within the next three years, envisioning a future with 20–30 billion robots worldwide. This vision underlines a potential era of unbounded economic growth and automation-driven human life, giving industry leaders the chance to grow more and pushing human skills to higher levels.</p>
+                    <p className="mt-5">Imagine a world where robots walk among us, performing tasks with human-like perfection. Sounds futuristic, right?</p>
+                    <p className="mt-5">NVIDIA, renowned for its AI advancements, is accelerating humanoid robotics development. They have introduced the Isaac GR00T blueprint, a collection of robot foundation models, data pipelines, and simulation frameworks to encourage next-generation humanoid robot development. This initiative aims to supercharge the creation of general-purpose humanoid robots, making them more adaptable and efficient. [1]</p>
+                    <p className="mt-5">Elon Musk's Tesla is not far behind. At CES 2025 [2], Musk announced plans to produce 500,000 humanoid robots within the next three years, envisioning a future with 20–30 billion robots worldwide. This vision underlines a potential era of unbounded economic growth and automation-driven human life, giving industry leaders the chance to grow more and pushing human skills to higher levels.</p>
 
                     <h2 className="mt-5 font-semibold">Innovations at CES 2025</h2>
-                    <p>The Consumer Electronics Show (CES) 2025 was a playground for the latest in robotics and automation.</p>
+                    <p className="mt-5">The Consumer Electronics Show (CES) 2025 was a playground for the latest in robotics and automation.</p>
 
                     <h3 className="mt-3 font-medium">NVIDIA's Cosmos AI</h3>
-                    <p>NVIDIA unveiled Cosmos, a family of AI models designed to help humanoid robots and self-driving cars navigate the world. Trained on extensive human activity footage, Cosmos powers robots to better understand and interact with their environment, enhancing their functionality in real-world scenarios.</p>
+                    <p className="mt-3">NVIDIA unveiled Cosmos, a family of AI models designed to help humanoid robots and self-driving cars navigate the world. Trained on extensive human activity footage, Cosmos powers robots to better understand and interact with their environment, enhancing their functionality in real-world scenarios.</p>
 
                     <h3 className="mt-3 font-medium">Unitree Robotics</h3>
-                    <p>Unitree Robotics became a key highlight of the show with their advanced humanoid robots. Their booth was a hotspot, attracting audiences to witness the future of robotics. These robots showcased impressive mobility and adaptability, aiming at a future where such machines become part of daily life. [3]</p>
+                    <p className="mt-3">Unitree Robotics became a key highlight of the show with their advanced humanoid robots. Their booth was a hotspot, attracting audiences to witness the future of robotics. These robots showcased impressive mobility and adaptability, aiming at a future where such machines become part of daily life. [3]</p>
 
                     <h2 className="mt-5 font-semibold">The Future</h2>
-                    <p>Advancements in robotics and automation are not just about creating machines but also about redefining our interaction and adaptability with technology. As these innovations continue to evolve, they promise to bring unpredictable changes to industries and daily life. A key driver of this progress is the development of the semiconductor industry and the growth of GPUs enabling human–machine adaptation.</p>
-                    <p>The era of robotics and automation is upon us. Whether you're a tech enthusiast or a casual observer, now is the time to engage, learn, and even contribute to this exciting field. Grab the skills, and adapt to the future — otherwise the machines will adapt your life!</p>
+                    <p className="mt-3">Advancements in robotics and automation are not just about creating machines but also about redefining our interaction and adaptability with technology. As these innovations continue to evolve, they promise to bring unpredictable changes to industries and daily life. A key driver of this progress is the development of the semiconductor industry and the growth of GPUs enabling human–machine adaptation.</p>
+                    <p className="mt-5">The era of robotics and automation is upon us. Whether you're a tech enthusiast or a casual observer, now is the time to engage, learn, and even contribute to this exciting field. Grab the skills, and adapt to the future — otherwise the machines will adapt your life!</p>
 
-                    <h3 className="mt-5 font-medium">References</h3>
-                    <ul className="list-disc ml-5">
-                        <li>[1] NVIDIA Announces Isaac GR00T Blueprint to Accelerate Humanoid Robotics Development. NVIDIA Blog</li>
-                        <li>[2] Elon Musk’s Vision: 30 Billion Robots and a New Economic Dawn. Wall Street Pit</li>
-                        <li>[3] CES 2025 recap: Noteworthy robots at this year’s show. The Robot Report</li>
-                    </ul>
+                    <h3 className="mt-10 font-medium">References</h3>
+                    <ol className="list-disc ml-5">
+                        <li className="mt-3">NVIDIA Announces Isaac GR00T Blueprint to Accelerate Humanoid Robotics Development. NVIDIA Blog</li>
+                        <li>Elon Musk’s Vision: 30 Billion Robots and a New Economic Dawn. Wall Street Pit</li>
+                        <li>CES 2025 recap: Noteworthy robots at this year’s show. The Robot Report</li>
+                    </ol>
                 </>
             ),
             date: "Feb 9, 2025",
@@ -188,12 +187,12 @@ const Blogs: {
             content: (
                 <>
                     <p>With the rising global demand for clean energy, India stands at the forefront of this transition, and solar power is leading the charge.</p>
-                    <p>Elon Musk once famously said that just a small area of solar panels in Nevada could power the entire United States. In India, Shri Prime Minister Modi has emphasized how solar energy can generate passive income for families, making it an attractive investment. But how can the average Indian home or entrepreneur tap into this massive opportunity? Let&apos;s dive deep into it.</p>
-                    <p>India is a solar powerhouse. Being a tropical country, it receives more sunlight than most nations, from the Northeast to the deserts of Rajasthan. Yet, only 1% of Indian urban homes have installed solar panels. India has around 10 crore independent urban homes, but only 10 lakh have adopted solar energy. That’s 99% untapped potential! [1]</p>
-                    <p>In fact, installing solar in India is far more beneficial than in Germany, where one in every eight homes already uses it—despite receiving far less sunlight than India.</p>
+                    <p className="mt-5">Elon Musk once famously said that just a small area of solar panels in Nevada could power the entire United States. In India, Shri Prime Minister Modi has emphasized how solar energy can generate passive income for families, making it an attractive investment. But how can the average Indian home or entrepreneur tap into this massive opportunity? Let&apos;s dive deep into it.</p>
+                    <p className="mt-5">India is a solar powerhouse. Being a tropical country, it receives more sunlight than most nations, from the Northeast to the deserts of Rajasthan. Yet, only 1% of Indian urban homes have installed solar panels. India has around 10 crore independent urban homes, but only 10 lakh have adopted solar energy. That’s 99% untapped potential! [1]</p>
+                    <p className="mt-5">In fact, installing solar in India is far more beneficial than in Germany, where one in every eight homes already uses it—despite receiving far less sunlight than India.</p>
 
                     <h2 className="mt-5 font-semibold">The Business Opportunity</h2>
-                    <p>The world wants to reduce its dependence on China for solar panels, creating a big opportunity for Indian manufacturers to reduce the cost gap and dominate the market. The Indian government is actively subsidising rooftop solar, making it cheaper and encouraging homeowners to invest. Families can now get up to ₹78,000 in direct subsidies under the PM Surya Ghar Muft Bijli Yojana. [2]</p>
+                    <p className="mt-5">The world wants to reduce its dependence on China for solar panels, creating a big opportunity for Indian manufacturers to reduce the cost gap and dominate the market. The Indian government is actively subsidising rooftop solar, making it cheaper and encouraging homeowners to invest. Families can now get up to ₹78,000 in direct subsidies under the PM Surya Ghar Muft Bijli Yojana. [2]</p>
                     <ul className="list-disc ml-5 mt-3">
                         <li>Institutions and companies can break even within 3 to 5 years, after which they enjoy free electricity for over two decades.</li>
                         <li>A solar panel system covers its own cost in 3 to 5 years and after that, homeowners can enjoy 22+ years of free electricity! [1]</li>
@@ -202,9 +201,9 @@ const Blogs: {
                     <p className="mt-3">With EV adoption increasing, extreme heat waves, and a rising economy, India’s electricity demand is set to skyrocket. More homes will need ACs, EV chargers, and high-power appliances—making solar a necessity, not a luxury.</p>
 
                     <h2 className="mt-5 font-semibold">The Solar Grid: Decentralizing India’s Power Supply</h2>
-                    <p>India&apos;s power grid was built over 50 years ago, at a time when electricity consumption was much lower. Over the decades, as India&apos;s population, industries, and technology have expanded, so has the demand for electricity. But the grid infrastructure hasn’t developed with the same speed.</p>
-                    <p>When people install rooftop solar panels, they generate electricity right where it&apos;s needed, reducing dependence on centralised power plants. This leads to the concept of decentralised energy production, favoured by Net Metering.</p>
-                    <p><strong>With Net Metering, homeowners don’t just consume electricity; they also generate and supply it back to the grid:</strong></p>
+                    <p className="mt-5">India&apos;s power grid was built over 50 years ago, at a time when electricity consumption was much lower. Over the decades, as India&apos;s population, industries, and technology have expanded, so has the demand for electricity. But the grid infrastructure hasn’t developed with the same speed.</p>
+                    <p className="mt-5">When people install rooftop solar panels, they generate electricity right where it&apos;s needed, reducing dependence on centralised power plants. This leads to the concept of decentralised energy production, favoured by Net Metering.</p>
+                    <p className="mt-5"><strong>With Net Metering, homeowners don’t just consume electricity; they also generate and supply it back to the grid:</strong></p>
                     <ul className="list-disc ml-5 mt-3">
                         <li><strong>During the Day:</strong> Solar panels generate electricity. Some powers the home instantly, while extra energy is sent to the grid.</li>
                         <li><strong>At Night:</strong> Homes pull electricity back from the grid to power appliances.</li>
@@ -221,11 +220,11 @@ const Blogs: {
                     <p className="mt-3">The solar revolution is happening right now. Whether you’re a homeowner looking for savings, or an entrepreneur seeking a new venture, solar energy is a great opportunity for building a business.</p>
 
                     <h3 className="mt-5 font-medium">References</h3>
-                    <ul className="list-disc ml-5">
-                        <li>[1] YouTube: <a href="https://youtu.be/gPO3mRmSzH0?si=1lafvcVnJv95VSvA" target="_blank">https://youtu.be/gPO3mRmSzH0?si=1lafvcVnJv95VSvA</a></li>
-                        <li>[2] PM Surya Ghar Muft Bijli Yojana: <a href="https://www.pmsuryaghar.gov.in/" target="_blank">https://www.pmsuryaghar.gov.in/</a></li>
-                        <li>[3] CES 2025: Solar Panel Advancements & Market Trends</li>
-                    </ul>
+                    <ol className="list-none ml-5">
+                        <li className="mt-3">YouTube: <a href="https://youtu.be/gPO3mRmSzH0?si=1lafvcVnJv95VSvA" target="_blank">https://youtu.be/gPO3mRmSzH0?si=1lafvcVnJv95VSvA</a></li>
+                        <li>PM Surya Ghar Muft Bijli Yojana: <a href="https://www.pmsuryaghar.gov.in/" target="_blank">https://www.pmsuryaghar.gov.in/</a></li>
+                        <li>CES 2025: Solar Panel Advancements & Market Trends</li>
+                    </ol>
                 </>
             ),
             date: "Feb 21, 2025",

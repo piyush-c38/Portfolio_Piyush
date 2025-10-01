@@ -101,3 +101,12 @@
     @apply bg-background text-foreground;
   }
 }
+
+.prose ul {
+  list-style-type: disc !important;
+  padding-left: 1.25rem !important; /* same as pl-5 */
+}
+.prose ol {
+  list-style-type: decimal !important;
+  padding-left: 1.25rem !important;
+}
