@@ -2,12 +2,21 @@ import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
   {
+    label: "Self project: Crypto Exchange Latency Topology Visualizer",
+    date: "Jun 2025 – Jul 2025",
+    role: "",
+    desc: "Visualized real-time latency for 20+ exchanges and 10+ cloud regions, rendering 50+ network connections in 3D. Achieved <5sec live updates with 99.9% uptime, 10,000+ data points, and CSV/JSON/image export via Chart.js.",
+    color: "bg-[#0f172a]",
+    projectLink: "https://github.com/piyush-c38/latency_vis",
+    demolink:"https://latency-vis-rose.vercel.app/",
+  },
+  {
     label: "506 Army Base Workshop",
     date: "May 2025 - Jun 2025",
     role: "Edge-AI Systems Intern",
     desc: "Designed and Implemented the Productivity tracking system using real-time OSnet person tracking and IoT product counting.",
     color: "bg-[#0f172a]",
-    projectLink:"",
+    projectLink: "",
   },
   {
     label: "EE Department IIT Bhilai",
@@ -15,31 +24,31 @@ const TIMELINE = [
     role: "Research Student",
     desc: "Developed gunshot detection and direction estimation device using VGGish embeddings and Random Forest, integrated with MEMS array on Jetson Nano.",
     color: "bg-[#334155]",
-    projectLink:"https://github.com/piyush-c38/Gunshot_Direction_Estimation",
+    projectLink: "https://github.com/piyush-c38/Gunshot_Direction_Estimation",
   },
   {
-    label: "Self-Project",
+    label: "Self-Project: Crack Segmentation using UNet",
     date: "Feb 2025 – March 2025",
-    role: "Computer Vision",
+    role: "",
     desc: "Developed a deep learning pipeline with PSPNet for concrete crack segmentation, achieving 84.85% recall and custom loss design.",
     color: "bg-[#64748b]",
-    projectLink:"https://github.com/piyush-c38/Crack_Detection_CV",
+    projectLink: "https://github.com/piyush-c38/Crack_Detection_CV",
   },
   {
     label: "IIT Indore",
     date: "May 2024 - Oct 2024",
-    role: "Mobile App Developer",
+    role: "Mobile App Developer Intern",
     desc: "Developed cross-platform inventory app for TracExpert, using React-Native, Docker, CI/CD, Bitbucket, and JWT security.",
     color: "bg-[#94a3b8]",
-    projectLink:"https://github.com/piyush-c38/TracExpert_T"
+    projectLink: "https://github.com/piyush-c38/TracExpert_T"
   },
   {
     label: "IBITF IIT Bhilai",
     date: "Jan 2024 - April 2024",
-    role: "Web Developer",
+    role: "Web Developer (Part-Time)",
     desc: "Developed a Web-IoT cashless payment solution with React and Node.js, serving 1,200+ institute users for daily transactions.",
     color: "bg-[#cbd5e1]",
-    projectLink:"https://github.com/piyush-c38/Multifunctional_ID_Card",
+    projectLink: "https://github.com/piyush-c38/Multifunctional_ID_Card",
   },
 ];
 const Timeline = () => (
@@ -67,6 +76,12 @@ const Timeline = () => (
               className="text-[12px] sm:text-[15px] flex items-center text-gray-600 hover:text-gray-900 transition-colors"
             >
               View Project <ExternalLink size={14} className="ml-1" />
+            </a>}
+            {item.demolink && <a
+              href={item.demolink}
+              className="text-[12px] sm:text-[15px] flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+            >
+              Live Demo <ExternalLink size={14} className="ml-1" />
             </a>}
           </div>
         </div>

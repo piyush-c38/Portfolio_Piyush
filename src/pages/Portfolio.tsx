@@ -104,7 +104,7 @@ const Portfolio = () => {
             </div>
             {/* Experience Timeline */}
             <div>
-              <h2 className="text-2xl font-semibold mb-3">My Work Experience</h2>
+              <h2 className="text-2xl font-semibold mb-3">My Works</h2>
               <Timeline />
             </div>
           </section>
