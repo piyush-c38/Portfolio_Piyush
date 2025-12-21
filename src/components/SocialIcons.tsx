@@ -47,7 +47,7 @@ const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
         key={label}
         target="_blank"
         rel="noopener noreferrer"
-        className="group w-9 h-9 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
+        className="group w-9 h-9 rounded-full flex items-center justify-center bg-slate-800  hover:bg-slate-600  active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
         aria-label={label}
       >
         <Icon size={19} strokeWidth={1.6} className="text-white" />

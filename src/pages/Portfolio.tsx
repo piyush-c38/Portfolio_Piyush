@@ -14,15 +14,15 @@ const PROFILE = {
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
-const handleReachOut = ()=>{
-  window.scrollTo({top:document.body.scrollHeight, left:0, behavior:"smooth"});
+const handleReachOut = () => {
+  window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
 }
 
 const ABOUT_ME = (<>
   <p>Hi, I’m Piyush — an experienced developer.</p>
   <p className="mt-4">For me, product planning and the final produced product matter the most. I believe in teamwork and enjoy innovating with like-minded friends.</p>
   <p className="mt-4">
-   Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. Prior to that, my work at{" "}
+    Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. Prior to that, my work at{" "}
     <a
       href="https://github.com/piyush-c38/TracExpert_T"
       target="_blank"
@@ -42,7 +42,7 @@ const ABOUT_ME = (<>
       onClick={handleReachOut}
       className="text-blue-600 underline hover:text-blue-800"
     >
-      Reach out 
+      Reach out
     </a>{" "}
     if you have any interesting ideas to collaborate on!</p>
 </>);
@@ -76,6 +76,9 @@ const Portfolio = () => {
                   My Resume: PDFv
                 </Link>
               </div>
+              <div className="w-full flex justify-center md:justify-start mt-4">
+                <SocialIcons />
+              </div>
               <h2 className="text-lg font-semibold mt-8 mb-2">Tools & Technologies</h2>
               <div className="flex flex-wrap">
                 {PROFILE.techKeyWords.map((tech, idx) => (
@@ -87,9 +90,6 @@ const Portfolio = () => {
                   </span>
                 ))}
               </div>
-            </div>
-            <div className="w-full flex justify-center md:justify-start mt-2">
-              <SocialIcons />
             </div>
           </aside>
 
