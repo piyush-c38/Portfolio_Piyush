@@ -8,7 +8,7 @@ const TIMELINE = [
     desc: "Visualized real-time latency for 20+ exchanges and 10+ cloud regions, rendering 50+ network connections in 3D. Achieved <5sec live updates with 99.9% uptime, 10,000+ data points, and CSV/JSON/image export via Chart.js.",
     color: "bg-[#0f172a]",
     projectLink: "https://github.com/piyush-c38/latency_vis",
-    demolink:"https://latency-vis-rose.vercel.app/",
+    demolink: "https://latency-vis-rose.vercel.app/",
   },
   {
     label: "506 Army Base Workshop",
@@ -68,7 +68,7 @@ const Timeline = () => (
           <div>
             <h3 className="text-[15px] sm:text-lg font-medium font-inter mb-0.5">{item.label}</h3>
             <div className="text-[11px] sm:text-xs text-gray-400 mb-1 font-inter">
-              {item.date} — <span className="text-black/50">{item.role}</span>
+              {item.date} {item.role && <span className="text-black/50">—{item.role}</span>}
             </div>
             <div className="text-[12px] sm:text-[15px] text-black/65 font-light max-w-xs sm:max-w-lg">{item.desc}</div>
             {item.projectLink && <a
