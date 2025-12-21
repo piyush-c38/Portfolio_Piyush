@@ -4,7 +4,7 @@ const TIMELINE = [
   {
     label: "506 Army Base Workshop",
     date: "May 2025 - Jun 2025",
-    role: "Full-Stack Product Developer",
+    role: "Edge-AI Systems Intern",
     desc: "Designed and Implemented the Productivity tracking system using real-time OSnet person tracking and IoT product counting.",
     color: "bg-[#0f172a]",
     projectLink:"",
