@@ -1,6 +1,14 @@
 import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
+   {
+    label: "Self Project: Mineral Network Analysis in Indian Context",
+    date: "Jan 2026 – Apr 2026",
+    role: "",
+    desc: "Built weighted bipartite and tripartite networks analysing 600+ state-mineral relationships across India. Performed core-periphery, centrality, and temporal analysis to identify mineral distribution and resource concentration patterns.",
+    color: "bg-[#0f172a]",
+    projectLink: "https://github.com/piyush-c38/MineralNetwork_NS/tree/main",
+  },
   {
     label: "Self project: Crypto Exchange Latency Topology Visualizer",
     date: "Jun 2025 – Jul 2025",
