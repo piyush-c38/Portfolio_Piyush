@@ -19,10 +19,14 @@ const handleReachOut = () => {
 }
 
 const ABOUT_ME = (<>
-  <p>Hi, I’m Piyush — an experienced developer.</p>
-  <p className="mt-4">For me, product planning and the final produced product matter the most. I believe in teamwork and enjoy innovating with like-minded friends.</p>
+  <p>Hi, I’m Piyush — a Software Engineer who enjoys building products that solve real-world problems.</p>
+
   <p className="mt-4">
-    Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system, focusing on industrial automation. Prior to that, my work at{" "}
+    For me, understanding the problem, planning the product, and delivering a meaningful user experience matter the most. I enjoy working with like-minded people and turning ideas into practical solutions.
+  </p>
+
+  <p className="mt-4">
+    Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system focused on industrial automation. Prior to that, my work at{" "}
     <a
       href="https://github.com/piyush-c38/TracExpert_T"
       target="_blank"
@@ -31,11 +35,17 @@ const ABOUT_ME = (<>
     >
       IIT Indore
     </a>{" "}
-    gave me valuable experience in app development, where I delivered robust industry management software.
+    gave me valuable experience in mobile application development and industry management software. More recently, I’ve been building AI-powered developer tools such as GitInsight, which helps developers understand unfamiliar codebases using AST parsing, embeddings, RAG, and LLMs.
   </p>
+
   <p className="mt-4">
-    To be precise, I’m skilled in application development, coding & problem solving, team building, and market analysis. In addition to my professional pursuits, I enjoy jamming to music, playing badminton, and spending quality time with my family and friends.
+    My experience spans full-stack development, AI applications, IoT systems, and product development. I’m skilled in Java, Python, React, Node.js, MySQL, MongoDB, and Docker, and enjoy building reliable, scalable, and user-centric products.
   </p>
+
+  <p className="mt-4">
+    Outside of work, you’ll probably find me jamming with my instruments, playing badminton, or spending time with family and friends.
+  </p>
+
   <p className="mt-4">
     <a
       href="#"
@@ -44,7 +54,8 @@ const ABOUT_ME = (<>
     >
       Reach out
     </a>{" "}
-    if you have any interesting ideas to collaborate on!</p>
+    if you have an interesting idea to build or collaborate on!
+  </p>
 </>);
 
 const Portfolio = () => {
