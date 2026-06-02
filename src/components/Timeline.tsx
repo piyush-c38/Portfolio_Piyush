@@ -1,7 +1,16 @@
 import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
-   {
+  {
+    label: "Self Project: GitInsight",
+    date: "May 2026 – Jun 2026",
+    role: "",
+    desc: "GitInsight is an AI-powered GitHub repository analysis platform that performs code-aware parsing, generates architecture and onboarding documentation, and enables repository-specific Q&A using a RAG pipeline with embeddings and LLMs.",
+    color: "bg-[#0f172a]",
+    projectLink: "https://github.com/piyush-c38/git-insight",
+    demolink: "https://git-insight-one.vercel.app/",
+  },
+  {
     label: "Self Project: Mineral Network Analysis in Indian Context",
     date: "Jan 2026 – Apr 2026",
     role: "",

@@ -78,7 +78,7 @@ const Footer = () => (
         <div className="mb-1">
           <SocialIcons variant="footer" />
         </div>
-        <span className="text-xs text-gray-400 mt-2 text-center">&copy; Piyush Chandrakar 2025. All rights reserved.</span>
+        <span className="text-xs text-gray-400 mt-2 text-center">&copy; Piyush Chandrakar 2026. All rights reserved.</span>
       </div>
     </div>
   </footer>

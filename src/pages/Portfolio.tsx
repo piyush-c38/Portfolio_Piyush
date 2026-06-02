@@ -11,7 +11,7 @@ const PROFILE = {
   img: "data/dp.png",
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Product Developer",
-  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
+  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "Typescript", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
 const handleReachOut = () => {
