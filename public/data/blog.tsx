@@ -234,6 +234,529 @@ const Blogs: {
             featured: false,
             slug: "the-solar-panel-business-a-bright-opportunity-in-india"
         },
+    {
+id: "8",
+title: "Building GitInsight: Making GitHub Repositories Explain Themselves",
+excerpt:
+"How we built GitInsight, an AI-powered repository analysis platform that helps developers understand unfamiliar GitHub repositories using AST parsing, RAG, embeddings, and LLMs.",
+image: "/images/blogs/gitinsight-cover.jpg",
+category: "Software Engineering",
+date: "June 2026",
+readTime: "10 min read",
+slug: "building-gitinsight",
+content: (
+<> <p>Every developer has experienced this.</p>
+
+  <p className="mt-5">
+    You discover an interesting open-source project, clone the repository,
+    open it in your editor, and immediately find yourself staring at dozens
+    of folders, hundreds of files, and absolutely no idea where to begin.
+  </p>
+
+  <p className="mt-5">
+    You start opening random files.
+  </p>
+
+  <p className="mt-5">
+    Then another file.
+  </p>
+
+  <p className="mt-5">
+    Then another.
+  </p>
+
+  <p className="mt-5">
+    Thirty minutes later, you're still trying to answer a simple question:
+  </p>
+
+  <p className="mt-5 font-medium">
+    "How does this project actually work?"
+  </p>
+
+  <p className="mt-5">
+    That frustration became the starting point for GitInsight.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    The Problem
+  </h2>
+
+  <p className="mt-5">
+    Most repositories are built for machines to run and developers to
+    maintain. They are rarely built for newcomers trying to understand them.
+  </p>
+
+  <p className="mt-5">
+    Even with a good README, understanding a project usually means exploring
+    the file structure manually, tracing dependencies, figuring out
+    important entry points, understanding how different modules interact,
+    and reading code before knowing what you're actually looking for.
+  </p>
+
+  <p className="mt-5">
+    Large Language Models can help explain code, but they don't
+    automatically understand an entire repository.
+  </p>
+
+  <p className="mt-5">
+    We wanted a tool that could take any public GitHub repository and answer
+    questions like:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Where should I start?</li>
+    <li>What technologies does this project use?</li>
+    <li>What are the important files?</li>
+    <li>How are different modules connected?</li>
+    <li>What dependencies does this project rely on?</li>
+    <li>What does this codebase actually do?</li>
+  </ul>
+
+  <p className="mt-5">
+    In short, we wanted the repository to explain itself.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    The First Approach
+  </h2>
+
+  <p className="mt-5">
+    Our initial idea sounded simple.
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Download a repository.</li>
+    <li>Feed it to an LLM.</li>
+    <li>Ask questions.</li>
+  </ul>
+
+  <p className="mt-5">
+    Unfortunately, reality disagreed.
+  </p>
+
+  <p className="mt-5">
+    Repositories are often too large to fit into a model's context window.
+    Even when they do fit, sending thousands of lines of code directly to an
+    LLM is expensive, slow, and often produces vague answers.
+  </p>
+
+  <p className="mt-5">
+    We quickly realized that before asking an AI to explain a project, we
+    first needed to understand the project ourselves.
+  </p>
+
+  <p className="mt-5">
+    That's where the real engineering work began.
+  </p>
+  <h2 className="mt-10 text-2xl font-medium">
+    Understanding the Repository
+  </h2>
+
+  <p className="mt-5">
+    The first challenge was repository ingestion.
+  </p>
+
+  <p className="mt-5">
+    Initially, we relied on traditional Git cloning. It worked perfectly on
+    local machines.
+  </p>
+
+  <p className="mt-5">
+    Then deployment happened.
+  </p>
+
+  <p className="mt-5">
+    Our hosting environment didn't include Git by default, which resulted in
+    one of those classic production errors that looks obvious only after
+    you've spent hours debugging it.
+  </p>
+
+  <p className="mt-5">
+    Instead of cloning repositories, we switched to downloading GitHub
+    repository archives directly and extracting them locally.
+  </p>
+
+  <p className="mt-5">
+    The end result was actually faster, simpler, and more deployment
+    friendly.
+  </p>
+
+  <p className="mt-5">
+    Once we had the repository, we needed to understand it.
+  </p>
+
+  <p className="mt-5">
+    We built a repository analysis pipeline that:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Scans project files</li>
+    <li>Detects technology stacks</li>
+    <li>Extracts dependencies</li>
+    <li>Identifies important files</li>
+    <li>Generates onboarding information</li>
+    <li>Builds repository knowledge for AI retrieval</li>
+  </ul>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Why We Chose AST Parsing
+  </h2>
+
+  <p className="mt-5">
+    One thing became clear very quickly.
+  </p>
+
+  <p className="mt-5">
+    File names alone don't tell the whole story.
+  </p>
+
+  <p className="mt-5">
+    A file called <code>utils.ts</code> could contain anything from a helper
+    function to half the application's business logic.
+  </p>
+
+  <p className="mt-5">
+    We needed a deeper understanding of the code.
+  </p>
+
+  <p className="mt-5">
+    To solve this, GitInsight uses AST (Abstract Syntax Tree) parsing
+    through Tree-sitter and TypeScript/Babel parsing tools.
+  </p>
+
+  <p className="mt-5">
+    Instead of treating source code as plain text, we analyze its structure.
+  </p>
+
+  <p className="mt-5">
+    This allows us to identify:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Functions</li>
+    <li>Classes</li>
+    <li>Imports</li>
+    <li>Exports</li>
+    <li>Relationships between files</li>
+  </ul>
+
+  <p className="mt-5">
+    This structured understanding became the foundation for generating
+    meaningful repository insights.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Building Repository Chat
+  </h2>
+
+  <p className="mt-5">
+    The repository chat feature was one of the most exciting parts of the
+    project.
+  </p>
+
+  <p className="mt-5">
+    The idea was simple:
+  </p>
+
+  <p className="mt-5 font-medium">
+    What if you could ask questions about a repository the same way you ask
+    questions to ChatGPT?
+  </p>
+
+  <p className="mt-5">
+    Questions like:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Where is authentication implemented?</li>
+    <li>What database does this project use?</li>
+    <li>How do I start contributing?</li>
+    <li>What is the main entry point?</li>
+  </ul>
+
+  <p className="mt-5">
+    To make this work, we built a Retrieval-Augmented Generation (RAG)
+    pipeline.
+  </p>
+
+  <p className="mt-5">
+    The process looks like this:
+  </p>
+
+  <ol className="mt-5 list-decimal pl-6">
+    <li>Split repository code into meaningful chunks.</li>
+    <li>Generate embeddings.</li>
+    <li>Store them in a local vector database.</li>
+    <li>Retrieve relevant code when a user asks a question.</li>
+    <li>Send only relevant context to the LLM.</li>
+  </ol>
+
+  <p className="mt-5">
+    This dramatically improved response quality while keeping the system
+    efficient.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Problems We Didn't Expect
+  </h2>
+
+  <p className="mt-5">
+    Like every project, GitInsight looked much easier on the whiteboard.
+  </p>
+
+  <p className="mt-5">
+    One of our biggest challenges was deployment.
+  </p>
+
+  <p className="mt-5">
+    Originally, we used a remote ChromaDB instance for vector storage.
+  </p>
+
+  <p className="mt-5">
+    It worked locally.
+  </p>
+
+  <p className="mt-5">
+    It worked occasionally in production.
+  </p>
+
+  <p className="mt-5">
+    And then it didn't.
+  </p>
+
+  <p className="mt-5">
+    Rate limits, connection issues, memory constraints, and deployment
+    complexity turned a simple feature into a surprisingly large maintenance
+    burden.
+  </p>
+
+  <p className="mt-5">
+    Eventually, we made a practical decision.
+  </p>
+
+  <p className="mt-5">
+    We replaced the external dependency with a lightweight local persistent
+    vector store.
+  </p>
+
+  <p className="mt-5">
+    The result?
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Simpler deployment</li>
+    <li>Faster responses</li>
+    <li>Fewer moving parts</li>
+    <li>Better reliability</li>
+  </ul>
+
+  <p className="mt-5">
+    Another challenge came from embeddings.
+  </p>
+
+  <p className="mt-5">
+    Early versions of the system took more than a minute to process
+    repositories because embeddings were being generated inefficiently.
+  </p>
+
+  <p className="mt-5">
+    After profiling the pipeline, introducing batching, optimizing workers,
+    and reducing unnecessary overhead, analysis times improved
+    dramatically.
+  </p>
+
+  <p className="mt-5">
+    Nothing teaches performance engineering quite like watching a request
+    sit for ninety seconds.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    The Features That Made It Into GitInsight
+  </h2>
+
+  <p className="mt-5">
+    After multiple iterations, GitInsight now provides:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Repository analysis from any public GitHub URL</li>
+    <li>Technology stack detection</li>
+    <li>Dependency extraction</li>
+    <li>Repository onboarding guidance</li>
+    <li>Repository-specific AI chat</li>
+    <li>File explorer</li>
+    <li>Code-aware retrieval using RAG</li>
+    <li>Dependency visualization</li>
+    <li>Repository knowledge generation</li>
+  </ul>
+
+  <p className="mt-5">
+    One feature we are still improving is architecture generation. It works
+    in some cases but is not yet accurate enough to be considered complete.
+  </p>
+  <h2 className="mt-10 text-2xl font-medium">
+    What We Learned
+  </h2>
+
+  <p className="mt-5">
+    Building GitInsight taught us something interesting.
+  </p>
+
+  <p className="mt-5">
+    The difficult part wasn't calling an LLM.
+  </p>
+
+  <p className="mt-5">
+    The difficult part was creating enough structure around the repository
+    so the LLM could give useful answers.
+  </p>
+
+  <p className="mt-5">
+    Most of the work went into:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Understanding repositories</li>
+    <li>Building retrieval pipelines</li>
+    <li>Handling deployment constraints</li>
+    <li>Improving performance</li>
+    <li>Making results reliable</li>
+  </ul>
+
+  <p className="mt-5">
+    The AI was only one piece of the system.
+  </p>
+
+  <p className="mt-5">
+    The engineering around it mattered just as much.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    The Final Result
+  </h2>
+
+  <p className="mt-5">
+    Today, GitInsight can take a public GitHub repository and help
+    developers understand it significantly faster than manually exploring
+    files.
+  </p>
+
+  <p className="mt-5">
+    Whether you're evaluating an open-source project, onboarding onto a new
+    codebase, or trying to understand how someone built something
+    interesting, GitInsight provides a practical starting point.
+  </p>
+
+  <p className="mt-5">
+    Instead of spending hours opening random files and tracing imports, you
+    can get onboarding guidance, explore important files, understand project
+    dependencies, and ask repository-specific questions within minutes.
+  </p>
+
+  <p className="mt-5">
+    And if you've ever spent an hour searching through folders wondering
+    where the application actually starts, that's exactly the problem we
+    built GitInsight to solve.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Try It Out
+  </h2>
+
+  <p className="mt-5">
+    Curious to see GitInsight in action?
+  </p>
+
+  <p className="mt-5">
+    Simply visit the hosted application and paste any public GitHub
+    repository URL.
+  </p>
+
+  <p className="mt-5">
+    GitInsight will automatically analyze the repository and generate:
+  </p>
+
+  <ul className="mt-5 list-disc pl-6">
+    <li>Technology stack insights</li>
+    <li>Dependency information</li>
+    <li>Repository onboarding guidance</li>
+    <li>Repository-specific AI chat</li>
+    <li>File exploration</li>
+  </ul>
+
+  <p className="mt-5">
+    Whether it's a small side project or a large open-source repository,
+    GitInsight helps you understand the codebase faster.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Want to Contribute?
+  </h2>
+
+  <p className="mt-5">
+    GitInsight is still evolving, and contributions are always welcome.
+  </p>
+
+  <p className="mt-5">
+    If you find a bug, have an idea for a feature, or want to improve
+    repository understanding, feel free to open an issue or submit a pull
+    request.
+  </p>
+
+  <p className="mt-5">
+    To get started locally:
+  </p>
+
+  <pre className="bg-gray-100 p-4 rounded-lg mt-5 overflow-x-auto">
+
+{`git clone https://github.com/piyush-c38/git-insight.git
+cd git-insight
+npm install
+npm run dev`} </pre>
+
+  <p className="mt-5">
+    Configure the required environment variables and you're ready to start
+    experimenting.
+  </p>
+
+  <h2 className="mt-10 text-2xl font-medium">
+    Closing Thoughts
+  </h2>
+
+  <p className="mt-5">
+    Building GitInsight started with a simple frustration: understanding a
+    new repository takes too much time.
+  </p>
+
+  <p className="mt-5">
+    Along the way, we learned that repository intelligence is much more
+    than connecting an LLM to source code. It requires understanding code
+    structure, building retrieval systems, solving deployment challenges,
+    and continuously improving performance.
+  </p>
+
+  <p className="mt-5">
+    The journey involved failed deployments, memory issues, slow embedding
+    pipelines, and several design pivots. But each challenge helped shape a
+    better product.
+  </p>
+
+  <p className="mt-5">
+    GitInsight isn't just about explaining repositories. It's about helping
+    developers spend less time figuring out where to start and more time
+    building.
+  </p>
+
+  <p className="mt-5">
+    And honestly, if GitInsight saves someone from opening twenty random
+    files before finding the right one, we'll consider that a success.
+  </p>
+</>
+),
+featured: true,
+image:
+"https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200&h=700&fit=crop",
+}
     ];
 
 export default Blogs;
