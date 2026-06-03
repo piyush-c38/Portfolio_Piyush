@@ -230,7 +230,7 @@ const Blogs: {
       date: "Feb 21, 2025",
       readTime: "6 min read",
       category: "Technology",
-      image: "https://cdn.dribbble.com/userupload/44284165/file/ea2cb389f593098031f9358bd341f7bf.jpg?resize=752x&vertical=center",
+      image: "https://cdn.dribbble.com/userupload/31776403/file/original-e7ac52edc3fc852b36c0d5aece82174d.jpg?resize=752x&vertical=center",
       featured: false,
       slug: "the-solar-panel-business-a-bright-opportunity-in-india"
     },
