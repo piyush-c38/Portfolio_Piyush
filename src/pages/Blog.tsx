@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import Blogs from "../../public/data/blog.tsx"
 
 const Blog = () => {
-  const categories = ["All", "Development", "Technology", "Design", "Backend", "Life"];
+  const categories = ["All", "Software Development", "Technology", "Design", "Life"];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All"
@@ -108,7 +108,7 @@ const Blog = () => {
         <section className="pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {filteredPosts.filter(post => !post.featured).map((post) => (
+              {filteredPosts.map((post) => (
                 <Link to={post.slug} key={post.slug}> 
                   <article key={post.id} className="group cursor-pointer">
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">

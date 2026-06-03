@@ -16,16 +16,16 @@ const BlogCards = () => (
       </Link>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-      {Blogs.slice(0, 4).map((post) => (
+      {Blogs.reverse().slice(0, 4).map((post) => (
         <Link to={`/blog/${post.slug}`} key={post.slug}>
           <article key={post.id} className="group cursor-pointer">
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="p-6">
                 <h3 className="text-[18px] sm:text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
-                  {post.title}
+                  {post.title.trim().length > 40 ? post.title.trim().substring(0, 34) + "..." : post.title.trim()}
                 </h3>
                 <div className="flex items-center justify-between mb-3">
-                  <span className="text-[14px] sm:text-xs font-medium text-gray-900 bg-gray-100 px-3 py-1 rounded-sm">
+                  <span className="max-w-[50%] text-[14px] sm:text-xs font-medium text-gray-900 bg-gray-100 px-3 py-1 rounded-sm">
                     {post.category}
                   </span>
                   <div className="flex items-center text-gray-500 text-[14px] sm:text-xs">
