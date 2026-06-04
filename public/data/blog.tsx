@@ -370,14 +370,247 @@ const Blogs: {
       featured: false,
       slug: "building-trueprice-effective-price-engine"
     },
+{
+  id: 9,
+  title: "GitHub Copilot Just Changed Its Pricing. Developers Are Not Happy.",
+  excerpt:
+    "GitHub's move from subscription-based Copilot pricing to AI Credits has sparked backlash across the developer community. Here's what changed, why developers are upset, and why I think the new system misses the mark.",
+  content: (
+    <>
+      <p>
+        For years, GitHub Copilot had a simple promise.
+      </p>
 
+      <p className="mt-5">
+        Pay a monthly subscription, open your editor, and code.
+      </p>
+
+      <p className="mt-5">
+        You didn't have to think about tokens. You didn't have to calculate usage.
+        You didn't have to wonder whether asking one more question would increase
+        next month's bill.
+      </p>
+
+      <p className="mt-5">
+        That changed on June 1, 2026.
+      </p>
+
+      <p className="mt-5">
+        GitHub officially moved Copilot from its old request-based billing system
+        to a new usage-based billing model powered by AI Credits. Instead of
+        paying primarily for access, users are now paying based on how much AI
+        they actually consume. GitHub says the cost depends on the model being
+        used and the number of tokens processed during each interaction.
+      </p>
+
+      <p className="mt-5">
+        On paper, the idea sounds reasonable.
+      </p>
+
+      <p className="mt-5">
+        A quick autocomplete and a multi-hour autonomous coding session clearly
+        don't cost the same amount to run. GitHub argues that the old pricing
+        model was no longer sustainable because modern AI agents consume
+        significantly more compute resources.
+      </p>
+
+      <p className="mt-5">
+        The problem is what happened when we developers started seeing the
+        numbers.
+      </p>
+
+      <p className="mt-5">
+        Within hours of the rollout, Reddit and GitHub Community discussions were
+        flooded with screenshots of projected bills. Some developers reported
+        that their previous monthly usage would now cost several hundred dollars.
+        Others shared estimates showing bills increasing from roughly $39 per
+        month to more than $800 under the new system. In my system itself, I
+        experienced the credit consumption increased to 22x; that's insane.
+      </p>
+
+      <p className="mt-5">
+        And that is where the controversy really started.
+      </p>
+
+      <p className="mt-5">
+        Most developers are not angry that AI costs money.
+      </p>
+
+      <p className="mt-5">
+        They are angry because Copilot became part of their daily workflow under
+        a predictable subscription model. Suddenly replacing that predictability
+        with token-based accounting feels less like a product upgrade and more
+        like a pricing shock.
+      </p>
+
+      <p className="mt-5">
+        After spending some time reading Reddit discussions, I saw a few common
+        demands appear repeatedly:
+      </p>
+
+      <ul className="list-disc pl-6 mt-5 space-y-2">
+        <li>Give users larger included credit allowances.</li>
+        <li>Keep flat-rate plans available for power users.</li>
+        <li>Provide clearer cost estimates before usage occurs.</li>
+        <li>Make agent mode more affordable.</li>
+        <li>Improve transparency around how credits are consumed.</li>
+      </ul>
+
+      <p className="mt-5">
+        One complaint appears particularly often.
+      </p>
+
+      <p className="mt-5">
+        Developers argue that "credits" hide the real cost.
+      </p>
+
+      <p className="mt-5">
+        Seeing "84,000 credits" feels abstract. Most people cannot immediately
+        translate that number into dollars. But when the same usage is shown as
+        hundreds of dollars, the reaction becomes very different. Several Reddit
+        discussions revolve around this exact issue, with users saying that the
+        credit system makes large consumption numbers feel less alarming until
+        they calculate the actual monetary value.
+      </p>
+
+      <p className="mt-5">
+        To be fair, Microsoft and GitHub are not pretending this change is
+        arbitrary.
+      </p>
+
+      <p className="mt-5">
+        Their explanation is straightforward: The old model forced the company to
+        absorb an increasing share of those costs, making the system
+        unsustainable over time. Usage-based billing is their attempt to align
+        pricing with actual resource consumption.
+      </p>
+
+      <p className="mt-5">
+        I understand the reasoning.
+      </p>
+
+      <p className="mt-5">
+        I still don't agree with the decision.
+      </p>
+
+      <p className="mt-5">
+        As a developer, I don't want to think about token economics while solving
+        engineering problems. Copilot succeeded because it felt invisible. It
+        stayed out of the way and helped me build things.
+      </p>
+
+      <p className="mt-5">
+        The new system changes that relationship.
+      </p>
+
+      <p className="mt-5">
+        Now every long conversation, every agent workflow, and every experiment
+        comes with a hidden question in the back of my mind:
+      </p>
+
+      <blockquote className="border-l-4 pl-4 italic mt-5">
+        "How much is this costing?"
+      </blockquote>
+
+      <p className="mt-5">
+        For casual users, the change may not matter much.
+      </p>
+
+      <p className="mt-5">
+        For us, developers who use Copilot heavily, it absolutely does.
+      </p>
+
+     <h3 className="text-xl font-semibold mt-10 mb-4">Further Reading</h3>
+
+<p>
+  If you'd like to explore the discussion yourself, here are some of the
+  articles and community threads I referred to while writing this post:
+</p>
+
+<ul className="list-disc pl-6 mt-4 space-y-2">
+  <li>
+    <a
+      href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      GitHub Blog — GitHub Copilot Moving to Usage-Based Billing
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://docs.github.com/en/copilot/reference/copilot-billing/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      GitHub Documentation — Copilot Billing Changes
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.reddit.com/r/GithubCopilot/comments/1ttd1hl/end_of_an_era_june_1_2026_github_copilot_models/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Reddit Discussion — End of an Era: GitHub Copilot Models & Billing Changes
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.reddit.com/r/GithubCopilot/comments/1sxge4u/github_copilot_is_moving_to_usagebased_billing/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Reddit Discussion — GitHub Copilot Usage-Based Billing Reactions
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.reddit.com/r/GithubCopilot/comments/1tu6msy/github_copilot_became_unusable_for_individual/"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Reddit Discussion — GitHub Copilot Became Unusable for Individual Developers
+    </a>
+  </li>
+
+  <li>
+    <a
+      href="https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
+      target="_blank"
+      rel="noopener noreferrer"
+      className="text-blue-600 hover:underline"
+    >
+      Business Insider — Developer Backlash Against New Copilot Pricing
+    </a>
+  </li>
+</ul>
+    </>
+  ),
+  date: "June 2, 2026",
+  readTime: "5 min read",
+  category: "Technology",
+  image:
+    "https://cdn.dribbble.com/userupload/35506784/file/original-eaa0ea386fa02cfa6bc8317c73f68685.png?resize=752x&vertical=center",
+  featured: false,
+  slug: "github-copilot-pricing-controversy"
+},
     {
-      id: 9,
+      id: 10,
       title: "Building GitInsight: Making GitHub Repositories Explain Themselves",
       excerpt:
         "How we built GitInsight, an AI-powered repository analysis platform that helps developers understand unfamiliar GitHub repositories using AST parsing, RAG, embeddings, and LLMs.",
       category: "Software Development",
-      date: "June 3, 2026",
+      date: "June 4, 2026",
       readTime: "15 min read",
       slug: "building-gitinsight",
       content: (
