@@ -391,7 +391,7 @@ const Blogs: {
         next month's bill.
       </p>
 
-      <p className="mt-5">
+      <p className="mt-5 font-medium">
         That changed on June 1, 2026.
       </p>
 
@@ -414,7 +414,7 @@ const Blogs: {
         significantly more compute resources.
       </p>
 
-      <p className="mt-5">
+      <p className="mt-5 font-medium">
         The problem is what happened when we developers started seeing the
         numbers.
       </p>
@@ -425,7 +425,7 @@ const Blogs: {
         that their previous monthly usage would now cost several hundred dollars.
         Others shared estimates showing bills increasing from roughly $39 per
         month to more than $800 under the new system. In my system itself, I
-        experienced the credit consumption increased to 22x; that's insane.
+        experienced the credit consumption increased to upto 20x; that's insane.
       </p>
 
       <p className="mt-5">
@@ -524,7 +524,7 @@ const Blogs: {
 
 <p>
   If you'd like to explore the discussion yourself, here are some of the
-  articles and community threads I referred to while writing this post:
+  articles and community threads I had read:
 </p>
 
 <ul className="list-disc pl-6 mt-4 space-y-2">
