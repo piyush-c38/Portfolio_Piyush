@@ -2,6 +2,7 @@
 import StatsCounters from "./StatsCounters";
 import ScrollIndicator from "./ScrollIndicator";
 import TechStack from "./TechStack";
+import { portfolioSettings } from "@/lib/content";
 
 const HeroSection = () => (
   <section className="relative w-full flex flex-col min-h-[420px] justify-center pb-8 md:min-h-[505px]">
@@ -16,7 +17,7 @@ const HeroSection = () => (
           Hello
         </h1>
         <p className="text-base sm:text-xl font-inter font-light text-black/60 mt-2 animate-fadeinup" style={{ animationDelay: "120ms" }}>
-          — It’s Piyush, a Full-Stack Product Developer
+          — It’s Piyush, a {portfolioSettings.designation}
         </p>
       </div>
       {/* TechStack - vertical zigzag, on right */}

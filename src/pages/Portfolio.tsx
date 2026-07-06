@@ -4,59 +4,11 @@ import Footer from "@/components/Footer";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import SocialIcons from "@/components/SocialIcons";
 import Timeline from "@/components/Timeline";
-import { Link } from "react-router-dom";
-import Links from "../../public/data/link.js"
-
-const PROFILE = {
-  img: "data/dp.png",
-  name: "Piyush Chandrakar",
-  tagline: "Full-Stack Product Developer",
-  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "Typescript", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
-};
+import { portfolioSettings } from "@/lib/content";
 
 const handleReachOut = () => {
   window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
 }
-
-const ABOUT_ME = (<>
-  <p>Hi, I’m Piyush — a Software Engineer who enjoys building products that solve real-world problems.</p>
-
-  <p className="mt-4">
-    For me, understanding the problem, planning the product, and delivering a meaningful user experience matter the most. I enjoy working with like-minded people and turning ideas into practical solutions.
-  </p>
-
-  <p className="mt-4">
-    Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system focused on industrial automation. Prior to that, my work at{" "}
-    <a
-      href="https://github.com/piyush-c38/TracExpert_T"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 underline hover:text-blue-800"
-    >
-      IIT Indore
-    </a>{" "}
-    gave me valuable experience in mobile application development and industry management software. More recently, I’ve been building AI-powered developer tools such as GitInsight, which helps developers understand unfamiliar codebases using AST parsing, embeddings, RAG, and LLMs.
-  </p>
-
-  <p className="mt-4">
-    My experience spans full-stack development, AI applications, IoT systems, and product development. I’m skilled in Java, Python, React, Node.js, MySQL, MongoDB, and Docker, and enjoy building reliable, scalable, and user-centric products.
-  </p>
-
-  <p className="mt-4">
-    Outside of work, you’ll probably find me jamming with my instruments, playing badminton, or spending time with family and friends.
-  </p>
-
-  <p className="mt-4">
-    <a
-      href="#"
-      onClick={handleReachOut}
-      className="text-blue-600 underline hover:text-blue-800"
-    >
-      Reach out
-    </a>{" "}
-    if you have an interesting idea to build or collaborate on!
-  </p>
-</>);
 
 const Portfolio = () => {
 
@@ -73,26 +25,27 @@ const Portfolio = () => {
           {/* --- Left Sidebar --- */}
           <aside className="md:w-1/3 w-full md:max-w-xs flex flex-col items-center bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mb-4 md:mb-0">
             <Avatar className="h-48 w-48 mx-auto mb-4 shadow">
-              <AvatarImage src={PROFILE.img} alt={PROFILE.name} />
+              <AvatarImage src={portfolioSettings.profilePhotoUrl} alt={portfolioSettings.name} />
             </Avatar>
             <div className="text-center md:text-left w-full">
-              <h2 className="text-center text-lg font-semibold mb-1">{PROFILE.name}</h2>
-              <div className="text-center text-black/80 text-sm italic mb-2">{PROFILE.tagline}</div>
+              <h2 className="text-center text-lg font-semibold mb-1">{portfolioSettings.name}</h2>
+              <div className="text-center text-black/80 text-sm italic mb-2">{portfolioSettings.designation}</div>
               <div className="flex justify-center">
-                <Link
-                  to={Links.resumeLink}
+                <a
+                  href={portfolioSettings.resumeUrl}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="text-[14px] sm:text-s font-bold text-white bg-slate-800 px-6 py-2 rounded-full m-1"
                 >
-                  My Resume: PDFv
-                </Link>
+                  My Resume
+                </a>
               </div>
               <div className="w-full flex justify-center md:justify-start mt-4">
-                <SocialIcons />
+                <SocialIcons links={portfolioSettings.socialLinks} />
               </div>
               <h2 className="text-lg font-semibold mt-8 mb-2">Tools & Technologies</h2>
               <div className="flex flex-wrap">
-                {PROFILE.techKeyWords.map((tech, idx) => (
+                {portfolioSettings.skills.map((tech, idx) => (
                   <span
                     key={idx}
                     className="text-[14px] sm:text-xs font-bold text-white bg-slate-800 px-2 py-1 rounded-sm m-1"
@@ -110,13 +63,36 @@ const Portfolio = () => {
             <div>
               <h2 className="text-2xl font-semibold mb-3">About Me</h2>
               <div className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90">
-                {ABOUT_ME}
+                {portfolioSettings.about.map((paragraph) => (
+                  <p key={paragraph} className="mt-4 first:mt-0">
+                    {paragraph}
+                  </p>
+                ))}
+                <p className="mt-4">
+                  <a
+                    href="#contact"
+                    onClick={handleReachOut}
+                    className="text-blue-600 underline hover:text-blue-800"
+                  >
+                    Reach out
+                  </a>{" "}
+                  if you have an interesting idea to build or collaborate on!
+                </p>
               </div>
             </div>
             {/* Experience Timeline */}
             <div>
               <h2 className="text-2xl font-semibold mb-3">My Works</h2>
-              <Timeline />
+              <Timeline
+                items={portfolioSettings.glimpseOfMyWork.map((item, index) => ({
+                  label: item.title,
+                  date: item.date ?? "Recent",
+                  desc: item.description,
+                  projectLink: item.link,
+                  demolink: item.demoLink,
+                  color: ["bg-[#0f172a]", "bg-[#334155]", "bg-[#64748b]"][index % 3],
+                }))}
+              />
             </div>
           </section>
         </div>

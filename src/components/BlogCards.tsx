@@ -1,6 +1,6 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
-import Blogs from "../../public/data/blog.tsx"
+import { blogPosts } from "@/lib/content";
 
 const BlogCards = () => (
   <section className="px-2 sm:px-0">
@@ -16,9 +16,9 @@ const BlogCards = () => (
       </Link>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-      {Blogs.reverse().slice(0, 4).map((post) => (
+      {blogPosts.slice(0, 4).map((post) => (
         <Link to={`/blog/${post.slug}`} key={post.slug}>
-          <article key={post.id} className="group cursor-pointer">
+          <article className="group cursor-pointer">
             <div className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
               <div className="p-6">
                 <h3 className="text-[18px] sm:text-lg font-semibold text-gray-900 mb-2 group-hover:text-gray-700 transition-colors">
@@ -26,7 +26,7 @@ const BlogCards = () => (
                 </h3>
                 <div className="flex items-center justify-between mb-3">
                   <span className="max-w-[50%] text-[14px] sm:text-xs font-medium text-gray-900 bg-gray-100 px-3 py-1 rounded-sm">
-                    {post.category}
+                    {post.tag}
                   </span>
                   <div className="flex items-center text-gray-500 text-[14px] sm:text-xs">
                     <Clock size={14} className="mr-1" />
@@ -39,7 +39,7 @@ const BlogCards = () => (
                 <div className="flex items-center justify-between">
                   <div className="flex items-center text-gray-500 text-[14px] sm:text-xs">
                     <Calendar size={14} className="mr-1" />
-                    {post.date}
+                    {post.publishedDate}
                   </div>
                   <ArrowRight size={16} className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
                 </div>

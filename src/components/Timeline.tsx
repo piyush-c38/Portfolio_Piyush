@@ -1,6 +1,16 @@
 import { ExternalLink } from "lucide-react";
 
-const TIMELINE = [
+type TimelineItem = {
+  label: string;
+  date: string;
+  role?: string;
+  desc: string;
+  color?: string;
+  projectLink?: string;
+  demolink?: string;
+};
+
+const TIMELINE: TimelineItem[] = [
   {
     label: "Self Project: GitInsight",
     date: "May 2026 – Jun 2026",
@@ -68,16 +78,20 @@ const TIMELINE = [
     projectLink: "https://github.com/piyush-c38/Multifunctional_ID_Card",
   },
 ];
-const Timeline = () => (
+type Props = {
+  items?: TimelineItem[];
+};
+
+const Timeline = ({ items = TIMELINE }: Props) => (
   <div className="relative pl-4 max-w-xl mx-auto sm:pl-4">
     <div className="absolute top-5 left-3 bottom-4 w-0.5 bg-gray-200 rounded hidden sm:block"></div>
     <div className="flex flex-col gap-7">
-      {TIMELINE.map((item, idx) => (
+      {items.map((item, idx) => (
         <div key={item.label} className="relative z-10 flex flex-row gap-4 sm:gap-5 mb-0 sm:mb-8 last:mb-0 group">
           {/* Dot and line */}
           <div className="flex flex-col items-center pt-0.5">
-            <span className={`w-4 h-4 rounded-full border-4 border-white shadow-sm ${item.color}`}></span>
-            {idx !== TIMELINE.length - 1 && (
+            <span className={`w-4 h-4 rounded-full border-4 border-white shadow-sm ${item.color ?? "bg-[#0f172a]"}`}></span>
+            {idx !== items.length - 1 && (
               <span className="hidden sm:flex flex-1 w-px bg-gray-200 mt-0.5"></span>
             )}
           </div>

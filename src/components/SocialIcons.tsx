@@ -1,9 +1,11 @@
 import { Mail, Instagram, Linkedin, X, School, Github } from "lucide-react";
+import type { SocialLink } from "@/types/content";
 import Links from "../../public/data/link.js";
 
 type Props = {
   variant?: "footer" | "sidebar";
   className?: string;
+  links?: SocialLink[];
 };
 
 const ICONS = [
@@ -39,9 +41,33 @@ const ICONS = [
   },
 ];
 
-const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
+const fallbackIcons = ICONS;
+
+const SocialIcons = ({ variant = "footer", className = "", links }: Props) => {
+  const icons = links?.length
+    ? links.map((link) => {
+        const iconMap: Record<string, typeof Mail> = {
+          Email: Mail,
+          LinkedIn: Linkedin,
+          GitHub: Github,
+          X: X,
+          Instagram: Instagram,
+          School,
+        };
+
+        const icon = iconMap[link.label] ?? Mail;
+
+        return {
+          icon,
+          label: link.label,
+          href: link.href,
+        };
+      })
+    : fallbackIcons;
+
+  return (
   <div className={`flex flex-row gap-3 ${className}`}>
-    {ICONS.map(({ icon: Icon, label, href }) => (
+    {icons.map(({ icon: Icon, label, href }) => (
       <a
         href={href}
         key={label}
@@ -54,6 +80,7 @@ const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
       </a>
     ))}
   </div>
-);
+  );
+};
 
 export default SocialIcons;

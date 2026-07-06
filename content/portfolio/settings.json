@@ -1,0 +1,57 @@
+{
+  "name": "Piyush Chandrakar",
+  "designation": "Full-Stack Product Developer",
+  "profilePhotoUrl": "https://res.cloudinary.com/demo/image/upload/sample.jpg",
+  "about": [
+    "Hi, I’m Piyush — a Software Engineer who enjoys building products that solve real-world problems.",
+    "For me, understanding the problem, planning the product, and delivering a meaningful user experience matter the most. I enjoy working with like-minded people and turning ideas into practical solutions.",
+    "My experience spans full-stack development, AI applications, IoT systems, and product development. I’m skilled in Java, Python, React, Node.js, MySQL, MongoDB, and Docker, and enjoy building reliable, scalable, and user-centric products."
+  ],
+  "resumeUrl": "https://drive.google.com/file/d/1t95vcXd2ieRFTqr9ciBSs5ErPvQCL6SK/view?usp=sharing",
+  "socialLinks": [
+    { "label": "Email", "href": "mailto:piyushch.ofc@gmail.com" },
+    { "label": "School", "href": "mailto:piyushc@iitbhilai.ac.in" },
+    { "label": "LinkedIn", "href": "https://www.linkedin.com/in/piyush-chandrakar" },
+    { "label": "GitHub", "href": "https://github.com/piyush-c38" },
+    { "label": "X", "href": "https://x.com/piyush_c38" },
+    { "label": "Instagram", "href": "https://instagram.com/piyush_c38" }
+  ],
+  "skills": [
+    "Java",
+    "Python",
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "React Native",
+    "Next.js",
+    "Node.js",
+    "MongoDB",
+    "Docker",
+    "RAG",
+    "LLMs",
+    "Vector Search"
+  ],
+  "glimpseOfMyWork": [
+    {
+      "title": "GitInsight",
+      "date": "2026",
+      "description": "AI-powered repository analysis platform that helps developers understand unfamiliar codebases.",
+      "link": "https://github.com/piyush-c38/git-insight",
+      "demoLink": "https://git-insight-one.vercel.app/",
+      "technologies": ["React", "TypeScript", "RAG", "LLMs"]
+    },
+    {
+      "title": "TracExpert",
+      "date": "2024",
+      "description": "Cross-platform inventory app delivered during the IIT Indore internship.",
+      "link": "https://github.com/piyush-c38/TracExpert_T",
+      "technologies": ["React Native", "Docker", "CI/CD"]
+    }
+  ],
+  "contactInformation": {
+    "personalEmail": "piyushch.ofc@gmail.com",
+    "studentEmail": "piyushc@iitbhilai.ac.in",
+    "location": "India",
+    "availability": "Open to collaborations and product engineering roles"
+  }
+}

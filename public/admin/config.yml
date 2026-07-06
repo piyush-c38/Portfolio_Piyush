@@ -1,0 +1,162 @@
+backend:
+  name: github
+  repo: piyush-c38/Portfolio_Piyush
+  branch: main
+
+site_url: https://piyush-c38.github.io/Portfolio_Piyush/
+display_url: https://piyush-c38.github.io/Portfolio_Piyush/
+logo_url: /favicon.png
+media_folder: static/uploads
+public_folder: /static/uploads
+
+publish_mode: simple
+
+collections:
+  - name: portfolio
+    label: Portfolio Settings
+    folder: content/portfolio
+    create: true
+    slug: "{{slug}}"
+    extension: json
+    format: json
+    fields:
+      - { label: Name, name: name, widget: string }
+      - { label: Designation, name: designation, widget: string }
+      - { label: Profile Photo URL, name: profilePhotoUrl, widget: string }
+      - label: About
+        name: about
+        widget: list
+        field: { label: Paragraph, name: paragraph, widget: text }
+      - { label: Resume URL, name: resumeUrl, widget: string }
+      - label: Social Links
+        name: socialLinks
+        widget: list
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Href, name: href, widget: string }
+      - label: Skills / Technologies
+        name: skills
+        widget: list
+        field: { label: Skill, name: skill, widget: string }
+      - label: Glimpse of My Work
+        name: glimpseOfMyWork
+        widget: list
+        fields:
+          - { label: Title, name: title, widget: string }
+          - { label: Date, name: date, widget: string, required: false }
+          - { label: Description, name: description, widget: text }
+          - { label: Link, name: link, widget: string, required: false }
+          - { label: Demo Link, name: demoLink, widget: string, required: false }
+          - label: Technologies
+            name: technologies
+            widget: list
+            required: false
+            field: { label: Technology, name: technology, widget: string }
+      - label: Contact Information
+        name: contactInformation
+        widget: object
+        fields:
+          - { label: Personal Email, name: personalEmail, widget: string }
+          - { label: Student Email, name: studentEmail, widget: string, required: false }
+          - { label: Location, name: location, widget: string, required: false }
+          - { label: Availability, name: availability, widget: text, required: false }
+
+  - name: blogs
+    label: Blogs
+    folder: content/blogs
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - label: Tag
+        name: tag
+        widget: select
+        options: [Software Development, Technology, Design, Life]
+      - { label: Read Time, name: readTime, widget: string }
+      - { label: Published Date, name: publishedDate, widget: datetime }
+      - { label: Cover Image, name: coverImage, widget: string }
+      - label: Gallery Images
+        name: galleryImages
+        widget: list
+        required: false
+        fields:
+          - { label: URL, name: url, widget: string }
+          - { label: Alt Text, name: alt, widget: string, required: false }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: SEO Title, name: seoTitle, widget: string, required: false }
+      - { label: SEO Description, name: seoDescription, widget: text, required: false }
+      - { label: Featured, name: featured, widget: boolean, required: false }
+      - { label: Excerpt, name: excerpt, widget: text, required: false }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: projects
+    label: Projects
+    folder: content/projects
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Cover Image, name: coverImage, widget: string }
+      - label: Gallery Images
+        name: galleryImages
+        widget: list
+        required: false
+        fields:
+          - { label: URL, name: url, widget: string }
+          - { label: Alt Text, name: alt, widget: string, required: false }
+          - { label: Caption, name: caption, widget: string, required: false }
+      - { label: GitHub Link, name: githubLink, widget: string, required: false }
+      - { label: Live Demo Link, name: liveDemoLink, widget: string, required: false }
+      - label: Additional Links
+        name: additionalLinks
+        widget: list
+        required: false
+        fields:
+          - { label: Label, name: label, widget: string }
+          - { label: Href, name: href, widget: string }
+      - label: Technologies
+        name: technologies
+        widget: list
+        field: { label: Technology, name: technology, widget: string }
+      - { label: Published Date, name: publishedDate, widget: datetime }
+      - { label: Featured, name: featured, widget: boolean, required: false }
+      - { label: Description, name: description, widget: text }
+      - { label: Body, name: body, widget: markdown }
+
+  - name: services
+    label: Services
+    folder: content/services
+    create: true
+    slug: "{{slug}}"
+    extension: md
+    format: frontmatter
+    fields:
+      - { label: Title, name: title, widget: string }
+      - { label: Slug, name: slug, widget: string }
+      - { label: Description, name: description, widget: text }
+      - { label: Image, name: image, widget: string }
+      - label: Features
+        name: features
+        widget: list
+        field: { label: Feature, name: feature, widget: string }
+      - label: Sample Projects
+        name: sampleProjects
+        widget: list
+        required: false
+        field: { label: Project, name: project, widget: string }
+      - label: Reviews
+        name: reviews
+        widget: list
+        required: false
+        fields:
+          - { label: Name, name: name, widget: string }
+          - { label: Role, name: role, widget: string, required: false }
+          - { label: Quote, name: quote, widget: text }
+      - { label: Service Overview, name: serviceOverview, widget: text, required: false }
+      - { label: Body, name: body, widget: markdown }

@@ -2,13 +2,14 @@
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
 import { Mail, School } from "lucide-react";
-import Links from "../../public/data/link.js";
+import { portfolioSettings } from "@/lib/content";
 
 const NAVS = [
   { label: "Home", to: "/" },
   { label: "Portfolio", to: "/portfolio" },
+  { label: "Projects", to: "/projects" },
+  { label: "Services", to: "/services" },
   { label: "Blog", to: "/blog" },
-  // { label: "Services", to: "/services" },
 ];
 
 const Footer = () => (
@@ -20,11 +21,11 @@ const Footer = () => (
           Want to innovate together? Let's Connect!
         </div>
         <div className="text-xs sm:text-base text-gray-200 font-light mb-3 sm:mb-4">
-          I’m always excited to collaborate on new and innovative projects. Whether you’re starting from scratch or refining an existing idea.
+          {portfolioSettings.contactInformation.availability}
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-3">
           <a
-            href={`mailto:${Links.personalEmail}`}
+            href={`mailto:${portfolioSettings.contactInformation.personalEmail}`}
             key={"PersonalEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -33,11 +34,12 @@ const Footer = () => (
           >
             <Mail size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Personal Email:</b> {Links.personalEmail}</div>
+          <div className="content-center"><b>Personal Email:</b> {portfolioSettings.contactInformation.personalEmail}</div>
         </div>
+        {portfolioSettings.contactInformation.studentEmail && (
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
           <a
-            href={`mailto:${Links.studentEmail}`}
+            href={`mailto:${portfolioSettings.contactInformation.studentEmail}`}
             key={"StudentEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,15 +48,16 @@ const Footer = () => (
           >
             <School size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Student Email :</b> {Links.studentEmail}</div>
+          <div className="content-center"><b>Student Email :</b> {portfolioSettings.contactInformation.studentEmail}</div>
         </div>
+        )}
         <div className="flex justify-center sm:justify-start">
           <Link
-            to={Links.resumeLink}
+            to={portfolioSettings.resumeUrl}
             target="_blank"
             className="text-[14px] sm:text-s font-bold text-slate-800 bg-white px-6 py-2 rounded-full m-1"
           >
-            My Resume: PDFv
+            My Resume
           </Link>
         </div>
       </div>
@@ -74,11 +77,11 @@ const Footer = () => (
       </div>
       {/* Branding & Socials */}
       <div className="flex flex-col items-center gap-3">
-        <span className="font-bold text-xl font-inter select-none mb-2 text-center">Piyush Chandrakar</span>
+        <span className="font-bold text-xl font-inter select-none mb-2 text-center">{portfolioSettings.name}</span>
         <div className="mb-1">
-          <SocialIcons variant="footer" />
+          <SocialIcons variant="footer" links={portfolioSettings.socialLinks} />
         </div>
-        <span className="text-xs text-gray-400 mt-2 text-center">&copy; Piyush Chandrakar 2026. All rights reserved.</span>
+        <span className="text-xs text-gray-400 mt-2 text-center">&copy; {portfolioSettings.name} 2026. All rights reserved.</span>
       </div>
     </div>
   </footer>
