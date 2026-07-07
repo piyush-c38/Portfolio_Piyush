@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import Links from "../../public/data/link.js"
 
 const PROFILE = {
-  img: "data/dp.png",
+  img: "https://res.cloudinary.com/yfhun3wh/image/upload/v1783424099/dp_anjwsa.png",
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Product Developer",
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "Typescript", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
