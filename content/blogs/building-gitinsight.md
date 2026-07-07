@@ -1,17 +1,17 @@
 ---
-title: Building GitInsight: Making GitHub Repositories Explain Themselves
-slug: building-gitinsight
-tag: Software Development
-readTime: 15 min read
-publishedDate: 2026-06-03
-coverImage: https://res.cloudinary.com/demo/image/upload/ar_16:9,c_fill,w_1400/sample.jpg
+title: "Building GitInsight: Making GitHub Repositories Explain Themselves"
+slug: "building-gitinsight"
+tag: "Software Development"
+readTime: "15 min read"
+publishedDate: "2026-06-03"
+coverImage: "https://res.cloudinary.com/demo/image/upload/ar_16:9,c_fill,w_1400/sample.jpg"
 galleryImages:
-  - url: https://res.cloudinary.com/demo/image/upload/ar_3:2,c_fill,w_1200/sample.jpg
-    alt: GitInsight architecture
-seoTitle: Building GitInsight
-seoDescription: How GitInsight helps developers understand unfamiliar repositories.
+  - url: "https://res.cloudinary.com/demo/image/upload/ar_3:2,c_fill,w_1200/sample.jpg"
+    alt: "GitInsight architecture"
+seoTitle: "Building GitInsight"
+seoDescription: "How GitInsight helps developers understand unfamiliar repositories."
 featured: true
-excerpt: How we built GitInsight, an AI-powered repository analysis platform that helps developers understand unfamiliar GitHub repositories using AST parsing, RAG, embeddings, and LLMs.
+excerpt: "How we built GitInsight, an AI-powered repository analysis platform that helps developers understand unfamiliar GitHub repositories using AST parsing, RAG, embeddings, and LLMs."
 ---
 
 Every developer has experienced this.

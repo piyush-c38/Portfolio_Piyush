@@ -1,15 +1,15 @@
 ---
-title: Building TruePrice: Finding the Real Price Behind Online Discounts
-slug: building-trueprice-effective-price-engine
-tag: Software Development
-readTime: 4 min read
-publishedDate: 2026-05-13
-coverImage: https://res.cloudinary.com/demo/image/upload/ar_16:9,c_fill,w_1400/sample.jpg
+title: "Building TruePrice: Finding the Real Price Behind Online Discounts"
+slug: "building-trueprice-effective-price-engine"
+tag: "Software Development"
+readTime: "4 min read"
+publishedDate: "2026-05-13"
+coverImage: "https://res.cloudinary.com/demo/image/upload/ar_16:9,c_fill,w_1400/sample.jpg"
 galleryImages: []
-seoTitle: Building TruePrice
-seoDescription: The story behind TruePrice and its effective price engine.
+seoTitle: "Building TruePrice"
+seoDescription: "The story behind TruePrice and its effective price engine."
 featured: false
-excerpt: The story behind TruePrice, an ongoing project that aims to calculate the actual effective price of products by analyzing offers, discounts, cashback rewards, and coupons from e-commerce websites.
+excerpt: "The story behind TruePrice, an ongoing project that aims to calculate the actual effective price of products by analyzing offers, discounts, cashback rewards, and coupons from e-commerce websites."
 ---
 
 We have all been there.
