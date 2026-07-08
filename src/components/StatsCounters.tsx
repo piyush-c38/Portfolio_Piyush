@@ -10,7 +10,7 @@ const StatsCounters = () => (
     </div>
     <div>
       <div className="text-xl sm:text-2xl font-normal text-black/80 tracking-tight mb-1">
-        <span className="font-semibold text-[26px] sm:text-[32px] md:text-[36px]">+3</span>
+        <span className="font-semibold text-[26px] sm:text-[32px] md:text-[36px]">+4</span>
       </div>
       <div className="text-xs sm:text-base font-light text-black/50">
         Years of Dev Experience

@@ -53,7 +53,7 @@ const BlogPost = () => {
           />
           <h1 className="text-2xl sm:text-4xl font-light mb-2">{blog.title}</h1>
           <div className="flex items-center justify-start gap-4 mt-4 mb-10">
-            <span className="text-sm font-medium text-black bg-gray-200 px-3 py-1 rounded-md">
+            <span className="text-sm font-medium text-center text-black bg-gray-200 px-3 py-1 rounded-md">
               {blog.category}
             </span>
             <div className="flex items-center text-gray-500 text-sm">

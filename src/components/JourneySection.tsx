@@ -3,7 +3,7 @@ import ImageCarousel from "./ImageCarousel";
 
 const journeyParagraph = (
   <>
-    Over the past 3+ years, I’ve worked on diverse development projects, partnering with various teams and clients to turn creative ideas into reality.
+    Over the past 4+ years, I’ve worked on diverse development projects, partnering with various teams and clients to turn creative ideas into reality.
   </>
 );
 
