@@ -2,7 +2,7 @@ import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
   {
-    label: "Self Project: GitInsight",
+    label: "Side Project: GitInsight",
     date: "May 2026 – Jun 2026",
     role: "",
     desc: "GitInsight is an AI-powered GitHub repository analysis platform that performs code-aware parsing, generates architecture and onboarding documentation, and enables repository-specific Q&A using a RAG pipeline with embeddings and LLMs.",
@@ -11,7 +11,7 @@ const TIMELINE = [
     demolink: "https://git-insight-one.vercel.app/",
   },
   {
-    label: "Self Project: Mineral Network Analysis in Indian Context",
+    label: "Side Project: Mineral Network Analysis in Indian Context",
     date: "Jan 2026 – Apr 2026",
     role: "",
     desc: "Built weighted bipartite and tripartite networks analysing 600+ state-mineral relationships across India. Performed core-periphery, centrality, and temporal analysis to identify mineral distribution and resource concentration patterns.",
@@ -19,7 +19,7 @@ const TIMELINE = [
     projectLink: "https://github.com/piyush-c38/MineralNetwork_NS/tree/main",
   },
   {
-    label: "Self project: Crypto Exchange Latency Topology Visualizer",
+    label: "Side project: Crypto Exchange Latency Topology Visualizer",
     date: "Jun 2025 – Jul 2025",
     role: "",
     desc: "Visualized real-time latency for 20+ exchanges and 10+ cloud regions, rendering 50+ network connections in 3D. Achieved <5sec live updates with 99.9% uptime, 10,000+ data points, and CSV/JSON/image export via Chart.js.",
@@ -44,7 +44,7 @@ const TIMELINE = [
     projectLink: "https://github.com/piyush-c38/Gunshot_Direction_Estimation",
   },
   {
-    label: "Self-Project: Crack Segmentation using UNet",
+    label: "Side Project: Crack Segmentation using UNet",
     date: "Feb 2025 – March 2025",
     role: "",
     desc: "Developed a deep learning pipeline with PSPNet for concrete crack segmentation, achieving 84.85% recall and custom loss design.",

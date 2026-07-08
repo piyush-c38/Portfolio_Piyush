@@ -9,78 +9,42 @@ const Services = () => {
     {
       id: 1,
       icon: Code,
-      title: "Web Development",
-      description: "Custom web applications built with modern technologies like React, Vue.js, and Node.js for optimal performance and user experience.",
-      features: ["Responsive Design", "Modern Frameworks", "Performance Optimization", "SEO Friendly"],
+      title: "AI Automation & Agentic AI",
+      description: "Automate repetitive business workflows using AI agents, LLMs, n8n, MCP, and custom integrations.",
+      features: ["AI Assistants", "AI Agents", "Workflow Automation", "Internal Business Tools", "Chatbots", "RAG Applications"],
       price: "Starting at $2,500",
-      slug: "web-development"
+      slug: "ai-automation"
     },
     {
       id: 2,
       icon: Smartphone,
-      title: "Mobile Development",
-      description: "Native and cross-platform mobile applications that deliver seamless experiences across iOS and Android devices.",
-      features: ["React Native", "Cross-platform", "Native Performance", "App Store Deployment"],
+      title: "Full-Stack Web Applications",
+      description: "Production-ready web applications built with modern technologies, optimized for performance, scalability, and maintainability.",
+      features: ["SaaS Products", "Admin Dashboards", "Business Portals", "Authentication", "Payment Integration"],
       price: "Starting at $5,000",
-      slug: "mobile-development"
-    },
-    {
-      id: 3,
-      icon: Palette,
-      title: "UI/UX Design",
-      description: "User-centered design solutions that combine aesthetics with functionality to create intuitive and engaging interfaces.",
-      features: ["User Research", "Wireframing", "Prototyping", "Design Systems"],
-      price: "Starting at $1,500",
-      slug: "ui-ux-design"
-    },
-    {
-      id: 4,
-      title: "E-commerce Solutions",
-      icon: Globe,
-      description: "Complete e-commerce platforms with payment integration, inventory management, and analytics to grow your online business.",
-      features: ["Payment Gateway", "Inventory Management", "Analytics Dashboard", "Mobile Optimized"],
-      price: "Starting at $4,000",
-      slug: "#"
-    },
-    {
-      id: 5,
-      icon: Database,
-      title: "Backend Development",
-      description: "Robust backend systems and APIs that power your applications with scalable architecture and secure data management.",
-      features: ["RESTful APIs", "Database Design", "Cloud Integration", "Security Implementation"],
-      price: "Starting at $3,000",
-      slug: "#"
-    },
-    {
-      id: 6,
-      icon: Zap,
-      title: "Performance Optimization",
-      description: "Boost your application's speed and efficiency with comprehensive performance audits and optimization strategies.",
-      features: ["Speed Optimization", "Code Refactoring", "SEO Improvement", "Analytics Setup"],
-      price: "Starting at $1,000",
-      slug: "#"
+      slug: "full-stack"
     }
   ];
 
   const process = [
     {
       step: "01",
-      title: "Discovery & Planning",
+      title: "Understand Requirements",
       description: "We start by understanding your goals, requirements, and target audience to create a comprehensive project plan."
     },
     {
       step: "02",
-      title: "Design & Prototyping",
+      title: "Plan the Architecture",
       description: "Creating wireframes and prototypes to visualize the solution before development begins."
     },
     {
       step: "03",
-      title: "Development & Testing",
+      title: "Build & Iterate",
       description: "Building your solution with modern technologies while ensuring quality through rigorous testing."
     },
     {
       step: "04",
-      title: "Launch & Support",
+      title: "Deploy & Support",
       description: "Deploying your project and providing ongoing support to ensure continued success."
     }
   ];
@@ -97,10 +61,9 @@ const Services = () => {
         {/* Hero Section */}
         <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Services</h1>
+            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Build Smarter Software with AI</h1>
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              Comprehensive digital solutions tailored to your needs. From web development
-              to mobile apps, I deliver high-quality results that drive your business forward.
+              I help startups and businesses build intelligent applications—from AI agents and workflow automation to scalable web and mobile products.
             </p>
           </div>
         </section>
@@ -110,43 +73,43 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
-                <Link to={service.slug}>
-                  <div key={service.id} className="group">
-                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                      <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
-                        <service.icon size={24} className="text-white" />
-                      </div>
+                // <Link to={service.slug}>
+                <div key={service.id} className="group">
+                  <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
+                      <service.icon size={24} className="text-white" />
+                    </div>
 
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        {service.title}
-                      </h3>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      {service.title}
+                    </h3>
 
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {service.description}
+                    </p>
 
-                      <ul className="space-y-2 mb-6">
-                        {service.features.map((feature) => (
-                          <li key={feature} className="flex items-center text-gray-600 text-sm">
-                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+                    <ul className="space-y-2 mb-6">
+                      {service.features.map((feature) => (
+                        <li key={feature} className="flex items-center text-gray-600 text-sm">
+                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
 
-                      <div className="border-t border-gray-100 pt-6">
-                        <div className="flex items-center justify-between">
-                          <span className="text-lg font-semibold text-gray-900">
-                            {service.price}
-                          </span>
-                          <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                            Learn More →
-                          </button>
-                        </div>
+                    <div className="border-t border-gray-100 pt-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-semibold text-gray-900">
+                          Custom Pricing
+                        </span>
+                        {/* <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                            See Case Studies →
+                          </button> */}
                       </div>
                     </div>
                   </div>
-                </Link>
+                </div>
+                // </Link> 
               ))}
             </div>
           </div>
@@ -190,12 +153,23 @@ const Services = () => {
               Let's discuss your requirements and create something amazing together.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200">
-                Get Free Consultation
+              <button
+                onClick={() =>
+                  window.open(
+                    "https://mail.google.com/mail/?view=cm&fs=1&to=piyushch.ofc@gmail.com&su=Project%20Inquiry",
+                    "_blank"
+                  )
+                }
+                className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200">
+                Let's Build
               </button>
-              <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
-                View Portfolio
-              </button>
+              <Link
+                to={"/portfolio"}
+              >
+                <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors duration-200">
+                  View Portfolio
+                </button>
+              </Link>
             </div>
           </div>
         </section>

@@ -14,9 +14,14 @@ const NAV_ITEMS = [
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  
-  const handleConnect = () => {
-    window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
+
+  const handleConnect = (e) => {
+    e.preventDefault();
+
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
     setOpen(v => !v)
   };
 

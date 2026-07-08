@@ -10,40 +10,81 @@ import Links from "../../public/data/link.js"
 const PROFILE = {
   img: "https://res.cloudinary.com/yfhun3wh/image/upload/v1783424099/dp_anjwsa.png",
   name: "Piyush Chandrakar",
-  tagline: "Full-Stack Product Developer",
+  tagline: "Full-Stack Developer",
   techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "Typescript", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
-const handleReachOut = () => {
-  window.scrollTo({ top: document.body.scrollHeight, left: 0, behavior: "smooth" });
-}
+const handleReachOut = (e) => {
+  e.preventDefault();
+
+  document.getElementById("contact")?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+  });
+};
 
 const ABOUT_ME = (<>
-  <p>Hi, I’m Piyush — a Software Engineer who enjoys building products that solve real-world problems.</p>
+  <p>Hey, I'm Piyush.</p>
 
   <p className="mt-4">
-    For me, understanding the problem, planning the product, and delivering a meaningful user experience matter the most. I enjoy working with like-minded people and turning ideas into practical solutions.
-  </p>
-
-  <p className="mt-4">
-    Recently, I worked with the 506 Army Base Workshop to develop a productivity monitoring Dev-IoT system focused on industrial automation. Prior to that, my work at{" "}
+    I build AI-powered products by combining full-stack engineering with automation and intelligent workflows. Currently, I'm exploring agentic AI by building a personal assistant using n8n, Ollama, and local LLMs to automate everyday tasks.{" "}
     <a
-      href="https://github.com/piyush-c38/TracExpert_T"
+      href="#"
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 underline hover:text-blue-800"
     >
-      IIT Indore
-    </a>{" "}
-    gave me valuable experience in mobile application development and industry management software. More recently, I’ve been building AI-powered developer tools such as GitInsight, which helps developers understand unfamiliar codebases using AST parsing, embeddings, RAG, and LLMs.
+      Read about the project here.
+    </a>
   </p>
 
   <p className="mt-4">
-    My experience spans full-stack development, AI applications, IoT systems, and product development. I’m skilled in Java, Python, React, Node.js, MySQL, MongoDB, and Docker, and enjoy building reliable, scalable, and user-centric products.
+    Some of my side projects include:
+  </p>
+
+  <ul className="mt-2 list-disc list-inside space-y-2">
+    <li>
+      <a
+        href="https://github.com/piyush-c38/git-insight"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline hover:text-blue-800"
+      >
+        AI-powered GitHub repository analyzer
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="https://github.com/piyush-c38/Gunshot_Direction_Estimation"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline hover:text-blue-800"
+      >
+        Gunshot direction estimation using VGGish embeddings
+      </a>
+    </li>
+  </ul>
+
+  <p className="mt-4">
+    From production web and mobile applications to AI and computer vision systems, I enjoy turning ideas into practical software.
   </p>
 
   <p className="mt-4">
-    Outside of work, you’ll probably find me jamming with my instruments, playing badminton, or spending time with family and friends.
+    I've been fortunate to work with reputed institutions:
+  </p>
+
+  <ul className="mt-2 list-disc list-inside space-y-2">
+    <li>
+      <strong>AI Systems Intern:</strong> 506 Army Base Workshop
+    </li>
+    <li>
+      <strong>App Development Intern:</strong> IIT Indore
+    </li>
+  </ul>
+
+  <p className="mt-4">
+    Outside of work, you'll probably find me jamming on my instruments, playing badminton, or spending quality time with family and friends.
   </p>
 
   <p className="mt-4">
@@ -54,7 +95,7 @@ const ABOUT_ME = (<>
     >
       Reach out
     </a>{" "}
-    if you have an interesting idea to build or collaborate on!
+    if you have an interesting idea to build or would like to collaborate!
   </p>
 </>);
 

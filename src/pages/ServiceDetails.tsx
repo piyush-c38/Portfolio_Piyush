@@ -8,85 +8,26 @@ const ServiceDetail = () => {
   const { service } = useParams();
 
   const serviceData = {
-    'web-development': {
-      title: 'Web Development',
-      description: 'Custom web applications built with modern technologies',
+    'ai-automation': {
+      title: 'AI Automation & Agentic AI',
+      description: 'Automate repetitive business workflows using AI agents, LLMs, n8n, MCP, and custom integrations.',
       projects: [
         {
           id: 1,
-          title: 'E-commerce Platform',
-          description: 'A full-featured e-commerce platform built with React and Node.js',
-          image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-          technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-          completedDate: 'Nov 2024',
-          link: '#'
-        },
-        {
-          id: 2,
-          title: 'SaaS Dashboard',
-          description: 'Analytics dashboard for SaaS companies with real-time data visualization',
-          image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-          technologies: ['React', 'TypeScript', 'Chart.js', 'Tailwind CSS'],
-          completedDate: 'Oct 2024',
-          link: '#'
-        },
-        {
-          id: 3,
-          title: 'Corporate Website',
-          description: 'Modern corporate website with CMS integration',
-          image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=400&fit=crop',
-          technologies: ['React', 'Gatsby', 'GraphQL', 'Contentful'],
-          completedDate: 'Sep 2024',
-          link: '#'
+          title: 'Git Insight',
+          description: 'An AI-powered GitHub repository analysis platform.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1783493671/pexels-realtoughcandy-11035539_wuxewn.jpg',
+          technologies: ['Next.js', 'Node.js', 'RAG', 'LLM'],
+          completedDate: 'May 2026',
+          link: 'https://git-insight-one.vercel.app/'
         }
       ]
     },
-    'mobile-development': {
-      title: 'Mobile Development',
-      description: 'Native and cross-platform mobile applications',
+    'full-stack': {
+      title: 'Full-Stack Web Applications',
+      description: 'Production-ready web applications built with modern technologies, optimized for performance, scalability, and maintainability.',
       projects: [
-        {
-          id: 1,
-          title: 'Fitness Tracking App',
-          description: 'Cross-platform fitness app with workout tracking and social features',
-          image: 'https://images.unsplash.com/photo-1526506118085-60ce8714f8c5?w=600&h=400&fit=crop',
-          technologies: ['React Native', 'Firebase', 'Redux', 'Expo'],
-          completedDate: 'Dec 2024',
-          link: '#'
-        },
-        {
-          id: 2,
-          title: 'Food Delivery App',
-          description: 'On-demand food delivery application with real-time tracking',
-          image: 'https://images.unsplash.com/photo-1565299624946-b28f40a0ca4b?w=600&h=400&fit=crop',
-          technologies: ['React Native', 'Node.js', 'Socket.io', 'Google Maps'],
-          completedDate: 'Aug 2024',
-          link: '#'
-        }
-      ]
-    },
-    'ui-ux-design': {
-      title: 'UI/UX Design',
-      description: 'User-centered design solutions',
-      projects: [
-        {
-          id: 1,
-          title: 'Banking App Redesign',
-          description: 'Complete UX overhaul of a mobile banking application',
-          image: 'https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=600&h=400&fit=crop',
-          technologies: ['Figma', 'Adobe XD', 'Principle', 'InVision'],
-          completedDate: 'Oct 2024',
-          link: '#'
-        },
-        {
-          id: 2,
-          title: 'E-learning Platform Design',
-          description: 'UI/UX design for an online learning platform',
-          image: 'https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=600&h=400&fit=crop',
-          technologies: ['Figma', 'Sketch', 'Marvel', 'Zeplin'],
-          completedDate: 'Jul 2024',
-          link: '#'
-        }
+
       ]
     }
   };
@@ -101,7 +42,7 @@ const ServiceDetail = () => {
     return (
       <div className="min-h-screen bg-white">
         <Navbar />
-        <main className="pt-20 py-20">
+        <main className="pt-40 py-20">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl font-bold text-gray-900 mb-4">Service Not Found</h1>
             <p className="text-gray-600 mb-8">The service you're looking for doesn't exist.</p>

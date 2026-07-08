@@ -29,7 +29,7 @@ const ICONS = [
   },
   {
     icon: X,
-    label: "X",
+    label: "Twitter",
     href: `${Links.x}`  
   },
   {
@@ -49,6 +49,7 @@ const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
         rel="noopener noreferrer"
         className="group w-9 h-9 rounded-full flex items-center justify-center bg-slate-800  hover:bg-slate-600  active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
         aria-label={label}
+        title={label}
       >
         <Icon size={19} strokeWidth={1.6} className="text-white" />
       </a>

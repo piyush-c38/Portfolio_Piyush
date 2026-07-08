@@ -16,7 +16,7 @@ const HeroSection = () => (
           Hello
         </h1>
         <p className="text-base sm:text-xl font-inter font-light text-black/60 mt-2 animate-fadeinup" style={{ animationDelay: "120ms" }}>
-          — It’s Piyush, a Full-Stack Product Developer
+          — It’s Piyush, a Full-Stack Developer
         </p>
       </div>
       {/* TechStack - vertical zigzag, on right */}
