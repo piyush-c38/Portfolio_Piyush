@@ -30,7 +30,7 @@ const Services = () => {
     {
       step: "01",
       title: "Understand Requirements",
-      description: "We start by understanding your goals, requirements, and target audience to create a comprehensive project plan."
+      description: "I start by understanding your goals, requirements, and target audience to create a comprehensive project plan."
     },
     {
       step: "02",
@@ -49,6 +49,22 @@ const Services = () => {
     }
   ];
 
+  const handleEmailClick = () => {
+    const isMobileOrTablet = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(
+      navigator.userAgent
+    );
+
+    if (isMobileOrTablet) {
+      window.location.href =
+        "mailto:piyushch.ofc@gmail.com?subject=Project%20Inquiry";
+    } else {
+      window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=piyushch.ofc@gmail.com&su=Project%20Inquiry",
+        "_blank"
+      );
+    }
+  };
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
@@ -59,7 +75,7 @@ const Services = () => {
 
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+        <section className="pt-28 pb-10 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Build Smarter Software with AI</h1>
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
@@ -152,15 +168,10 @@ const Services = () => {
             <p className="text-xl text-gray-600 mb-8">
               Let's discuss your requirements and create something amazing together.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
               <button
-                onClick={() =>
-                  window.open(
-                    "https://mail.google.com/mail/?view=cm&fs=1&to=piyushch.ofc@gmail.com&su=Project%20Inquiry",
-                    "_blank"
-                  )
-                }
-                className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200">
+                onClick={handleEmailClick}
+                className=" bg-gray-900 text-white px-8 py-3 w-44 rounded-lg hover:bg-gray-800 transition-colors duration-200">
                 Let's Build
               </button>
               <Link

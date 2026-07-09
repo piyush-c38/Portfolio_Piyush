@@ -11,7 +11,7 @@ const PROFILE = {
   img: "https://res.cloudinary.com/yfhun3wh/image/upload/v1783424099/dp_anjwsa.png",
   name: "Piyush Chandrakar",
   tagline: "Full-Stack Developer",
-  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "Typescript", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Tensorflow", "PyTorch", "SciKit-Learn", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
+  techKeyWords: ["Java", "Python", "JavaScript", "TypeScript", "React", "React Native", "NextJS", "NodeJS", "ExpressJS", "MongoDB", "Firebase", "RAG", "LLMs", "Vector Search", "Git Hub", "Bit Bucket", "Jira", "Mosquitto", "Docker"],
 };
 
 const handleReachOut = (e) => {

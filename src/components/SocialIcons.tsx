@@ -6,53 +6,68 @@ type Props = {
   className?: string;
 };
 
+const handleEmailClick = (email) => {
+  const isMobileOrTablet = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(
+    navigator.userAgent
+  );
+
+  if (isMobileOrTablet) {
+    window.location.href =
+      `mailto:${email}?subject=Project%20Inquiry`;
+  } else {
+    window.open(
+      `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Project%20Inquiry`,
+      "_blank"
+    );
+  }
+};
+
 const ICONS = [
   {
     icon: Mail,
     label: "Personal Email",
-    href: `mailto:${Links.personalEmail}`
+    onClick: () => handleEmailClick(Links.personalEmail),
   },
   {
     icon: School,
     label: "Student Email",
-    href: `mailto:${Links.studentEmail}`
+    onClick: () => handleEmailClick(Links.studentEmail),
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    href: `${Links.linkedin}`
+    onClick: () => window.open(Links.linkedin, "_blank"),
   },
   {
     icon: Github,
     label: "GitHub",
-    href: `${Links.github}`
+    onClick: () => window.open(Links.github, "_blank"),
   },
   {
     icon: X,
     label: "Twitter",
-    href: `${Links.x}`  
+    onClick: () => window.open(Links.x, "_blank"),
   },
   {
     icon: Instagram,
     label: "Instagram",
-    href: `${Links.instagram}`
+    onClick: () => window.open(Links.instagram, "_blank"),
   },
 ];
 
 const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
   <div className={`flex flex-row gap-3 ${className}`}>
-    {ICONS.map(({ icon: Icon, label, href }) => (
-      <a
-        href={href}
+    {ICONS.map(({ icon: Icon, label, onClick }) => (
+      <button
         key={label}
-        target="_blank"
         rel="noopener noreferrer"
         className="group w-9 h-9 rounded-full flex items-center justify-center bg-slate-800  hover:bg-slate-600  active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
         aria-label={label}
         title={label}
+        onClick={onClick}
       >
         <Icon size={19} strokeWidth={1.6} className="text-white" />
-      </a>
+      </button>
     ))}
   </div>
 );
