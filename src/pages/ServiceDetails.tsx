@@ -14,6 +14,15 @@ const ServiceDetail = () => {
       projects: [
         {
           id: 1,
+          title: 'Rescue The Animal',
+          description: 'A platform to help users find the right rescue organization during emergencies.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1783780341/rta-2_mywtmu.jpg',
+          technologies: ['React', 'Node.js', 'MongoDB'],
+          completedDate: 'June 2026',
+          link: 'https://piyush-c38.github.io/rescue-the-animal-rta/'
+        },
+        {
+          id: 2,
           title: 'Git Insight',
           description: 'An AI-powered GitHub repository analysis platform.',
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1783493671/pexels-realtoughcandy-11035539_wuxewn.jpg',
@@ -27,12 +36,36 @@ const ServiceDetail = () => {
       title: 'Full-Stack Web Applications',
       description: 'Production-ready web applications built with modern technologies, optimized for performance, scalability, and maintainability.',
       projects: [
-
+        {
+          id: 1,
+          title: 'Rescue The Animal',
+          description: 'A platform to help users find the right rescue organization during emergencies.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1783780341/rta-2_mywtmu.jpg',
+          technologies: ['React', 'Node.js', 'MongoDB'],
+          completedDate: 'June 2026',
+          link: 'https://piyush-c38.github.io/rescue-the-animal-rta/'
+        },
       ]
     }
   };
 
   const currentService = serviceData[service as keyof typeof serviceData];
+
+  const handleEmailClick = () => {
+    const isMobileOrTablet = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(
+      navigator.userAgent
+    );
+
+    if (isMobileOrTablet) {
+      window.location.href =
+        "mailto:piyushch.ofc@gmail.com?subject=Project%20Inquiry";
+    } else {
+      window.open(
+        "https://mail.google.com/mail/?view=cm&fs=1&to=piyushch.ofc@gmail.com&su=Project%20Inquiry",
+        "_blank"
+      );
+    }
+  };
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -149,8 +182,10 @@ const ServiceDetail = () => {
             <p className="text-l sm:text-xl text-gray-600 mb-8">
               Let's discuss your project and create something amazing together.
             </p>
-            <button className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200">
-              Get Free Consultation
+            <button
+              onClick={handleEmailClick}
+              className=" bg-gray-900 text-white px-8 py-3 w-44 rounded-lg hover:bg-gray-800 transition-colors duration-200">
+              Let's Build
             </button>
           </div>
         </section>

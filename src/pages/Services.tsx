@@ -89,7 +89,7 @@ const Services = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {services.map((service) => (
-                // <Link to={service.slug}>
+                <Link to={service.slug}>
                 <div key={service.id} className="group">
                   <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <div className="w-12 h-12 bg-gray-900 rounded-lg flex items-center justify-center mb-6 group-hover:bg-gray-800 transition-colors">
@@ -118,14 +118,14 @@ const Services = () => {
                         <span className="text-lg font-semibold text-gray-900">
                           Custom Pricing
                         </span>
-                        {/* <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                            See Case Studies →
-                          </button> */}
+                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
+                          Past Work →
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
-                // </Link> 
+                </Link> 
               ))}
             </div>
           </div>

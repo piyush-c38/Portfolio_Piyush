@@ -2,6 +2,15 @@ import { ExternalLink } from "lucide-react";
 
 const TIMELINE = [
   {
+    label: "Side Project: RTA",
+    date: "July 2026",
+    role: "",
+    desc: "A full-stack emergency response platform that integrates AI, Google Places, geospatial search, and multilingual voice processing to analyze animal-emergency situations, list nearby rescue organizations using a hybrid recommendation engine, and ease communication to organizations through automated WhatsApp summaries.",
+    color: "bg-[#0f172a]",
+    projectLink: "https://github.com/piyush-c38/rescue-the-animal-rta",
+    demolink: "https://piyush-c38.github.io/rescue-the-animal-rta/",
+  },
+  {
     label: "Side Project: GitInsight",
     date: "May 2026 – Jun 2026",
     role: "",

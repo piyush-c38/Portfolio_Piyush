@@ -370,240 +370,240 @@ const Blogs: {
       featured: false,
       slug: "building-trueprice-effective-price-engine"
     },
-{
-  id: 9,
-  title: "GitHub Copilot Just Changed Its Pricing. Developers Are Not Happy.",
-  excerpt:
-    "GitHub's move from subscription-based Copilot pricing to AI Credits has sparked backlash across the developer community. Here's what changed, why developers are upset, and why I think the new system misses the mark.",
-  content: (
-    <>
-      <p>
-        For years, GitHub Copilot had a simple promise.
-      </p>
+    {
+      id: 9,
+      title: "GitHub Copilot Just Changed Its Pricing. Developers Are Not Happy.",
+      excerpt:
+        "GitHub's move from subscription-based Copilot pricing to AI Credits has sparked backlash across the developer community. Here's what changed, why developers are upset, and why I think the new system misses the mark.",
+      content: (
+        <>
+          <p>
+            For years, GitHub Copilot had a simple promise.
+          </p>
 
-      <p className="mt-5">
-        Pay a monthly subscription, open your editor, and code.
-      </p>
+          <p className="mt-5">
+            Pay a monthly subscription, open your editor, and code.
+          </p>
 
-      <p className="mt-5">
-        You didn't have to think about tokens. You didn't have to calculate usage.
-        You didn't have to wonder whether asking one more question would increase
-        next month's bill.
-      </p>
+          <p className="mt-5">
+            You didn't have to think about tokens. You didn't have to calculate usage.
+            You didn't have to wonder whether asking one more question would increase
+            next month's bill.
+          </p>
 
-      <p className="mt-5 font-medium">
-        That changed on June 1, 2026.
-      </p>
+          <p className="mt-5 font-medium">
+            That changed on June 1, 2026.
+          </p>
 
-      <p className="mt-5">
-        GitHub officially moved Copilot from its old request-based billing system
-        to a new usage-based billing model powered by AI Credits. Instead of
-        paying primarily for access, users are now paying based on how much AI
-        they actually consume. GitHub says the cost depends on the model being
-        used and the number of tokens processed during each interaction.
-      </p>
+          <p className="mt-5">
+            GitHub officially moved Copilot from its old request-based billing system
+            to a new usage-based billing model powered by AI Credits. Instead of
+            paying primarily for access, users are now paying based on how much AI
+            they actually consume. GitHub says the cost depends on the model being
+            used and the number of tokens processed during each interaction.
+          </p>
 
-      <p className="mt-5">
-        On paper, the idea sounds reasonable.
-      </p>
+          <p className="mt-5">
+            On paper, the idea sounds reasonable.
+          </p>
 
-      <p className="mt-5">
-        A quick autocomplete and a multi-hour autonomous coding session clearly
-        don't cost the same amount to run. GitHub argues that the old pricing
-        model was no longer sustainable because modern AI agents consume
-        significantly more compute resources.
-      </p>
+          <p className="mt-5">
+            A quick autocomplete and a multi-hour autonomous coding session clearly
+            don't cost the same amount to run. GitHub argues that the old pricing
+            model was no longer sustainable because modern AI agents consume
+            significantly more compute resources.
+          </p>
 
-      <p className="mt-5 font-medium">
-        The problem is what happened when we developers started seeing the
-        numbers.
-      </p>
+          <p className="mt-5 font-medium">
+            The problem is what happened when we developers started seeing the
+            numbers.
+          </p>
 
-      <p className="mt-5">
-        Within hours of the rollout, Reddit and GitHub Community discussions were
-        flooded with screenshots of projected bills. Some developers reported
-        that their previous monthly usage would now cost several hundred dollars.
-        Others shared estimates showing bills increasing from roughly $39 per
-        month to more than $800 under the new system. In my system itself, I
-        experienced the credit consumption increased to upto 20x; that's insane.
-      </p>
+          <p className="mt-5">
+            Within hours of the rollout, Reddit and GitHub Community discussions were
+            flooded with screenshots of projected bills. Some developers reported
+            that their previous monthly usage would now cost several hundred dollars.
+            Others shared estimates showing bills increasing from roughly $39 per
+            month to more than $800 under the new system. In my system itself, I
+            experienced the credit consumption increased to upto 20x; that's insane.
+          </p>
 
-      <p className="mt-5">
-        And that is where the controversy really started.
-      </p>
+          <p className="mt-5">
+            And that is where the controversy really started.
+          </p>
 
-      <p className="mt-5">
-        Most developers are not angry that AI costs money.
-      </p>
+          <p className="mt-5">
+            Most developers are not angry that AI costs money.
+          </p>
 
-      <p className="mt-5">
-        They are angry because Copilot became part of their daily workflow under
-        a predictable subscription model. Suddenly replacing that predictability
-        with token-based accounting feels less like a product upgrade and more
-        like a pricing shock.
-      </p>
+          <p className="mt-5">
+            They are angry because Copilot became part of their daily workflow under
+            a predictable subscription model. Suddenly replacing that predictability
+            with token-based accounting feels less like a product upgrade and more
+            like a pricing shock.
+          </p>
 
-      <p className="mt-5">
-        After spending some time reading Reddit discussions, I saw a few common
-        demands appear repeatedly:
-      </p>
+          <p className="mt-5">
+            After spending some time reading Reddit discussions, I saw a few common
+            demands appear repeatedly:
+          </p>
 
-      <ul className="list-disc pl-6 mt-5 space-y-2">
-        <li>Give users larger included credit allowances.</li>
-        <li>Keep flat-rate plans available for power users.</li>
-        <li>Provide clearer cost estimates before usage occurs.</li>
-        <li>Make agent mode more affordable.</li>
-        <li>Improve transparency around how credits are consumed.</li>
-      </ul>
+          <ul className="list-disc pl-6 mt-5 space-y-2">
+            <li>Give users larger included credit allowances.</li>
+            <li>Keep flat-rate plans available for power users.</li>
+            <li>Provide clearer cost estimates before usage occurs.</li>
+            <li>Make agent mode more affordable.</li>
+            <li>Improve transparency around how credits are consumed.</li>
+          </ul>
 
-      <p className="mt-5">
-        One complaint appears particularly often.
-      </p>
+          <p className="mt-5">
+            One complaint appears particularly often.
+          </p>
 
-      <p className="mt-5">
-        Developers argue that "credits" hide the real cost.
-      </p>
+          <p className="mt-5">
+            Developers argue that "credits" hide the real cost.
+          </p>
 
-      <p className="mt-5">
-        Seeing "84,000 credits" feels abstract. Most people cannot immediately
-        translate that number into dollars. But when the same usage is shown as
-        hundreds of dollars, the reaction becomes very different. Several Reddit
-        discussions revolve around this exact issue, with users saying that the
-        credit system makes large consumption numbers feel less alarming until
-        they calculate the actual monetary value.
-      </p>
+          <p className="mt-5">
+            Seeing "84,000 credits" feels abstract. Most people cannot immediately
+            translate that number into dollars. But when the same usage is shown as
+            hundreds of dollars, the reaction becomes very different. Several Reddit
+            discussions revolve around this exact issue, with users saying that the
+            credit system makes large consumption numbers feel less alarming until
+            they calculate the actual monetary value.
+          </p>
 
-      <p className="mt-5">
-        To be fair, Microsoft and GitHub are not pretending this change is
-        arbitrary.
-      </p>
+          <p className="mt-5">
+            To be fair, Microsoft and GitHub are not pretending this change is
+            arbitrary.
+          </p>
 
-      <p className="mt-5">
-        Their explanation is straightforward: The old model forced the company to
-        absorb an increasing share of those costs, making the system
-        unsustainable over time. Usage-based billing is their attempt to align
-        pricing with actual resource consumption.
-      </p>
+          <p className="mt-5">
+            Their explanation is straightforward: The old model forced the company to
+            absorb an increasing share of those costs, making the system
+            unsustainable over time. Usage-based billing is their attempt to align
+            pricing with actual resource consumption.
+          </p>
 
-      <p className="mt-5">
-        I understand the reasoning.
-      </p>
+          <p className="mt-5">
+            I understand the reasoning.
+          </p>
 
-      <p className="mt-5">
-        I still don't agree with the decision.
-      </p>
+          <p className="mt-5">
+            I still don't agree with the decision.
+          </p>
 
-      <p className="mt-5">
-        As a developer, I don't want to think about token economics while solving
-        engineering problems. Copilot succeeded because it felt invisible. It
-        stayed out of the way and helped me build things.
-      </p>
+          <p className="mt-5">
+            As a developer, I don't want to think about token economics while solving
+            engineering problems. Copilot succeeded because it felt invisible. It
+            stayed out of the way and helped me build things.
+          </p>
 
-      <p className="mt-5">
-        The new system changes that relationship.
-      </p>
+          <p className="mt-5">
+            The new system changes that relationship.
+          </p>
 
-      <p className="mt-5">
-        Now every long conversation, every agent workflow, and every experiment
-        comes with a hidden question in the back of my mind:
-      </p>
+          <p className="mt-5">
+            Now every long conversation, every agent workflow, and every experiment
+            comes with a hidden question in the back of my mind:
+          </p>
 
-      <blockquote className="border-l-4 pl-4 italic mt-5">
-        "How much is this costing?"
-      </blockquote>
+          <blockquote className="border-l-4 pl-4 italic mt-5">
+            "How much is this costing?"
+          </blockquote>
 
-      <p className="mt-5">
-        For casual users, the change may not matter much.
-      </p>
+          <p className="mt-5">
+            For casual users, the change may not matter much.
+          </p>
 
-      <p className="mt-5">
-        For us, developers who use Copilot heavily, it absolutely does.
-      </p>
+          <p className="mt-5">
+            For us, developers who use Copilot heavily, it absolutely does.
+          </p>
 
-     <h3 className="text-xl font-semibold mt-10 mb-4">Further Reading</h3>
+          <h3 className="text-xl font-semibold mt-10 mb-4">Further Reading</h3>
 
-<p>
-  If you'd like to explore the discussion yourself, here are some of the
-  articles and community threads I had read:
-</p>
+          <p>
+            If you'd like to explore the discussion yourself, here are some of the
+            articles and community threads I had read:
+          </p>
 
-<ul className="list-disc pl-6 mt-4 space-y-2">
-  <li>
-    <a
-      href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      GitHub Blog — GitHub Copilot Moving to Usage-Based Billing
-    </a>
-  </li>
+          <ul className="list-disc pl-6 mt-4 space-y-2">
+            <li>
+              <a
+                href="https://github.blog/news-insights/company-news/github-copilot-is-moving-to-usage-based-billing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                GitHub Blog — GitHub Copilot Moving to Usage-Based Billing
+              </a>
+            </li>
 
-  <li>
-    <a
-      href="https://docs.github.com/en/copilot/reference/copilot-billing/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      GitHub Documentation — Copilot Billing Changes
-    </a>
-  </li>
+            <li>
+              <a
+                href="https://docs.github.com/en/copilot/reference/copilot-billing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                GitHub Documentation — Copilot Billing Changes
+              </a>
+            </li>
 
-  <li>
-    <a
-      href="https://www.reddit.com/r/GithubCopilot/comments/1ttd1hl/end_of_an_era_june_1_2026_github_copilot_models/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Reddit Discussion — End of an Era: GitHub Copilot Models & Billing Changes
-    </a>
-  </li>
+            <li>
+              <a
+                href="https://www.reddit.com/r/GithubCopilot/comments/1ttd1hl/end_of_an_era_june_1_2026_github_copilot_models/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Reddit Discussion — End of an Era: GitHub Copilot Models & Billing Changes
+              </a>
+            </li>
 
-  <li>
-    <a
-      href="https://www.reddit.com/r/GithubCopilot/comments/1sxge4u/github_copilot_is_moving_to_usagebased_billing/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Reddit Discussion — GitHub Copilot Usage-Based Billing Reactions
-    </a>
-  </li>
+            <li>
+              <a
+                href="https://www.reddit.com/r/GithubCopilot/comments/1sxge4u/github_copilot_is_moving_to_usagebased_billing/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Reddit Discussion — GitHub Copilot Usage-Based Billing Reactions
+              </a>
+            </li>
 
-  <li>
-    <a
-      href="https://www.reddit.com/r/GithubCopilot/comments/1tu6msy/github_copilot_became_unusable_for_individual/"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Reddit Discussion — GitHub Copilot Became Unusable for Individual Developers
-    </a>
-  </li>
+            <li>
+              <a
+                href="https://www.reddit.com/r/GithubCopilot/comments/1tu6msy/github_copilot_became_unusable_for_individual/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Reddit Discussion — GitHub Copilot Became Unusable for Individual Developers
+              </a>
+            </li>
 
-  <li>
-    <a
-      href="https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
-      target="_blank"
-      rel="noopener noreferrer"
-      className="text-blue-600 hover:underline"
-    >
-      Business Insider — Developer Backlash Against New Copilot Pricing
-    </a>
-  </li>
-</ul>
-    </>
-  ),
-  date: "June 2, 2026",
-  readTime: "5 min read",
-  category: "Technology",
-  image:
-    "https://cdn.dribbble.com/userupload/35506784/file/original-eaa0ea386fa02cfa6bc8317c73f68685.png?resize=752x&vertical=center",
-  featured: false,
-  slug: "github-copilot-pricing-controversy"
-},
+            <li>
+              <a
+                href="https://www.businessinsider.com/github-copilot-token-uage-pricing-change-reaction-2026-6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 hover:underline"
+              >
+                Business Insider — Developer Backlash Against New Copilot Pricing
+              </a>
+            </li>
+          </ul>
+        </>
+      ),
+      date: "June 2, 2026",
+      readTime: "5 min read",
+      category: "Technology",
+      image:
+        "https://cdn.dribbble.com/userupload/35506784/file/original-eaa0ea386fa02cfa6bc8317c73f68685.png?resize=752x&vertical=center",
+      featured: false,
+      slug: "github-copilot-pricing-controversy"
+    },
     {
       id: 10,
       title: "Building GitInsight: Making GitHub Repositories Explain Themselves",
@@ -874,7 +874,7 @@ const Blogs: {
           </p>
 
           <p className="mt-5">
-            One of our biggest challenges was deployment.
+            One of my biggest challenges was deployment.
           </p>
 
           <p className="mt-5">
@@ -1122,9 +1122,750 @@ npm run dev`} </pre>
           </p>
         </>
       ),
-      featured: true,
+      featured: false,
       image: "https://cdn.dribbble.com/userupload/42642838/file/original-22416a1c160bc0debc58759e9ff1fa96.png?resize=752x&vertical=center",
-    }
+    },
+    {
+      id: 11,
+      title: "The RTA App: Using AI to Make Animal Emergency Response Faster",
+      excerpt:
+        "How I built the RTA app, a platform that uses AI to speed up animal emergency response times.",
+      category: "Software Development",
+      date: "July 11, 2026",
+      readTime: "18 min read",
+      slug: "the-rta-app",
+      content: (
+        <>
+          <p>
+            Most people are unable to think clearly during an emergency.
+          </p>
+
+          <p className="mt-5">
+            Imagine you're driving home and notice an injured dog lying on the roadside.
+          </p>
+
+          <p>
+            Or maybe you find a bird with a broken wing.
+          </p>
+
+          <p>
+            Or a snake enters a residential area.
+          </p>
+
+          <p className="mt-5">
+            Your first instinct is usually the same.
+          </p>
+
+          <p>Open Google.</p>
+          <p>Search for a veterinary clinic.</p>
+          <p>Call the first number.</p>
+          <p>Hope someone picks up.</p>
+
+          <p className="mt-5">
+            Unfortunately, that's where things start becoming difficult.
+          </p>
+
+          <p>Not every veterinary clinic treats every animal.</p>
+          <p>Some organizations only rescue wildlife.</p>
+          <p>Some municipalities handle stray cattle.</p>
+          <p>Some NGOs specialize in birds.</p>
+          <p>Some numbers don't work anymore.</p>
+
+          <p className="mt-5">
+            And when you're already panicking, comparing twenty search results is probably
+            the last thing you want to do.
+          </p>
+
+          <p className="mt-5">
+            That became the starting point for <strong>RTA - Rescue the Animal</strong>.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">The First Idea</h2>
+
+          <p className="mt-5">
+            My initial solution was straightforward.
+          </p>
+
+          <p>Get the user's location.</p>
+          <p>Search nearby veterinary clinics.</p>
+          <p>Display them on the screen.</p>
+
+          <p className="mt-5">
+            Technically, it worked.
+          </p>
+
+          <p>
+            Practically, it wasn't enough.
+          </p>
+
+          <p className="mt-5">
+            During testing, I quickly realized that proximity alone doesn't solve the
+            problem.
+          </p>
+
+          <p>
+            The closest clinic might not treat birds.
+          </p>
+
+          <p>
+            The highest-rated NGO might only handle wildlife.
+          </p>
+
+          <p>
+            A municipality might be the correct authority for rescuing cattle.
+          </p>
+
+          <p className="mt-5">
+            Returning a sorted list based only on distance wasn't actually helping the
+            user make a better decision.
+          </p>
+
+          <p>
+            I needed something smarter.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Designing for Panic, Not for Browsing
+          </h2>
+
+          <p className="mt-5">
+            One of the first product decisions had nothing to do with AI.
+          </p>
+
+          <p>
+            It was about the interface.
+          </p>
+
+          <p className="mt-5">
+            Most websites try to impress users with animations, banners, cards, and
+            navigation menus.
+          </p>
+
+          <p>
+            Emergency situations don't need any of that.
+          </p>
+
+          <p>
+            They need clarity.
+          </p>
+
+          <p className="mt-5">
+            So I intentionally kept the landing page simple.
+          </p>
+
+          <p>
+            The first thing users see is the <strong>Emergency</strong> button.
+          </p>
+
+          <p>No unnecessary scrolling.</p>
+          <p>No distractions.</p>
+          <p>No marketing content.</p>
+          <p>Just the action that matters most.</p>
+
+          <p className="mt-5">
+            That single design decision shaped the rest of the application.
+          </p>
+
+          <p className="mt-5">
+            Every feature had to answer one question:
+          </p>
+
+          <blockquote className="my-5 border-l-4 border-gray-400 pl-4 italic">
+            "Does this help someone during an emergency?"
+          </blockquote>
+
+          <p>
+            If the answer was no, it didn't belong in the product.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Finding the Right Help
+          </h2>
+
+          <p className="mt-5">
+            Once the user shares their location, the application searches nearby rescue
+            organizations.
+          </p>
+
+          <p>
+            This wasn't limited to veterinary hospitals.
+          </p>
+
+          <p>
+            Different emergencies require different responders.
+          </p>
+
+          <p className="mt-5">
+            Depending on the situation, Rescue the Animal searches for:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Veterinary hospitals</li>
+            <li>Animal NGOs</li>
+            <li>Wildlife rescue organizations</li>
+            <li>Snake rescuers</li>
+            <li>Municipal animal services</li>
+            <li>Government rescue centers</li>
+          </ul>
+
+          <p className="mt-5">
+            To achieve this, I integrated the <strong>Google Places API</strong> alongside
+            my own curated NGO database.
+          </p>
+
+          <p>
+            Google provides real-time nearby organizations.
+          </p>
+
+          <p>
+            My database provides verified rescue organizations that may not always appear
+            prominently in search results.
+          </p>
+
+          <p className="mt-5">
+            Combining both sources gave much better coverage than relying on either one
+            individually.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Why Distance Wasn't Enough
+          </h2>
+
+          <p className="mt-5">
+            Initially, organizations were ranked using practical factors like:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Distance</li>
+            <li>Google rating</li>
+            <li>Availability of phone numbers</li>
+            <li>Operational status</li>
+          </ul>
+
+          <p className="mt-5">
+            This produced reasonable results.
+          </p>
+
+          <p>
+            But one question remained.
+          </p>
+
+          <p className="mt-5">
+            What if the closest organization wasn't actually the right one?
+          </p>
+
+          <p>
+            An injured bird shouldn't necessarily be taken to the nearest cattle rescue
+            center.
+          </p>
+
+          <p>
+            A snake rescue shouldn't begin with calling a general veterinary clinic.
+          </p>
+
+          <p className="mt-5">
+            The application needed context.
+          </p>
+
+          <p>
+            That's where AI entered the picture.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Using AI to Understand Emergencies
+          </h2>
+
+          <p className="mt-5">
+            Rather than treating AI like a chatbot, I wanted it to perform structured
+            analysis.
+          </p>
+
+          <p>
+            When users describe the situation, either by typing or speaking, the AI
+            extracts meaningful information.
+          </p>
+
+          <p className="mt-5">
+            Instead of receiving a paragraph, the system understands things like:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Animal type</li>
+            <li>Injury condition</li>
+            <li>Severity</li>
+            <li>Possible urgency</li>
+            <li>Required rescue type</li>
+            <li>Summary of the incident</li>
+          </ul>
+
+          <p className="mt-5">
+            For example, a description like:
+          </p>
+
+          <blockquote className="my-5 border-l-4 border-gray-400 pl-4 italic">
+            "A cow is lying near the roadside. One of its legs is bleeding and it is
+            unable to stand."
+          </blockquote>
+
+          <p>
+            is transformed into structured information.
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li><strong>Animal:</strong> Cow</li>
+            <li><strong>Condition:</strong> Bleeding</li>
+            <li><strong>Urgency:</strong> High</li>
+            <li>
+              <strong>Suggested responder:</strong> Veterinary hospital or municipal
+              animal rescue
+            </li>
+          </ul>
+
+          <p className="mt-5">
+            This structured understanding became much more valuable than simply
+            generating text.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Building a Hybrid Recommendation Engine
+          </h2>
+
+          <p className="mt-5">
+            One thing became clear very quickly.
+          </p>
+
+          <p>
+            AI shouldn't make every decision.
+          </p>
+
+          <p>
+            It should improve the decisions we're already making.
+          </p>
+
+          <p className="mt-5">
+            Instead of asking the language model to rank rescue organizations directly,
+            I built a hybrid recommendation system.
+          </p>
+
+          <p className="mt-5">
+            Each organization first receives a score based on objective factors like:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Distance</li>
+            <li>Google rating</li>
+            <li>Phone availability</li>
+            <li>Operational status</li>
+            <li>Service category</li>
+          </ul>
+
+          <p className="mt-5">
+            Then the AI provides additional context.
+          </p>
+
+          <p>
+            Does this organization usually handle birds?
+          </p>
+
+          <p>
+            Would this NGO be appropriate for snake rescue?
+          </p>
+
+          <p>
+            Is municipal assistance more suitable than a veterinary clinic?
+          </p>
+
+          <p className="mt-5">
+            Those AI insights become part of the overall ranking.
+          </p>
+
+          <p>
+            The result is a recommendation engine that combines deterministic scoring
+            with contextual intelligence.
+          </p>
+
+          <p>
+            It feels much more reliable than relying entirely on either approach.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Speaking Instead of Typing
+          </h2>
+
+          <p className="mt-5">
+            Typing detailed information during an emergency isn't always practical.
+          </p>
+
+          <p>
+            Sometimes users are holding an injured animal.
+          </p>
+
+          <p>
+            Sometimes they're outdoors.
+          </p>
+
+          <p>
+            Sometimes they're simply too stressed to write.
+          </p>
+
+          <p className="mt-5">
+            So I introduced voice input.
+          </p>
+
+          <p>
+            Users can press the microphone button and describe the situation naturally.
+          </p>
+
+          <p className="mt-5">
+            The spoken description is converted into text, analyzed by AI, and used
+            throughout the recommendation pipeline.
+          </p>
+
+          <p>
+            The goal wasn't to replace typing.
+          </p>
+
+          <p>
+            It was to remove one more barrier between the user and getting help.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Breaking Language Barriers
+          </h2>
+
+          <p className="mt-5">
+            India has incredible linguistic diversity.
+          </p>
+
+          <p>
+            That also creates practical challenges during emergencies.
+          </p>
+
+          <p className="mt-5">
+            Imagine someone from Madhya Pradesh traveling through Tamil Nadu.
+          </p>
+
+          <p>
+            They may not be comfortable describing a rescue situation in English or
+            Tamil.
+          </p>
+
+          <p className="mt-5">
+            Instead of forcing users to communicate in one language, Rescue the Animal
+            allows them to describe the incident in their preferred language.
+          </p>
+
+          <p className="mt-5">
+            The workflow looks like this:
+          </p>
+
+          <div className="my-6 flex flex-col items-center gap-2 text-center font-medium">
+            <p>User speaks in their native language.</p>
+            <p>↓</p>
+            <p>AI translates the description into English.</p>
+            <p>↓</p>
+            <p>Emergency analysis is performed.</p>
+            <p>↓</p>
+            <p>Organizations are ranked.</p>
+            <p>↓</p>
+            <p>Both the translated description and the original message are preserved.</p>
+          </div>
+
+          <p className="mt-5">
+            This small addition made the platform significantly more accessible.
+          </p>
+
+          <p>
+            The user doesn't have to think about language.
+          </p>
+
+          <p>
+            They simply focus on explaining the situation.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Making Communication Easier
+          </h2>
+
+          <p className="mt-5">
+            Finding the correct rescue organization is only part of the process.
+          </p>
+
+          <p>
+            The next challenge is explaining the emergency.
+          </p>
+
+          <p className="mt-5">
+            Rather than asking users to repeat everything over a phone call, Rescue the
+            Animal automatically prepares a WhatsApp message.
+          </p>
+
+          <p className="mt-5">
+            The message includes:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Current location</li>
+            <li>Translated English description</li>
+            <li>Original user description</li>
+            <li>Emergency summary</li>
+          </ul>
+
+          <p className="mt-5">
+            The user simply selects an organization and sends the message.
+          </p>
+
+          <p>
+            This reduces communication time and helps rescue teams understand the
+            situation before they arrive.
+          </p>
+          <h2 className="mt-10 text-2xl font-bold">
+            Challenges I Didn't Expect
+          </h2>
+
+          <p className="mt-5">
+            Like every project, Rescue the Animal looked much simpler on paper.
+          </p>
+
+          <p>
+            One of my biggest challenges was recommendation quality.
+          </p>
+
+          <p className="mt-5">
+            Initially, the application relied mostly on Google Places search results.
+          </p>
+
+          <p>
+            While those results were geographically accurate, they weren't always
+            contextually relevant.
+          </p>
+
+          <p className="mt-5">
+            I spent considerable time refining how organizations were categorized and
+            ranked so recommendations aligned better with different rescue scenarios.
+          </p>
+
+          <p className="mt-5">
+            Another challenge involved multilingual processing.
+          </p>
+
+          <p>
+            Voice recognition, translation, structured AI analysis, and recommendation
+            ranking all needed to work together without making the experience feel slow.
+          </p>
+
+          <p className="mt-5">
+            Finding the right balance between response quality and response time
+            required several iterations.
+          </p>
+
+          <p className="mt-5">
+            I also learned that external APIs don't always behave consistently.
+          </p>
+
+          <p>
+            Handling incomplete information, missing phone numbers, unavailable
+            ratings, and varying search results became an important part of making the
+            platform reliable.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            The Technologies Behind Rescue the Animal
+          </h2>
+
+          <p className="mt-5">
+            The application is built using a modern full-stack architecture.
+          </p>
+
+          <h3 className="mt-8 text-xl font-semibold">
+            Frontend
+          </h3>
+
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>Vite</li>
+            <li>Tailwind CSS</li>
+          </ul>
+
+          <h3 className="mt-8 text-xl font-semibold">
+            Backend
+          </h3>
+
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>TypeScript</li>
+          </ul>
+
+          <h3 className="mt-8 text-xl font-semibold">
+            Database
+          </h3>
+
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            <li>MongoDB Atlas</li>
+          </ul>
+
+          <h3 className="mt-8 text-xl font-semibold">
+            External Services
+          </h3>
+
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            <li>Google Places API</li>
+            <li>Gemini API</li>
+          </ul>
+
+          <h3 className="mt-8 text-xl font-semibold">
+            Deployment
+          </h3>
+
+          <ul className="mt-4 list-disc space-y-2 pl-6">
+            <li>GitHub Pages</li>
+            <li>Render</li>
+            <li>MongoDB Atlas</li>
+          </ul>
+
+          <p className="mt-5">
+            The architecture is intentionally modular, making it easy to extend with
+            additional rescue categories, languages, or communication channels in the
+            future.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            What I Learned
+          </h2>
+
+          <p className="mt-5">
+            Building Rescue the Animal taught us something interesting.
+          </p>
+
+          <p>
+            The difficult part wasn't integrating AI.
+          </p>
+
+          <p>
+            The difficult part was understanding what people actually need during
+            emergencies.
+          </p>
+
+          <p className="mt-5">
+            Most of my effort went into:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>Designing a panic-friendly interface.</li>
+            <li>Improving recommendation quality.</li>
+            <li>Combining multiple data sources.</li>
+            <li>Building reliable location-based search.</li>
+            <li>Reducing unnecessary user decisions.</li>
+            <li>Making multilingual communication effortless.</li>
+          </ul>
+
+          <p className="mt-5">
+            The AI became significantly more useful because the surrounding system gave
+            it enough structure to work with.
+          </p>
+
+          <p>
+            Good engineering made the AI valuable.
+          </p>
+
+          <p>
+            Not the other way around.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            The Final Result
+          </h2>
+
+          <p className="mt-5">
+            Today, Rescue the Animal helps users find the right rescue organization
+            faster than manually searching through dozens of nearby results.
+          </p>
+
+          <p className="mt-5">
+            Instead of comparing ratings, reading reviews, and guessing who to call,
+            users can share their location, describe the situation naturally, and
+            receive recommendations tailored to the specific emergency.
+          </p>
+
+          <p className="mt-5">
+            Whether it's an injured street dog, a trapped bird, a snake rescue, or
+            livestock requiring immediate assistance, the platform helps connect people
+            with the organizations most likely to help.
+          </p>
+
+          <p className="mt-5">
+            The goal was never to build another directory of veterinary clinics.
+          </p>
+
+          <p>
+            The goal was to reduce hesitation during the moments when every minute
+            matters.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Try It Out
+          </h2>
+
+          <a
+            href="https://piyush-c38.github.io/rescue-the-animal-rta/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block underline px-2 pt-4 text-blue-700 hover:text-blue-900"
+          >
+            Demo Link
+          </a>
+          <p className="mt-5">
+            If you'd like to explore the platform, simply open the website and press
+            the <strong>Emergency</strong> button.
+          </p>
+
+          <p className="mt-5">
+            Share your location, describe the situation by typing or speaking, and let
+            the application recommend the most appropriate rescue organizations nearby.
+          </p>
+
+          <h2 className="mt-10 text-2xl font-bold">
+            Want to Contribute?
+          </h2>
+
+          <a
+            href="https://github.com/piyush-c38/rescue-the-animal-rta"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block underline px-2 pt-4 text-blue-700 hover:text-blue-900"
+          >
+            Git Link
+          </a>
+
+          <p className="mt-5">
+            Rescue the Animal is still evolving, and there are plenty of ideas I would
+            love to explore.
+          </p>
+
+          <p className="mt-5">
+            Some areas I'm actively interested in include:
+          </p>
+
+          <ul className="mt-5 list-disc space-y-2 pl-6">
+            <li>More regional language support</li>
+            <li>Better wildlife classification</li>
+            <li>Offline emergency capabilities</li>
+            <li>Improved recommendation algorithms</li>
+            <li>Integration with additional rescue organizations</li>
+          </ul>
+
+          <p className="mt-5">
+            If you're passionate about AI, geospatial applications, or building
+            technology that creates real-world impact, contributions are always welcome.
+          </p>
+        </>
+      ),
+      featured: true,
+      image: "https://res.cloudinary.com/yfhun3wh/image/upload/v1783780341/rta-2_mywtmu.jpg",
+    },
+
   ];
 
 export default Blogs;

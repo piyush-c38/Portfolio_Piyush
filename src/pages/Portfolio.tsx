@@ -45,6 +45,17 @@ const ABOUT_ME = (<>
   <ul className="mt-2 list-disc list-inside space-y-2">
     <li>
       <a
+        href="https://github.com/piyush-c38/rescue-the-animal-rta"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline hover:text-blue-800"
+      >
+        RTA – Intelligent Animal Rescue Platform
+      </a>
+    </li>
+
+    <li>
+      <a
         href="https://github.com/piyush-c38/git-insight"
         target="_blank"
         rel="noopener noreferrer"
