@@ -1,6 +1,6 @@
 const Links = {
   resumeLink:
-    "https://drive.google.com/file/d/1Gh2Cvd-s-xsWmsacQNmq47LJm98aWc48/view?usp=sharing",
+    "https://drive.google.com/file/d/1-ocHpvgvdWa933C-sGp_GDSwU24gdMBu/view?usp=sharing",
   personalEmail: "piyushch.ofc@gmail.com",
   studentEmail: "piyushc@iitbhilai.ac.in",
   linkedin: "https://www.linkedin.com/in/piyush-chandrakar",
