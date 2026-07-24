@@ -116,11 +116,8 @@ const Services = () => {
                     <div className="border-t border-gray-100 pt-6">
                       <div className="flex items-center justify-between">
                         <span className="text-lg font-semibold text-gray-900">
-                          Custom Pricing
+                          Click for details 
                         </span>
-                        <button className="text-gray-600 hover:text-gray-900 transition-colors">
-                          Previous Works →
-                        </button>
                       </div>
                     </div>
                   </div>

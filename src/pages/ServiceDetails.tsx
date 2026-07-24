@@ -30,6 +30,36 @@ const ServiceDetail = () => {
           completedDate: 'May 2026',
           link: 'https://git-insight-one.vercel.app/'
         }
+      ],
+      pricing: [
+        // {
+        //   id: 1,
+        //   title: 'Basic',
+        //   description: 'Basic Portfolio/Product app ChatBot',
+        //   features: ['4-day delivery', '2 Revisions', '2 pages', 'Design customization', 'Content upload', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+        //   price: 'Starting at ₹7,990.00',
+        // },
+        // {
+        //   id: 2,
+        //   title: 'Standard',
+        //   description: 'Business App with 6–7 pages, React Frontend + Node backend + Database ',
+        //   features: ['8-day delivery', '2 Revisions', '7 pages', 'Design customization', 'Content upload', 'Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+        //   price: 'Starting at ₹38,990.00',
+        // },
+        // {
+        //   id: 3,
+        //   title: 'Premium',
+        //   description: 'Full stack web app/SaaS MVP with auth, APIs, dashboard & database. E-commerce.',
+        //   features: ['25-day delivery', '4 Revisions', '10 pages', 'Design customization', 'Content upload','Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+        //   price: 'Starting at ₹1,04,990.00',
+        // },
+        {
+          id: 1,
+          title: 'Custom AI Solution',
+          description: 'RAG, LLM, and Agentic AI solutions tailored to your business needs.',
+          features: ['Custom AI Agents', 'RAG Applications', 'LLM Integrations', 'Workflow Automation', 'Internal Business Tools', 'Chatbots'],
+          price: 'Custom Pricing',
+        }
       ]
     },
     'full-stack': {
@@ -45,6 +75,36 @@ const ServiceDetail = () => {
           completedDate: 'June 2026',
           link: 'https://piyush-c38.github.io/rescue-the-animal-rta/'
         },
+      ],
+      pricing: [
+        {
+          id: 1,
+          title: 'Basic',
+          description: 'Basic Portfolio/Product app setup with 1–2 pages, React Frontend + Node backend.',
+          features: ['4-day delivery', '2 Revisions', '2 pages', 'Design customization', 'Content upload', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+          price: 'Starting at ₹7,990.00',
+        },
+        {
+          id: 2,
+          title: 'Standard',
+          description: 'Business App with 6–7 pages, React Frontend + Node backend + Database ',
+          features: ['8-day delivery', '2 Revisions', '7 pages', 'Design customization', 'Content upload', 'Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+          price: 'Starting at ₹38,990.00',
+        },
+        {
+          id: 3,
+          title: 'Premium',
+          description: 'Full stack web app/SaaS MVP with auth, APIs, dashboard & database. E-commerce.',
+          features: ['25-day delivery', '4 Revisions', '10 pages', 'Design customization', 'Content upload','Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+          price: 'Starting at ₹1,04,990.00',
+        },
+        {
+          id: 4,
+          title: 'Custom Web Solution',
+          description: '',
+          features: ['Frontend+Backend', 'Database', 'Advanced APIs & Authentication', 'Admin Page', 'SEO & Integrations', 'Design customization', 'Responsive design', 'Source code', 'Detailed code comments'],
+          price: 'Custom Pricing',
+        }
       ]
     }
   };
@@ -115,10 +175,10 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        {/* Projects Grid */}
+         {/* Projects Grid */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Previous Works</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Work Samples</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentService.projects.map((project) => (
@@ -164,6 +224,44 @@ const ServiceDetail = () => {
                         >
                           View Project <ExternalLink size={14} className="ml-1" />
                         </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Pricing Details */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Plans & Pricing</h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-8">
+              {currentService.pricing.map((pricing) => (
+                <div key={pricing.id} className="group">
+                  <div className="bg-white rounded-xl p-8 shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                      {pricing.title}
+                    </h3>
+
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      {pricing.description}
+                    </p>
+
+                    <ul className="space-y-2 mb-6">
+                      {pricing.features.map((feature) => (
+                        <li key={feature} className="flex items-center text-gray-600 text-sm">
+                          <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                     <div className="border-t border-gray-300 pt-6">
+                      <div className="flex items-center justify-between">
+                        <span className="text-lg font-semibold text-gray-900">
+                          {pricing.price}
+                        </span>
                       </div>
                     </div>
                   </div>
