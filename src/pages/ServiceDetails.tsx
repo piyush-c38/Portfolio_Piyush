@@ -75,6 +75,44 @@ const ServiceDetail = () => {
           completedDate: 'June 2026',
           link: 'https://piyush-c38.github.io/rescue-the-animal-rta/'
         },
+        {
+          id: 2,
+          title: 'Bright Smile Clinic',
+          description: 'A dental clinic website with appointment booking and service information.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg',
+          technologies: ['Vite', 'Node.js'],
+          completedDate: 'Jan 2026',
+          link: 'https://piyush-c38.github.io/agency-bright-smile-clinic/'
+        },
+        {
+          id: 3,
+          title: 'Roastwell & Co,',
+          description: 'A coffee e-commerce website with product listings and booking.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/cafe_huq6ku.jpg',
+          technologies: ['Vite', 'Node.js'],
+          completedDate: 'March 2026',
+          link: 'https://piyush-c38.github.io/agency-cafe-showcase/'
+        },
+        {
+          id: 4,
+          title: 'Xesis Coaching Institute',
+          description: 'A coaching institute website with course listings and enrollment features.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/coaching_w7nyvc.jpg',
+          technologies: ['Vite', 'Node.js'],
+          completedDate: 'March 2026',
+          link: 'https://piyush-c38.github.io/agency-xesis-coaching/'
+        },
+        {
+          id: 5,
+          title: 'CA Potfolio Website',
+          description: 'A portfolio website for a Chartered Accountant showcasing services and expertise.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg',
+          technologies: ['Vite', 'Node.js'],
+          completedDate: 'July 2026',
+          link: 'https://piyush-c38.github.io/agency-ca-portfolio/'
+        },
+        
+
       ],
       pricing: [
         {
