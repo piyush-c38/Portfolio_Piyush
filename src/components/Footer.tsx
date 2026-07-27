@@ -1,7 +1,7 @@
 
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
-import { Mail, School } from "lucide-react";
+import { Mail, School, Phone } from "lucide-react";
 import Links from "../../public/data/link.js";
 
 const NAVS = [
@@ -47,6 +47,19 @@ const Footer = () => (
             <School size={19} strokeWidth={1.6} className="text-white" />
           </a>
           <div className="content-center"><b>Student Email :</b> {Links.studentEmail}</div>
+        </div>
+        <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
+          <a
+            href={`tel:${Links.phoneNumber}`}
+            key={"PhoneNumber"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group w-9 h-9 rounded-full flex items-center justify-center bg-white/10 hover:bg-white/20 active:bg-white/30 text-white border border-white/20 transition transform hover:scale-110"
+            aria-label={"Phone Number"}
+          >
+            <Phone size={19} strokeWidth={1.6} className="text-white" />
+          </a>
+          <div className="content-center"><b>Phone Number :</b> {Links.phoneNumber}</div>
         </div>
         <div className="flex justify-center sm:justify-start">
           <Link

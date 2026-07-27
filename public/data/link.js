@@ -7,6 +7,7 @@ const Links = {
   github: "https://github.com/piyush-c38",
   x: "https://x.com/piyush_c38",
   instagram: "https://instagram.com/piyush_c38",
+  phoneNumber: "+91 9179932361",
 };
 
 export default Links;

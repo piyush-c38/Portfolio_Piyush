@@ -1,4 +1,4 @@
-import { ExternalLink, Menu, X } from "lucide-react";
+import { ExternalLink, Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import clsx from "clsx";
@@ -47,8 +47,16 @@ const Navbar = () => {
             ))}
           </ul>
         </div>
-        <div className="flex gap-3 items-center">
+        <div className="flex gap-0 items-center">
           {/* Desktop book a call */}
+          <a
+            href="tel:+919179932361"
+            rel="noopener noreferrer"
+            className="hidden md:flex ml-3 font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+          >
+            Contact
+            <Phone size={18} />
+          </a>
           <a
             href="#"
             rel="noopener noreferrer"
@@ -96,6 +104,16 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
+              <li className="pt-3 border-t border-gray-200">
+                <a
+                  href="tel:+919179932361"
+                  rel="noopener noreferrer"
+                  className="flex justify-center font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+                >
+                  Contact
+                  <Phone size={18} />
+                </a>
+              </li>
               <li className="pt-3 border-t border-gray-200">
                 <a
                   href="#"
