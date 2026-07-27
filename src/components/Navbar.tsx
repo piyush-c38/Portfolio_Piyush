@@ -2,6 +2,7 @@ import { ExternalLink, Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
 import clsx from "clsx";
+import Links from "../../public/data/link.js";
 
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
@@ -50,7 +51,7 @@ const Navbar = () => {
         <div className="flex gap-0 items-center">
           {/* Desktop book a call */}
           <a
-            href="tel:+919179932361"
+            href={`tel:${Links.phoneNumber}`}
             rel="noopener noreferrer"
             className="hidden md:flex ml-3 font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
           >
@@ -106,7 +107,7 @@ const Navbar = () => {
               ))}
               <li className="pt-3 border-t border-gray-200">
                 <a
-                  href="tel:+919179932361"
+                  href={`tel:${Links.phoneNumber}`}
                   rel="noopener noreferrer"
                   className="flex justify-center font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
                 >
@@ -114,7 +115,7 @@ const Navbar = () => {
                   <Phone size={18} />
                 </a>
               </li>
-              <li className="pt-3 border-t border-gray-200">
+              <li className="pt-3">
                 <a
                   href="#"
                   rel="noopener noreferrer"
