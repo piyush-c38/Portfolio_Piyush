@@ -77,16 +77,16 @@ const ServiceDetail = () => {
         },
         {
           id: 2,
-          title: 'Bright Smile Clinic',
-          description: 'A dental clinic website with appointment booking and service information.',
-          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg',
+          title: 'CA Potfolio Website',
+          description: 'A portfolio website for a Chartered Accountant showcasing services and expertise.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg',
           technologies: ['Vite', 'Node.js'],
-          completedDate: 'Jan 2026',
-          link: 'https://piyush-c38.github.io/agency-bright-smile-clinic/'
+          completedDate: 'June 2026',
+          link: 'https://piyush-c38.github.io/agency-ca-portfolio/'
         },
         {
           id: 3,
-          title: 'Roastwell & Co,',
+          title: 'Roastwell & Co.',
           description: 'A coffee e-commerce website with product listings and booking.',
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/cafe_huq6ku.jpg',
           technologies: ['Vite', 'Node.js'],
@@ -104,12 +104,12 @@ const ServiceDetail = () => {
         },
         {
           id: 5,
-          title: 'CA Potfolio Website',
-          description: 'A portfolio website for a Chartered Accountant showcasing services and expertise.',
-          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg',
+          title: 'Bright Smile Clinic',
+          description: 'A dental clinic website with appointment booking and service information.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg',
           technologies: ['Vite', 'Node.js'],
-          completedDate: 'July 2026',
-          link: 'https://piyush-c38.github.io/agency-ca-portfolio/'
+          completedDate: 'Jan 2026',
+          link: 'https://piyush-c38.github.io/agency-bright-smile-clinic/'
         },
         
 
@@ -213,7 +213,7 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-         {/* Projects Grid */}
+         {/* Work Samples */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Work Samples</h2>
