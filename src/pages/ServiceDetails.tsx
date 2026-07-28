@@ -68,12 +68,12 @@ const ServiceDetail = () => {
       projects: [
         {
           id: 1,
-          title: 'Rescue The Animal',
-          description: 'A platform to help users find the right rescue organization during emergencies.',
-          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1783780341/rta-2_mywtmu.jpg',
-          technologies: ['React', 'Node.js', 'MongoDB'],
+          title: 'The Build House',
+          description: 'A modern interior design website for a leading design firm.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785233237/living-room_uvouxf.jpg',
+          technologies: ['React', 'Node.js', 'Cloundinary'],
           completedDate: 'June 2026',
-          link: 'https://piyush-c38.github.io/rescue-the-animal-rta/'
+          link: 'https://piyush-c38.github.io/agency-interior-designer/'
         },
         {
           id: 2,
@@ -86,6 +86,15 @@ const ServiceDetail = () => {
         },
         {
           id: 3,
+          title: 'Prakriti Salon & Spa',
+          description: 'A salon and spa website with service listings, booking, and contact features.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785233424/adam-winger-FkAZqQJTbXM-unsplash_cayyid.jpg',
+          technologies: ['React', 'Node.js', 'Cloundinary'],
+          completedDate: 'April 2026',
+          link: 'https://piyush-c38.github.io/agency-saloon-spa/'
+        },
+        {
+          id: 4,
           title: 'Roastwell & Co.',
           description: 'A coffee e-commerce website with product listings and booking.',
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/cafe_huq6ku.jpg',
@@ -94,7 +103,7 @@ const ServiceDetail = () => {
           link: 'https://piyush-c38.github.io/agency-cafe-showcase/'
         },
         {
-          id: 4,
+          id: 5,
           title: 'Xesis Coaching Institute',
           description: 'A coaching institute website with course listings and enrollment features.',
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/coaching_w7nyvc.jpg',
@@ -103,7 +112,7 @@ const ServiceDetail = () => {
           link: 'https://piyush-c38.github.io/agency-xesis-coaching/'
         },
         {
-          id: 5,
+          id: 6,
           title: 'Bright Smile Clinic',
           description: 'A dental clinic website with appointment booking and service information.',
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg',
@@ -216,7 +225,7 @@ const ServiceDetail = () => {
          {/* Work Samples */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">Work Samples</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">{(service === 'full-stack') ? 'Concept Websites' : 'Work Samples'}</h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentService.projects.map((project) => (
