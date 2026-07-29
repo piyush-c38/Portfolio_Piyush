@@ -316,7 +316,7 @@ const ServiceDetail = () => {
               ))}
             </div>
             <div className="max-w-4xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 text-center">
-              <p className="text-md sm:text-l text-gray-600">
+              <p className=" text-gray-600">
                 *The above mentioned price is the Build Price only. Domain and Hosting costs are to be paid separately by the Client.
               </p>
             </div>
