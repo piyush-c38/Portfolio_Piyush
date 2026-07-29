@@ -120,7 +120,7 @@ const ServiceDetail = () => {
           completedDate: 'Jan 2026',
           link: 'https://piyush-c38.github.io/agency-bright-smile-clinic/'
         },
-        
+
 
       ],
       pricing: [
@@ -135,18 +135,18 @@ const ServiceDetail = () => {
           id: 2,
           title: 'Standard',
           description: 'Business App with 6–7 pages, React Frontend + Node backend + Database ',
-          features: ['8-day delivery', '2 Revisions', '7 pages', 'Design customization', 'Content upload', 'Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+          features: ['10-day delivery', '2 Revisions', '7 pages', 'Design customization', 'Content upload', 'Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
           price: 'Starting at ₹38,990.00',
         },
+        // {
+        //   id: 3,
+        //   title: 'Premium',
+        //   description: 'Full stack web app/SaaS MVP with auth, APIs, dashboard & database. E-commerce.',
+        //   features: ['25-day delivery', '4 Revisions', '10 pages', 'Design customization', 'Content upload','Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
+        //   price: 'Starting at ₹1,04,990.00',
+        // },
         {
           id: 3,
-          title: 'Premium',
-          description: 'Full stack web app/SaaS MVP with auth, APIs, dashboard & database. E-commerce.',
-          features: ['25-day delivery', '4 Revisions', '10 pages', 'Design customization', 'Content upload','Admin Page', 'Responsive design', 'Source code', 'Detailed code comments', 'Additional Cost for Additional page and features'],
-          price: 'Starting at ₹1,04,990.00',
-        },
-        {
-          id: 4,
           title: 'Custom Web Solution',
           description: '',
           features: ['Frontend+Backend', 'Database', 'Advanced APIs & Authentication', 'Admin Page', 'SEO & Integrations', 'Design customization', 'Responsive design', 'Source code', 'Detailed code comments'],
@@ -222,7 +222,7 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-         {/* Work Samples */}
+        {/* Work Samples */}
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-12 text-center">{(service === 'full-stack') ? 'Concept Websites' : 'Work Samples'}</h2>
@@ -304,16 +304,21 @@ const ServiceDetail = () => {
                         </li>
                       ))}
                     </ul>
-                     <div className="border-t border-gray-300 pt-6">
+                    <div className="border-t border-gray-300 pt-6">
                       <div className="flex items-center justify-between">
                         <span className="text-lg font-semibold text-gray-900">
-                          {pricing.price}
+                          {pricing.price}*
                         </span>
                       </div>
                     </div>
                   </div>
                 </div>
               ))}
+            </div>
+            <div className="max-w-4xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className="text-md sm:text-l text-gray-600">
+                *The above mentioned price is the Build Price only. Domain and Hosting costs are to be paid separately by the Client.
+              </p>
             </div>
           </div>
         </section>
