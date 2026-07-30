@@ -77,12 +77,12 @@ const ServiceDetail = () => {
         },
         {
           id: 2,
-          title: 'CA Potfolio Website',
-          description: 'A portfolio website for a Chartered Accountant showcasing services and expertise.',
-          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg',
+          title: 'Satyam Bakery',
+          description: 'A classic bakery website with product listings and online ordering.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1784870957/Bakery_Counter_ra45jx.jpg',
           technologies: ['Vite', 'Node.js'],
           completedDate: 'June 2026',
-          link: 'https://piyush-c38.github.io/agency-ca-portfolio/'
+          link: 'https://piyush-c38.github.io/satyam-bakery-demo/'
         },
         {
           id: 3,
@@ -120,8 +120,15 @@ const ServiceDetail = () => {
           completedDate: 'Jan 2026',
           link: 'https://piyush-c38.github.io/agency-bright-smile-clinic/'
         },
-
-
+        {
+          id: 7,
+          title: 'CA Potfolio Website',
+          description: 'A portfolio website for a Chartered Accountant showcasing services and expertise.',
+          image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg',
+          technologies: ['Vite', 'Node.js'],
+          completedDate: 'Jan 2026',
+          link: 'https://piyush-c38.github.io/agency-ca-portfolio/'
+        },
       ],
       pricing: [
         {
