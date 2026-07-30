@@ -1,0 +1,168 @@
+hero_title: Build Smarter Software with AI
+hero_description: I help startups and businesses build intelligent applications, from AI agents and workflow automation to scalable web and mobile products.
+cta_title: Ready to Start Your Project?
+cta_description: Let's discuss your requirements and create something amazing together.
+process:
+  - step: "01"
+    title: Understand Requirements
+    description: I start by understanding your goals, requirements, and target audience to create a comprehensive project plan.
+  - step: "02"
+    title: Plan the Architecture
+    description: Creating wireframes and prototypes to visualize the solution before development begins.
+  - step: "03"
+    title: Build & Iterate
+    description: Building your solution with modern technologies while ensuring quality through rigorous testing.
+  - step: "04"
+    title: Deploy & Support
+    description: Deploying your project and providing ongoing support to ensure continued success.
+services:
+  - slug: ai-automation
+    title: AI Automation & Agentic AI
+    description: Automate repetitive business workflows using AI agents, LLMs, n8n, MCP, and custom integrations.
+    section_label: Work Samples
+    card_features:
+      - AI Assistants
+      - AI Agents
+      - Workflow Automation
+      - Internal Business Tools
+      - Chatbots
+      - RAG Applications
+    pricing:
+      - title: Custom AI Solution
+        description: RAG, LLM, and Agentic AI solutions tailored to your business needs.
+        features:
+          - Custom AI Agents
+          - RAG Applications
+          - LLM Integrations
+          - Workflow Automation
+          - Internal Business Tools
+          - Chatbots
+        price: Custom Pricing
+    projects:
+      - title: Rescue The Animal
+        description: A platform to help users find the right rescue organization during emergencies.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1783780341/rta-2_mywtmu.jpg
+        technologies:
+          - React
+          - Node.js
+          - MongoDB
+        completed_date: June 2026
+        link: https://piyush-c38.github.io/rescue-the-animal-rta/
+      - title: Git Insight
+        description: An AI-powered GitHub repository analysis platform.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1783493671/pexels-realtoughcandy-11035539_wuxewn.jpg
+        technologies:
+          - Next.js
+          - Node.js
+          - RAG
+          - LLM
+        completed_date: May 2026
+        link: https://git-insight-one.vercel.app/
+  - slug: full-stack
+    title: Full-Stack Web Applications
+    description: Production-ready web applications built with modern technologies, optimized for performance, scalability, and maintainability.
+    section_label: Concept Websites
+    card_features:
+      - SaaS Products
+      - Admin Dashboards
+      - Business Portals
+      - Authentication
+      - Payment Integration
+    pricing:
+      - title: Basic
+        description: Basic portfolio or product app setup with 1-2 pages, React frontend and Node backend.
+        features:
+          - 4-day delivery
+          - 2 revisions
+          - 2 pages
+          - Design customization
+          - Content upload
+          - Responsive design
+          - Source code
+          - Detailed code comments
+        price: Starting at Rs. 7,990
+      - title: Standard
+        description: Business app with 6-7 pages, React frontend, Node backend, and database.
+        features:
+          - 10-day delivery
+          - 2 revisions
+          - 7 pages
+          - Design customization
+          - Content upload
+          - Admin page
+          - Responsive design
+          - Source code
+          - Detailed code comments
+        price: Starting at Rs. 38,990
+      - title: Custom Web Solution
+        description: ""
+        features:
+          - Frontend + backend
+          - Database
+          - Advanced APIs & authentication
+          - Admin page
+          - SEO & integrations
+          - Design customization
+          - Responsive design
+          - Source code
+          - Detailed code comments
+        price: Custom Pricing
+    projects:
+      - title: The Build House
+        description: A modern interior design website for a leading design firm.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785233237/living-room_uvouxf.jpg
+        technologies:
+          - React
+          - Node.js
+          - Cloudinary
+        completed_date: June 2026
+        link: https://piyush-c38.github.io/agency-interior-designer/
+      - title: Satyam Bakery
+        description: A classic bakery website with product listings and online ordering.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1784870957/Bakery_Counter_ra45jx.jpg
+        technologies:
+          - Vite
+          - Node.js
+        completed_date: June 2026
+        link: https://piyush-c38.github.io/satyam-bakery-demo/
+      - title: Prakriti Salon & Spa
+        description: A salon and spa website with service listings, booking, and contact features.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785233424/adam-winger-FkAZqQJTbXM-unsplash_cayyid.jpg
+        technologies:
+          - React
+          - Node.js
+          - Cloudinary
+        completed_date: April 2026
+        link: https://piyush-c38.github.io/agency-saloon-spa/
+      - title: Roastwell & Co.
+        description: A coffee e-commerce website with product listings and booking.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/cafe_huq6ku.jpg
+        technologies:
+          - Vite
+          - Node.js
+        completed_date: March 2026
+        link: https://piyush-c38.github.io/agency-cafe-showcase/
+      - title: Xesis Coaching Institute
+        description: A coaching institute website with course listings and enrollment features.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/coaching_w7nyvc.jpg
+        technologies:
+          - Vite
+          - Node.js
+        completed_date: March 2026
+        link: https://piyush-c38.github.io/agency-xesis-coaching/
+      - title: Bright Smile Clinic
+        description: A dental clinic website with appointment booking and service information.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg
+        technologies:
+          - Vite
+          - Node.js
+        completed_date: January 2026
+        link: https://piyush-c38.github.io/agency-bright-smile-clinic/
+      - title: CA Portfolio Website
+        description: A portfolio website for a Chartered Accountant showcasing services and expertise.
+        image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg
+        technologies:
+          - Vite
+          - Node.js
+        completed_date: January 2026
+        link: https://piyush-c38.github.io/agency-ca-portfolio/

@@ -1,57 +1,42 @@
 import { Mail, Instagram, Linkedin, X, School, Github } from "lucide-react";
-import Links from "../../public/data/link.js";
+import { siteContent } from "@/lib/content";
+import { openEmailClient } from "@/lib/site";
 
 type Props = {
   variant?: "footer" | "sidebar";
   className?: string;
 };
 
-const handleEmailClick = (email) => {
-  const isMobileOrTablet = /Android|iPhone|iPad|iPod|Mobile|Tablet/i.test(
-    navigator.userAgent
-  );
-
-  if (isMobileOrTablet) {
-    window.location.href =
-      `mailto:${email}?subject=Project%20Inquiry`;
-  } else {
-    window.open(
-      `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=Project%20Inquiry`,
-      "_blank"
-    );
-  }
-};
-
 const ICONS = [
   {
     icon: Mail,
     label: "Personal Email",
-    onClick: () => handleEmailClick(Links.personalEmail),
+    onClick: () => openEmailClient(siteContent.personal_email),
   },
   {
     icon: School,
     label: "Student Email",
-    onClick: () => handleEmailClick(Links.studentEmail),
+    onClick: () => openEmailClient(siteContent.student_email),
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    onClick: () => window.open(Links.linkedin, "_blank"),
+    onClick: () => window.open(siteContent.social_links.linkedin, "_blank"),
   },
   {
     icon: Github,
     label: "GitHub",
-    onClick: () => window.open(Links.github, "_blank"),
+    onClick: () => window.open(siteContent.social_links.github, "_blank"),
   },
   {
     icon: X,
     label: "Twitter",
-    onClick: () => window.open(Links.x, "_blank"),
+    onClick: () => window.open(siteContent.social_links.x, "_blank"),
   },
   {
     icon: Instagram,
     label: "Instagram",
-    onClick: () => window.open(Links.instagram, "_blank"),
+    onClick: () => window.open(siteContent.social_links.instagram, "_blank"),
   },
 ];
 

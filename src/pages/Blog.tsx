@@ -3,18 +3,17 @@ import Navbar from "@/components/Navbar";
 import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import Blogs from "../../public/data/blog.tsx"
+import { blogPosts } from "@/lib/content";
 
 const Blog = () => {
-  const categories = ["All", "Software Development", "Technology", "Design", "Life"];
+  const categories = ["All", ...new Set(blogPosts.map((post) => post.category))];
   const [selectedCategory, setSelectedCategory] = React.useState("All");
 
   const filteredPosts = selectedCategory === "All"
-    ? Blogs
-    : Blogs.filter(post => post.category === selectedCategory);
+    ? blogPosts
+    : blogPosts.filter(post => post.category === selectedCategory);
 
-  const featuredPost = Blogs.find(post => post.featured);
-  const regularPosts = Blogs.filter(post => !post.featured);
+  const featuredPost = blogPosts.find(post => post.featured);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -38,7 +37,7 @@ const Blog = () => {
 
         {/* Featured Post */}
         {featuredPost && (
-          <Link to={featuredPost.slug}>
+          <Link to={`/blog/${featuredPost.slug}`}>
             <section className="py-12">
               <div className="max-w-7xl mx-auto px-6 sm:px-6 lg:px-8">
                 <h2 className="text-2xl font-bold text-gray-900 mb-8">Featured Article</h2>
@@ -70,7 +69,7 @@ const Blog = () => {
                       <div className="flex items-center justify-between">
                         <div className="flex items-center text-gray-500 text-sm">
                           <Calendar size={14} className="mr-1" />
-                          {featuredPost.date}
+                          {featuredPost.formattedDate}
                         </div>
                         <button className="flex items-center text-gray-900 hover:text-gray-700 transition-colors">
                           Read More <ArrowRight size={16} className="ml-1" />
@@ -109,8 +108,8 @@ const Blog = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {filteredPosts.map((post) => (
-                <Link to={post.slug} key={post.slug}> 
-                  <article key={post.id} className="group cursor-pointer">
+                <Link to={`/blog/${post.slug}`} key={post.slug}>
+                  <article className="group cursor-pointer">
                     <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
                       <div className="h-48 overflow-hidden">
                         <img
@@ -138,7 +137,7 @@ const Blog = () => {
                         <div className="flex items-center justify-between">
                           <div className="flex items-center text-gray-500 text-sm">
                             <Calendar size={14} className="mr-1" />
-                            {post.date}
+                            {post.formattedDate}
                           </div>
                           <ArrowRight size={16} className="text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
                         </div>

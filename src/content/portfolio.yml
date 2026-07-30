@@ -1,0 +1,106 @@
+profile:
+  image: https://res.cloudinary.com/yfhun3wh/image/upload/v1783424099/dp_anjwsa.png
+  name: Piyush Chandrakar
+  tagline: Full-Stack Developer
+  tools:
+    - Java
+    - Python
+    - JavaScript
+    - TypeScript
+    - React
+    - React Native
+    - NextJS
+    - NodeJS
+    - ExpressJS
+    - MongoDB
+    - Firebase
+    - RAG
+    - LLMs
+    - Vector Search
+    - Git Hub
+    - Bit Bucket
+    - Jira
+    - Mosquitto
+    - Docker
+about_markdown: |
+  Hey, I'm Piyush.
+
+  I build AI-powered products by combining full-stack engineering with automation and intelligent workflows. Currently, I'm exploring agentic AI by building a personal assistant using n8n, Ollama, and local LLMs to automate everyday tasks.
+
+  Some of my side projects include:
+
+  - [RTA - Intelligent Animal Rescue Platform](https://github.com/piyush-c38/rescue-the-animal-rta)
+  - [AI-powered GitHub repository analyzer](https://github.com/piyush-c38/git-insight)
+  - [Gunshot direction estimation using VGGish embeddings](https://github.com/piyush-c38/Gunshot_Direction_Estimation)
+
+  From production web and mobile applications to AI and computer vision systems, I enjoy turning ideas into practical software.
+
+  I've been fortunate to work with reputed institutions:
+
+  - **AI Systems Intern:** 506 Army Base Workshop
+  - **App Development Intern:** IIT Indore
+
+  Outside of work, you'll probably find me jamming on my instruments, playing badminton, or spending quality time with family and friends.
+
+  [Reach out](#contact) if you have an interesting idea to build or would like to collaborate.
+journey:
+  heading: Explore My Journey
+  description: Over the past 4+ years, I've worked on diverse development projects, partnering with various teams and clients to turn creative ideas into reality.
+timeline:
+  - title: Side Project: RTA
+    date: July 2026
+    role: ""
+    description: A full-stack emergency response platform that integrates AI, Google Places, geospatial search, and multilingual voice processing to analyze animal-emergency situations, list nearby rescue organizations using a hybrid recommendation engine, and ease communication to organizations through automated WhatsApp summaries.
+    color: bg-[#0f172a]
+    project_link: https://github.com/piyush-c38/rescue-the-animal-rta
+    demo_link: https://piyush-c38.github.io/rescue-the-animal-rta/
+  - title: Side Project: GitInsight
+    date: May 2026 - Jun 2026
+    role: ""
+    description: GitInsight is an AI-powered GitHub repository analysis platform that performs code-aware parsing, generates architecture and onboarding documentation, and enables repository-specific Q&A using a RAG pipeline with embeddings and LLMs.
+    color: bg-[#0f172a]
+    project_link: https://github.com/piyush-c38/git-insight
+    demo_link: https://git-insight-one.vercel.app/
+  - title: Side Project: Mineral Network Analysis in Indian Context
+    date: Jan 2026 - Apr 2026
+    role: ""
+    description: Built weighted bipartite and tripartite networks analysing 600+ state-mineral relationships across India. Performed core-periphery, centrality, and temporal analysis to identify mineral distribution and resource concentration patterns.
+    color: bg-[#0f172a]
+    project_link: https://github.com/piyush-c38/MineralNetwork_NS/tree/main
+  - title: Side project: Crypto Exchange Latency Topology Visualizer
+    date: Jun 2025 - Jul 2025
+    role: ""
+    description: Visualized real-time latency for 20+ exchanges and 10+ cloud regions, rendering 50+ network connections in 3D. Achieved live updates under 5 seconds with export support via Chart.js.
+    color: bg-[#0f172a]
+    project_link: https://github.com/piyush-c38/latency_vis
+    demo_link: https://latency-vis-rose.vercel.app/
+  - title: 506 Army Base Workshop
+    date: May 2025 - Jun 2025
+    role: Edge-AI Systems Intern
+    description: Designed and implemented a productivity tracking system using real-time OSNet person tracking and IoT product counting.
+    color: bg-[#0f172a]
+    project_link: ""
+  - title: EE Department IIT Bhilai
+    date: Jan 2025 - Mar 2025
+    role: Research Student
+    description: Developed a gunshot detection and direction estimation device using VGGish embeddings and Random Forest, integrated with a MEMS array on Jetson Nano.
+    color: bg-[#334155]
+    project_link: https://github.com/piyush-c38/Gunshot_Direction_Estimation
+  - title: Side Project: Crack Segmentation using UNet
+    date: Feb 2025 - Mar 2025
+    role: ""
+    description: Developed a deep learning pipeline for concrete crack segmentation with strong recall and a custom loss design.
+    color: bg-[#64748b]
+    project_link: https://github.com/piyush-c38/Crack_Detection_CV
+  - title: IIT Indore
+    date: May 2024 - Oct 2024
+    role: Mobile App Developer Intern
+    description: Developed a cross-platform inventory app for TracExpert using React Native, Docker, CI/CD, Bitbucket, and JWT security.
+    color: bg-[#94a3b8]
+    project_link: https://github.com/piyush-c38/TracExpert_T
+  - title: IBITF IIT Bhilai
+    date: Jan 2024 - Apr 2024
+    role: Web Developer (Part-Time)
+    description: Developed a Web-IoT cashless payment solution with React and Node.js for daily institute transactions.
+    color: bg-[#cbd5e1]
+    project_link: https://github.com/piyush-c38/Multifunctional_ID_Card
