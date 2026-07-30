@@ -28,14 +28,14 @@ const ABOUT_ME = (<>
 
   <p className="mt-4">
     I build AI-powered products by combining full-stack engineering with automation and intelligent workflows. Currently, I'm exploring agentic AI by building a personal assistant using n8n, Ollama, and local LLMs to automate everyday tasks.{" "}
-    <a
+    {/* <a
       href="#"
       target="_blank"
       rel="noopener noreferrer"
       className="text-blue-600 underline hover:text-blue-800"
     >
       Read about the project here.
-    </a>
+    </a> */}
   </p>
 
   <p className="mt-4">
