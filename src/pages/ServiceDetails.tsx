@@ -91,7 +91,7 @@ const ServiceDetail = () => {
           image: 'https://res.cloudinary.com/yfhun3wh/image/upload/v1785233424/adam-winger-FkAZqQJTbXM-unsplash_cayyid.jpg',
           technologies: ['React', 'Node.js', 'Cloundinary'],
           completedDate: 'April 2026',
-          link: 'https://piyush-c38.github.io/agency-saloon-spa/'
+          link: 'https://piyush-c38.github.io/agency-salon-spa/'
         },
         {
           id: 4,
