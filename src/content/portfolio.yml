@@ -47,27 +47,27 @@ journey:
   heading: Explore My Journey
   description: Over the past 4+ years, I've worked on diverse development projects, partnering with various teams and clients to turn creative ideas into reality.
 timeline:
-  - title: Side Project: RTA
+  - title: "Side Project: RTA"
     date: July 2026
     role: ""
     description: A full-stack emergency response platform that integrates AI, Google Places, geospatial search, and multilingual voice processing to analyze animal-emergency situations, list nearby rescue organizations using a hybrid recommendation engine, and ease communication to organizations through automated WhatsApp summaries.
     color: bg-[#0f172a]
     project_link: https://github.com/piyush-c38/rescue-the-animal-rta
     demo_link: https://piyush-c38.github.io/rescue-the-animal-rta/
-  - title: Side Project: GitInsight
+  - title: "Side Project: GitInsight"
     date: May 2026 - Jun 2026
     role: ""
     description: GitInsight is an AI-powered GitHub repository analysis platform that performs code-aware parsing, generates architecture and onboarding documentation, and enables repository-specific Q&A using a RAG pipeline with embeddings and LLMs.
     color: bg-[#0f172a]
     project_link: https://github.com/piyush-c38/git-insight
     demo_link: https://git-insight-one.vercel.app/
-  - title: Side Project: Mineral Network Analysis in Indian Context
+  - title: "Side Project: Mineral Network Analysis in Indian Context"
     date: Jan 2026 - Apr 2026
     role: ""
     description: Built weighted bipartite and tripartite networks analysing 600+ state-mineral relationships across India. Performed core-periphery, centrality, and temporal analysis to identify mineral distribution and resource concentration patterns.
     color: bg-[#0f172a]
     project_link: https://github.com/piyush-c38/MineralNetwork_NS/tree/main
-  - title: Side project: Crypto Exchange Latency Topology Visualizer
+  - title: "Side Project: Crypto Exchange Latency Topology Visualizer"
     date: Jun 2025 - Jul 2025
     role: ""
     description: Visualized real-time latency for 20+ exchanges and 10+ cloud regions, rendering 50+ network connections in 3D. Achieved live updates under 5 seconds with export support via Chart.js.
@@ -86,7 +86,7 @@ timeline:
     description: Developed a gunshot detection and direction estimation device using VGGish embeddings and Random Forest, integrated with a MEMS array on Jetson Nano.
     color: bg-[#334155]
     project_link: https://github.com/piyush-c38/Gunshot_Direction_Estimation
-  - title: Side Project: Crack Segmentation using UNet
+  - title: "Side Project: Crack Segmentation using UNet"
     date: Feb 2025 - Mar 2025
     role: ""
     description: Developed a deep learning pipeline for concrete crack segmentation with strong recall and a custom loss design.
