@@ -1,12 +1,12 @@
 ---
-title: 5G Revolution Paving the Way for a Limitless Future
-excerpt: A simple look at why 5G matters and how it unlocks faster, more responsive digital experiences.
-date: 2023-07-17
-readTime: 1 min read
-category: Technology
-image: https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200&h=800&fit=crop
+title: Open Source Software and Community
+excerpt: Exploring the world of open source software, its licenses, impact, and how communities drive global innovation.
+date: 2025-01-20
+readTime: 2 min read
+category: Software Development
+image: https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=400&fit=crop
 featured: false
-slug: 5g-revolution-paving-the-way-for-a-limitless-future
+slug: open-source-software-and-community
 ---
 "IoT, Autonomous Vehicles, Virtual Reality, Remote Healthcare, Smart Cities, 4K Streaming."
 

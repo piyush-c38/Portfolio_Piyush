@@ -8,11 +8,18 @@ image: https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=1200&h=800
 featured: false
 slug: stepping-out-of-my-comfort-zone
 ---
+For me, the past year has been about exploring new things. Be it hitting the gym, having a morning walk, watching movies or having healthy exercise. I did everything that I felt was right for me. It's been a time of personal growth and an opportunity to pave my own path, even if it meant being the first in my family.
 
-The past year taught me that growth often begins with discomfort.
+But today, I found myself facing a familiar struggle.
 
-I explored new routines, from morning walks to yoga, and noticed that the hardest part was not the activity itself. It was the hesitation that came with doing something unfamiliar in front of others.
+For the past few days, I have been practising yoga daily morning. But I hesitate to practice in front of my family members, especially in front of my father. It's Strange, isn't it? We all encounter moments like these.
 
-That feeling is common. We often feel awkward when we step outside our comfort zone, even when the thing we are doing is healthy, meaningful, or necessary for growth.
+And it's normal.
 
-This experience reminded me that confidence is built through repetition. When something is good for us, hesitation should not become the reason we stop.
+It's so because we are venturing into something new which is out of our comfort zone, doing something new, Right?
+
+We need to be confident with what we do. Of course, if something is wrong, then hesitation is justified. But when it comes to the activities that enhance our well-being, we must embrace them wholeheartedly. Like... doing exercise!
+
+As I conclude this blog, I leave you with this thought: we should never allow fear or hesitation to hold us back from exploring new frontiers; let's break free from all the confines.
+
+Stay tuned for more creative ideas and inspiration. Let's embark on this incredible journey together!
