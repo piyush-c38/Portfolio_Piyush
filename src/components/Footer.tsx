@@ -2,7 +2,7 @@
 import SocialIcons from "./SocialIcons";
 import { Link } from "react-router-dom";
 import { Mail, School, Phone } from "lucide-react";
-import Links from "../../public/data/link.js";
+import { siteContent } from "@/lib/content";
 
 const NAVS = [
   { label: "Home", to: "/" },
@@ -24,7 +24,7 @@ const Footer = () => (
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-3">
           <a
-            href={`mailto:${Links.personalEmail}`}
+            href={`mailto:${siteContent.personal_email}`}
             key={"PersonalEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -33,11 +33,11 @@ const Footer = () => (
           >
             <Mail size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Personal Email:</b> {Links.personalEmail}</div>
+          <div className="content-center"><b>Personal Email:</b> {siteContent.personal_email}</div>
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
           <a
-            href={`mailto:${Links.studentEmail}`}
+            href={`mailto:${siteContent.student_email}`}
             key={"StudentEmail"}
             target="_blank"
             rel="noopener noreferrer"
@@ -46,11 +46,11 @@ const Footer = () => (
           >
             <School size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Student Email :</b> {Links.studentEmail}</div>
+          <div className="content-center"><b>Student Email :</b> {siteContent.student_email}</div>
         </div>
         <div className="flex gap-5 text-sm text-gray-200 font-light mb-3 sm:mb-4">
           <a
-            href={`tel:${Links.phoneNumber}`}
+            href={`tel:${siteContent.phone_number}`}
             key={"PhoneNumber"}
             target="_blank"
             rel="noopener noreferrer"
@@ -59,16 +59,17 @@ const Footer = () => (
           >
             <Phone size={19} strokeWidth={1.6} className="text-white" />
           </a>
-          <div className="content-center"><b>Phone Number :</b> {Links.phoneNumber}</div>
+          <div className="content-center"><b>Phone Number :</b> {siteContent.phone_number}</div>
         </div>
         <div className="flex justify-center sm:justify-start">
-          <Link
-            to={Links.resumeLink}
+          <a
+            href={siteContent.resume_link}
             target="_blank"
+            rel="noopener noreferrer"
             className="text-[14px] sm:text-s font-bold text-slate-800 bg-white px-6 py-2 rounded-full m-1"
           >
             My Resume: PDFv
-          </Link>
+          </a>
         </div>
       </div>
     </div>
@@ -87,11 +88,11 @@ const Footer = () => (
       </div>
       {/* Branding & Socials */}
       <div className="flex flex-col items-center gap-3">
-        <span className="font-bold text-xl font-inter select-none mb-2 text-center">Piyush Chandrakar</span>
+        <span className="font-bold text-xl font-inter select-none mb-2 text-center">{siteContent.owner_name}</span>
         <div className="mb-1">
           <SocialIcons variant="footer" />
         </div>
-        <span className="text-xs text-gray-400 mt-2 text-center">&copy; Piyush Chandrakar 2026. All rights reserved.</span>
+        <span className="text-xs text-gray-400 mt-2 text-center">&copy; {siteContent.owner_name} {siteContent.copyright_year}. All rights reserved.</span>
       </div>
     </div>
   </footer>

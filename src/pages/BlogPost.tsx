@@ -3,15 +3,14 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Clock, Calendar } from 'lucide-react';
-import Blogs from "../../public/data/blog.tsx"
+import { getBlogBySlug } from "@/lib/content";
+import MarkdownContent from "@/components/MarkdownContent";
 
 const BlogPost = () => {
   const params = useParams();
   const navigate = useNavigate();
   const slug = params["*"] || params["slug"];
-  const blog = Blogs.find((b) => `/blog/${b.slug}` === `/blog/${slug}` || b.slug === slug);
-
-  console.log(slug);
+  const blog = getBlogBySlug(slug);
 
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -62,12 +61,14 @@ const BlogPost = () => {
             </div>
             <div className="flex items-center text-gray-500 text-sm">
               <Calendar size={14} className="mr-1" />
-              {blog.date}
+              {blog.formattedDate}
             </div>
           </div>
-          <div className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2">
-            {blog.content}
-          </div>
+          <MarkdownContent
+            className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2"
+            content={blog.content}
+            preserveLineBreaks
+          />
         </article>
       </main>
       <Footer />
