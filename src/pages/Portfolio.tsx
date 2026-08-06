@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import ReactMarkdown from "react-markdown";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import SocialIcons from "@/components/SocialIcons";
 import Timeline from "@/components/Timeline";
 import { portfolioContent, siteContent } from "@/lib/content";
+import MarkdownContent from "@/components/MarkdownContent";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -62,9 +62,10 @@ const Portfolio = () => {
           <section className="flex-1 flex flex-col gap-9">
             <div>
               <h2 className="text-2xl font-semibold mb-3">About Me</h2>
-              <div className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90">
-                <ReactMarkdown>{portfolioContent.about_markdown}</ReactMarkdown>
-              </div>
+              <MarkdownContent
+                className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90"
+                content={portfolioContent.about_markdown}
+              />
             </div>
             <div>
               <h2 className="text-2xl font-semibold mb-3">My Works</h2>

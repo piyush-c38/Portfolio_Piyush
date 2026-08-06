@@ -3,9 +3,8 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Clock, Calendar } from 'lucide-react';
-import ReactMarkdown from "react-markdown";
-import remarkGfm from "remark-gfm";
 import { getBlogBySlug } from "@/lib/content";
+import MarkdownContent from "@/components/MarkdownContent";
 
 const BlogPost = () => {
   const params = useParams();
@@ -65,9 +64,11 @@ const BlogPost = () => {
               {blog.formattedDate}
             </div>
           </div>
-          <div className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2">
-            <ReactMarkdown remarkPlugins={[remarkGfm]}>{blog.content}</ReactMarkdown>
-          </div>
+          <MarkdownContent
+            className="prose prose-neutral max-w-none text-black/80 text-base leading-relaxed mb-2"
+            content={blog.content}
+            preserveLineBreaks
+          />
         </article>
       </main>
       <Footer />
