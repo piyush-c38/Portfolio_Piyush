@@ -6,7 +6,7 @@ import { componentTagger } from "lovable-tagger";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: "/",
+  base: mode === "production" ? "/Portfolio_Piyush/" : "/",
   build: {
     rollupOptions: {
       input: {
