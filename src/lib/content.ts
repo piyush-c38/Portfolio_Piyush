@@ -26,7 +26,6 @@ export type PortfolioTimelineItem = {
   date: string;
   role: string;
   description: string;
-  color: string;
   project_link?: string;
   demo_link?: string;
 };

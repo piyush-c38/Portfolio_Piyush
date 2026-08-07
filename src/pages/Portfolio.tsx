@@ -63,8 +63,9 @@ const Portfolio = () => {
             <div>
               <h2 className="text-2xl font-semibold mb-3">About Me</h2>
               <MarkdownContent
-                className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90"
+                className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90 [&_p]:leading-6 [&_li]:leading-6 [&_a]:text-blue-600 [&_a]:no-underline"
                 content={portfolioContent.about_markdown}
+
               />
             </div>
             <div>

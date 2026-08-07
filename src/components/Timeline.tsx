@@ -16,7 +16,7 @@ const Timeline = ({ items }: TimelineProps) => (
         >
           <div className="flex flex-col items-center pt-0.5">
             <span
-              className={`w-4 h-4 rounded-full border-4 border-white shadow-sm ${item.color}`}
+              className={`w-4 h-4 rounded-full border-4 border-white shadow-sm bg-[#0f172a]`}
             ></span>
             {idx !== items.length - 1 && (
               <span className="hidden sm:flex flex-1 w-px bg-gray-200 mt-0.5"></span>
