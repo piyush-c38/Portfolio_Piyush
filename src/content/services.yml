@@ -80,6 +80,7 @@ services:
           - Responsive design
           - Source code
           - Detailed code comments
+          - Additional Cost for Additional page and features
         price: Starting at Rs. 7,990
       - title: Standard
         description: Business app with 6-7 pages, React frontend, Node backend, and database.
@@ -93,6 +94,7 @@ services:
           - Responsive design
           - Source code
           - Detailed code comments
+          - Additional Cost for Additional page and features
         price: Starting at Rs. 38,990
       - title: Custom Web Solution
         description: ""

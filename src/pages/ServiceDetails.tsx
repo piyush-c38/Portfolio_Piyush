@@ -141,20 +141,32 @@ const ServiceDetail = () => {
                     ))}
                   </ul>
                   <div className="border-t border-gray-100 pt-6">
-                    <div className="text-xl font-semibold text-gray-900">{plan.price}</div>
+                    <div className="text-xl font-semibold text-gray-900">{plan.price}*</div>
                   </div>
                 </div>
               ))}
             </div>
-
-            <div className="text-center mt-14">
-              <button
-                onClick={() => openEmailClient()}
-                className="bg-gray-900 text-white px-8 py-3 rounded-lg hover:bg-gray-800 transition-colors duration-200"
-              >
-                Let's Build
-              </button>
+            <div className="max-w-4xl mt-8 mx-auto px-4 sm:px-6 lg:px-8 text-center">
+              <p className=" text-gray-600">
+                *The above mentioned price is the Build Price only. Domain and Hosting costs are to be paid separately by the Client.
+              </p>
             </div>
+          </div>
+        </section>
+        {/* CTA Section */}
+        <section className="py-20 bg-gray-50">
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">
+              Interested?
+            </h2>
+            <p className="text-l sm:text-xl text-gray-600 mb-8">
+              Let's discuss your project and create something amazing together.
+            </p>
+            <button
+              onClick={() => openEmailClient()}
+              className=" bg-gray-900 text-white px-8 py-3 w-44 rounded-lg hover:bg-gray-800 transition-colors duration-200">
+              Let's Build
+            </button>
           </div>
         </section>
       </main>
