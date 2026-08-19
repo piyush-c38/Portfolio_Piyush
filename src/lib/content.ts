@@ -45,13 +45,27 @@ export type PortfolioContent = {
   timeline: PortfolioTimelineItem[];
 };
 
+export type CaseStudy = {
+  title: string;
+  subtitle: string;
+  location: string;
+  chapters: {
+    label: string;
+    heading: string;
+    body: string;
+    image: string;
+  }[];
+};
+
 export type ServiceProject = {
   title: string;
+  slug: string;
   description: string;
   image: string;
   technologies: string[];
   completed_date: string;
   link: string;
+  case_study?: CaseStudy | CaseStudy[];
 };
 
 export type ServicePricing = {
@@ -98,6 +112,33 @@ export type BlogPost = {
 };
 
 const parseYaml = <T>(raw: string) => load(raw) as T;
+
+const isRecord = (value: unknown): value is Record<string, unknown> =>
+  typeof value === "object" && value !== null;
+
+const normalizeCaseStudy = (value: unknown): CaseStudy | undefined => {
+  const rawCaseStudy = Array.isArray(value) ? value[0] : value;
+
+  if (!isRecord(rawCaseStudy)) {
+    return undefined;
+  }
+
+  const rawChapters = Array.isArray(rawCaseStudy.chapters) ? rawCaseStudy.chapters : [];
+
+  return {
+    title: String(rawCaseStudy.title ?? ""),
+    subtitle: String(rawCaseStudy.subtitle ?? ""),
+    location: String(rawCaseStudy.location ?? ""),
+    chapters: rawChapters
+      .filter(isRecord)
+      .map((chapter) => ({
+        label: String(chapter.label ?? ""),
+        heading: String(chapter.heading ?? ""),
+        body: String(chapter.body ?? ""),
+        image: String(chapter.image ?? ""),
+      })),
+  };
+};
 
 const parseMarkdownFile = (filePath: string, raw: string): BlogPost => {
   const match = raw.match(/^---\r?\n([\s\S]*?)\r?\n---\r?\n?([\s\S]*)$/);
@@ -159,3 +200,9 @@ export const getBlogBySlug = (slug?: string) =>
 
 export const getServiceBySlug = (slug?: string) =>
   servicesContent.services.find((service) => service.slug === slug);
+
+export const getServiceProjectBySlug = (serviceSlug?: string, projectSlug?: string) =>
+  getServiceBySlug(serviceSlug)?.projects.find((project) => project.slug === projectSlug);
+
+export const getServiceCaseStudyBySlug = (serviceSlug?: string, projectSlug?: string) =>
+  normalizeCaseStudy(getServiceProjectBySlug(serviceSlug, projectSlug)?.case_study);

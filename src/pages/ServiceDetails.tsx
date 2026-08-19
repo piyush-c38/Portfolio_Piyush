@@ -96,15 +96,25 @@ const ServiceDetail = () => {
                         <Calendar size={14} className="mr-2" />
                         {project.completed_date}
                       </div>
-
-                      <a
-                        href={project.link}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center text-gray-900 hover:text-gray-700 transition-colors font-medium"
-                      >
-                        View Project <ExternalLink size={16} className="ml-2" />
-                      </a>
+                        
+                      <div className="flex flex-wrap items-center gap-4">
+                        {project.slug && project.case_study ? (
+                          <Link
+                            to={`/services/${currentService.slug}/casestudy/${project.slug}`}
+                            className="inline-flex items-center text-gray-900 hover:text-gray-700 transition-colors font-medium"
+                          >
+                            Case Study <ExternalLink size={16} className="ml-2" />
+                          </Link>
+                        ) : null}
+                        <a
+                          href={project.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center text-gray-900 hover:text-gray-700 transition-colors font-medium"
+                        >
+                          Demo <ExternalLink size={16} className="ml-2" />
+                        </a>
+                      </div>
                     </div>
                   </div>
                 </div>

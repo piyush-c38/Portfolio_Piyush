@@ -111,6 +111,7 @@ services:
         price: Custom Pricing
     projects:
       - title: The Build House
+        slug: the-build-house
         description: A modern interior design website for a leading design firm.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785233237/living-room_uvouxf.jpg
         technologies:
@@ -119,7 +120,29 @@ services:
           - Cloudinary
         completed_date: June 2026
         link: https://piyush-c38.github.io/agency-interior-designer/
+        case_study:
+          - title: Highfield Villa
+            subtitle: A four-bedroom villa reimagined as one continuous, light-filled home.
+            location: Goa · 6,200 sq ft · 11 months
+            chapters:
+              - label: Client Requirement
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Design Challenge
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Concept
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Execution
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       - title: Satyam Bakery
+        slug: satyam-bakery
         description: A classic bakery website with product listings and online ordering.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1784870957/Bakery_Counter_ra45jx.jpg
         technologies:
@@ -127,7 +150,29 @@ services:
           - Node.js
         completed_date: June 2026
         link: https://piyush-c38.github.io/satyam-bakery-demo/
+        case_study:
+          - title: Highfield Villa
+            subtitle: A four-bedroom villa reimagined as one continuous, light-filled home.
+            location: Goa · 6,200 sq ft · 11 months
+            chapters:
+              - label: Client Requirement
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Design Challenge
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Concept
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Execution
+                heading: A home for three generations
+                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       - title: Prakriti Salon & Spa
+        slug: prakriti-salon-spa
         description: A salon and spa website with service listings, booking, and contact features.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785233424/adam-winger-FkAZqQJTbXM-unsplash_cayyid.jpg
         technologies:
@@ -137,6 +182,7 @@ services:
         completed_date: April 2026
         link: https://piyush-c38.github.io/agency-saloon-spa/
       - title: Roastwell & Co.
+        slug: roastwell-co
         description: A coffee e-commerce website with product listings and booking.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/cafe_huq6ku.jpg
         technologies:
@@ -145,6 +191,7 @@ services:
         completed_date: March 2026
         link: https://piyush-c38.github.io/agency-cafe-showcase/
       - title: Xesis Coaching Institute
+        slug: xesis-coaching-institute
         description: A coaching institute website with course listings and enrollment features.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060863/coaching_w7nyvc.jpg
         technologies:
@@ -153,6 +200,7 @@ services:
         completed_date: March 2026
         link: https://piyush-c38.github.io/agency-xesis-coaching/
       - title: Bright Smile Clinic
+        slug: bright-smile-clinic
         description: A dental clinic website with appointment booking and service information.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060862/clinic_pmrrlx.jpg
         technologies:
@@ -161,6 +209,7 @@ services:
         completed_date: January 2026
         link: https://piyush-c38.github.io/agency-bright-smile-clinic/
       - title: CA Portfolio Website
+        slug: ca-portfolio-website
         description: A portfolio website for a Chartered Accountant showcasing services and expertise.
         image: https://res.cloudinary.com/yfhun3wh/image/upload/v1785060861/ca_vqpsiw.jpg
         technologies:
