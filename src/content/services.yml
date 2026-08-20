@@ -121,25 +121,36 @@ services:
         completed_date: June 2026
         link: https://piyush-c38.github.io/agency-interior-designer/
         case_study:
-          - title: Highfield Villa
-            subtitle: A four-bedroom villa reimagined as one continuous, light-filled home.
-            location: Goa · 6,200 sq ft · 11 months
+          - title: The Build House
+            subtitle: A modern interior design website for a leading design firm.
             chapters:
-              - label: Client Requirement
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: The Story Behind the Project
+                heading: A Unique Vision
+                body: Every great project begins with a unique vision. For this client, the core objective was to break away from traditional layouts and present their portfolio through a narrative-driven experience. They wanted their work to unfold like a story, engaging visitors on a deeper, more emotional level.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Design Challenge
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Design Philosophy
+                heading: Aesthetic Preferences
+                body: |
+                  The client’s aesthetic preferences were focused and intentional
+                  - Minimalist & Modern: Clean layouts that let the content breathe.
+                  - Earthy UI Tones: A warm, organic color palette to create a welcoming and grounded atmosphere.
+                  - Smooth Animations: Fluid transitions that enhance storytelling without overwhelming the user.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Concept
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Key Interactive Concept
+                heading: Sticky-Notes-On-Wall
+                body: To bring the narrative to life, the client envisioned a standout feature. Multiple projects showcased in a "Sticky-Notes-On-Wall" style, giving users an interactive, tactile way to explore their creative journey.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Execution
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Functional Requirements
+                body: |
+                  Beyond the aesthetics, the website required a robust, user-friendly feature set
+                  - Work Sample Gallery: An immersive portfolio showcase.
+                  - Detailed Case Study Section: In-depth breakdowns of past projects.
+                  - Contact & Enquiry Section: A seamless way for potential clients to reach out.
+                  - Newsletter Form: To build and maintain audience engagement.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: The Final Outcome
+                heading: Happy!!!
+                body: Ultimately, the requirement was to deliver a modern, elegant, and fully responsive website that looks and performs exceptionally across all devices—seamlessly blending storytelling with digital craftsmanship.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       - title: Satyam Bakery
         slug: satyam-bakery
@@ -151,25 +162,29 @@ services:
         completed_date: June 2026
         link: https://piyush-c38.github.io/satyam-bakery-demo/
         case_study:
-          - title: Highfield Villa
-            subtitle: A four-bedroom villa reimagined as one continuous, light-filled home.
-            location: Goa · 6,200 sq ft · 11 months
+          - title: Satyam Bakery
+            subtitle: A classic bakery website with product listings and online ordering.
             chapters:
-              - label: Client Requirement
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Project Overview
+                heading: A feature-packed custom bakery website.
+                body: |
+                  The requirement was to create a custom-designed, dark-themed, luxurious bakery website featuring
+                  - An animated hero section
+                  - Product gallery
+                  - Menu
+                  - An alluring, bakery-themed UI
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Design Challenge
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Design & UI
+                heading: The Legacy
+                body: The client wanted to use the website to present their legacy to customers while handling online orders.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Concept
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: The Business
+                heading: The Intension
+                body: A modern products section matching the store's brand theme and elegance.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-              - label: Execution
-                heading: A home for three generations
-                body: The family wanted a villa that could host twenty people at a festival and still feel calm on a Tuesday. Their brief asked for accessible ground-floor living for grandparents, private upper-floor suites, and a kitchen that could run at full pace without dominating the house.
+              - label: Results
+                heading: Outcome
+                body: While the brand focused on the product, we took care of presentation, trust, and reachability.
                 image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       - title: Prakriti Salon & Spa
         slug: prakriti-salon-spa
@@ -180,7 +195,7 @@ services:
           - Node.js
           - Cloudinary
         completed_date: April 2026
-        link: https://piyush-c38.github.io/agency-saloon-spa/
+        link: https://piyush-c38.github.io/agency-salon-spa/
       - title: Roastwell & Co.
         slug: roastwell-co
         description: A coffee e-commerce website with product listings and booking.
@@ -190,6 +205,35 @@ services:
           - Node.js
         completed_date: March 2026
         link: https://piyush-c38.github.io/agency-cafe-showcase/
+        case_study:
+          - title: Roastwell & Co.
+            subtitle: A coffee e-commerce website with product listings and booking.
+            chapters:
+              - label: Project Overview
+                heading: The Retro Coffee-Cafe :)
+                body: One of the most unique projects I have ever worked on was creating a retro-style website for a coffee brand. The biggest challenge was finding the right thematic inspiration.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Design & UI
+                heading: Hero Section Concept
+                body: |
+                  - Coffee-themed
+                  - Retro style
+                  - Feature-rich
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Key Features
+                heading: The Business
+                body: |
+                  - Gallery menu
+                  - Storytelling layout
+                  - Featured cafe imagery
+                  - WhatsApp integration
+                  - Retro UI
+                  - Modern, retro-styled contact section
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+              - label: Results
+                heading: Outcome
+                body: It was their imagination, and I painted the canvas for them.
+                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
       - title: Xesis Coaching Institute
         slug: xesis-coaching-institute
         description: A coaching institute website with course listings and enrollment features.

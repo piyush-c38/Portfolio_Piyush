@@ -48,7 +48,6 @@ export type PortfolioContent = {
 export type CaseStudy = {
   title: string;
   subtitle: string;
-  location: string;
   chapters: {
     label: string;
     heading: string;
@@ -128,7 +127,6 @@ const normalizeCaseStudy = (value: unknown): CaseStudy | undefined => {
   return {
     title: String(rawCaseStudy.title ?? ""),
     subtitle: String(rawCaseStudy.subtitle ?? ""),
-    location: String(rawCaseStudy.location ?? ""),
     chapters: rawChapters
       .filter(isRecord)
       .map((chapter) => ({

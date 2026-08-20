@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import MarkdownContent from "@/components/MarkdownContent";
 import {
     getServiceBySlug,
     getServiceCaseStudyBySlug,
@@ -67,7 +68,7 @@ const CaseStudy = () => {
         );
     }
 
-    const { title, subtitle, location, chapters } = currentCaseStudy;
+    const { title, subtitle, chapters } = currentCaseStudy;
     const heroImage = chapters[0]?.image ?? currentProject.image;
 
     return (
@@ -89,7 +90,7 @@ const CaseStudy = () => {
                         className="w-full h-full object-cover"
                     />
                     <div className="absolute inset-0 bg-gradient-to-b from-black/30 via-black/20 to-black/70" />
-                    <div className="px-10 absolute inset-0 container-full flex flex-col justify-end pb-20">
+                    <div className="px-10 absolute inset-0 container-full flex flex-col justify-end pb-16">
                         <motion.div
                             initial={{ opacity: 0, y: 40 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +106,6 @@ const CaseStudy = () => {
                             <p className="text-base md:text-lg text-white/80 leading-relaxed max-w-lg mb-4">
                                 {subtitle}
                             </p>
-                            <p className="text-xs tracking-[0.2em] uppercase text-white/60">{location}</p>
                         </motion.div>
                     </div>
                 </section>
@@ -128,9 +128,11 @@ const CaseStudy = () => {
                                 <h2 className="font-serif text-3xl md:text-5xl text-foreground leading-[1.05] mb-6">
                                     {chapter.heading}
                                 </h2>
-                                <p className="text-muted-foreground leading-relaxed max-w-3xl text-base md:text-lg">
-                                    {chapter.body}
-                                </p>
+                                <MarkdownContent
+                                    className="prose prose-neutral max-w-3xl text-muted-foreground text-base md:text-lg leading-relaxed"
+                                    content={chapter.body}
+                                    preserveLineBreaks={false}
+                                />
                             </motion.div>
                         </div>
 
