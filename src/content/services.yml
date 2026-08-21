@@ -123,11 +123,12 @@ services:
         case_study:
           - title: The Build House
             subtitle: A modern interior design website for a leading design firm.
+            accentColor: bg-[#f2eee7]
             chapters:
               - label: The Story Behind the Project
                 heading: A Unique Vision
                 body: Every great project begins with a unique vision. For this client, the core objective was to break away from traditional layouts and present their portfolio through a narrative-driven experience. They wanted their work to unfold like a story, engaging visitors on a deeper, more emotional level.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787295813/Screenshot_from_2026-08-21_12-33-12_mzmzeg.png
               - label: Design Philosophy
                 heading: Aesthetic Preferences
                 body: |
@@ -135,11 +136,11 @@ services:
                   - Minimalist & Modern: Clean layouts that let the content breathe.
                   - Earthy UI Tones: A warm, organic color palette to create a welcoming and grounded atmosphere.
                   - Smooth Animations: Fluid transitions that enhance storytelling without overwhelming the user.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787295608/1_phvclp.png
               - label: Key Interactive Concept
                 heading: Sticky-Notes-On-Wall
                 body: To bring the narrative to life, the client envisioned a standout feature. Multiple projects showcased in a "Sticky-Notes-On-Wall" style, giving users an interactive, tactile way to explore their creative journey.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787295608/2_drcjz9.png
               - label: Functional Requirements
                 body: |
                   Beyond the aesthetics, the website required a robust, user-friendly feature set
@@ -147,11 +148,11 @@ services:
                   - Detailed Case Study Section: In-depth breakdowns of past projects.
                   - Contact & Enquiry Section: A seamless way for potential clients to reach out.
                   - Newsletter Form: To build and maintain audience engagement.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787295608/3_riahyz.png
               - label: The Final Outcome
                 heading: Happy!!!
                 body: Ultimately, the requirement was to deliver a modern, elegant, and fully responsive website that looks and performs exceptionally across all devices—seamlessly blending storytelling with digital craftsmanship.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787295607/4_jhtngl.png
       - title: Satyam Bakery
         slug: satyam-bakery
         description: A classic bakery website with product listings and online ordering.
@@ -164,6 +165,7 @@ services:
         case_study:
           - title: Satyam Bakery
             subtitle: A classic bakery website with product listings and online ordering.
+            accentColor: bg-[#f2eee7]
             chapters:
               - label: Project Overview
                 heading: A feature-packed custom bakery website.
@@ -173,19 +175,19 @@ services:
                   - Product gallery
                   - Menu
                   - An alluring, bakery-themed UI
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298960/1_trmsne.png
               - label: Design & UI
                 heading: The Legacy
                 body: The client wanted to use the website to present their legacy to customers while handling online orders.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298960/2_wsc9et.png
               - label: The Business
                 heading: The Intension
                 body: A modern products section matching the store's brand theme and elegance.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298960/3_x7qc6i.png
               - label: Results
                 heading: Outcome
                 body: While the brand focused on the product, we took care of presentation, trust, and reachability.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298959/4_ie2n9b.png
       - title: Prakriti Salon & Spa
         slug: prakriti-salon-spa
         description: A salon and spa website with service listings, booking, and contact features.
@@ -208,18 +210,19 @@ services:
         case_study:
           - title: Roastwell & Co.
             subtitle: A coffee e-commerce website with product listings and booking.
+            accentColor: bg-[#f2eee7]
             chapters:
               - label: Project Overview
                 heading: The Retro Coffee-Cafe :)
                 body: One of the most unique projects I have ever worked on was creating a retro-style website for a coffee brand. The biggest challenge was finding the right thematic inspiration.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298971/1_y5siyr.png
               - label: Design & UI
                 heading: Hero Section Concept
                 body: |
                   - Coffee-themed
                   - Retro style
                   - Feature-rich
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298969/2_l40ugy.png
               - label: Key Features
                 heading: The Business
                 body: |
@@ -229,11 +232,11 @@ services:
                   - WhatsApp integration
                   - Retro UI
                   - Modern, retro-styled contact section
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298969/3_blvwru.png
               - label: Results
                 heading: Outcome
                 body: It was their imagination, and I painted the canvas for them.
-                image: https://images.unsplash.com/photo-1787117754799-75c2b97d66a8?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
+                image: https://res.cloudinary.com/yfhun3wh/image/upload/v1787298969/4_kgvymv.png
       - title: Xesis Coaching Institute
         slug: xesis-coaching-institute
         description: A coaching institute website with course listings and enrollment features.

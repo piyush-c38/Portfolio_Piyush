@@ -68,8 +68,8 @@ const CaseStudy = () => {
         );
     }
 
-    const { title, subtitle, chapters } = currentCaseStudy;
-    const heroImage = chapters[0]?.image ?? currentProject.image;
+    const { title, subtitle, chapters, accentColor } = currentCaseStudy;
+    const heroImage = currentProject.image;
 
     return (
         <div className="min-h-screen bg-white">
@@ -113,9 +113,9 @@ const CaseStudy = () => {
                 {chapters.map((chapter, index) => (
                     <section
                         key={`${chapter.label}-${index}`}
-                        className={`px-10 py-16 md:py-28 ${index % 2 === 1 ? "bg-[#f2efe8]" : ""}`}
+                        className={`${index % 2 === 1 ? "flex flex-row-reverse" : "flex"} px-10 py-16 md:py-28 ${index % 2 === 1 ? accentColor : ""}`}
                     >
-                        <div className="container-narrow md:px-14 lg:px-20">
+                        <div className="flex items-center md:px-14 lg:px-20">
                             <motion.div
                                 initial={{ opacity: 0, y: 30 }}
                                 whileInView={{ opacity: 1, y: 0 }}
@@ -154,7 +154,7 @@ const CaseStudy = () => {
                                         alt={`${title} - ${chapter.heading}`}
                                         loading="lazy"
                                         width={1600}
-                                        height={1067}
+                                        height={900}
                                         className="w-full h-full object-cover transition-transform duration-[1.5s] ease-out group-hover:scale-105"
                                     />
                                 </div>
