@@ -113,7 +113,7 @@ const CaseStudy = () => {
                 {chapters.map((chapter, index) => (
                     <section
                         key={`${chapter.label}-${index}`}
-                        className={`${index % 2 === 1 ? "flex flex-row-reverse" : "flex"} px-10 py-16 md:py-28 ${index % 2 === 1 ? accentColor : ""}`}
+                        className={`lg:${index % 2 === 1 ? "flex flex-row-reverse" : "flex"} px-10 py-16 md:py-28 ${index % 2 === 1 ? accentColor : ""}`}
                     >
                         <div className="flex items-center md:px-14 lg:px-20">
                             <motion.div
