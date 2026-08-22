@@ -19,22 +19,22 @@ const Services = () => {
 
       <main className="pt-0">
         <div className="w-full h-screen bg-[#09090f] flex flex-col justify-center items-center text-center">
-          <div className="max-w-7xl w-[80%]">
+          <div className="w-[90%]">
             <ParticleText
               text={servicesContent.hero_title}
-              particleSize={2.0}
-              density={4}
+              particleSize={2.5}
+              density={2}
               color="#ffffff"
               highlightColor="#aee0ff"
-              scatter={90}
+              scatter={190}
               gatherDuration={1600}
               stagger={660}
               pointerRepel={42}
               repelRadius={120}
-              idleDrift={0.8}
+              idleDrift={0.0}
               trigger="mount"
-              fontSize="clamp(2.25rem, 9vw, 6rem)"
-              fontWeight={800}
+              fontSize="clamp(3.0rem, 9vw, 6rem)"
+              fontWeight={650}
               fontFamily="inherit"
               glow
             />
