@@ -15,7 +15,7 @@ const NAV_ITEMS = [
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
-  const isServicesPage = location.pathname.startsWith("/services");
+  const isServicesPage = location.pathname === "/services";
   const [hasPassedServicesHero, setHasPassedServicesHero] = useState(false);
   const isServicesHeroMode = isServicesPage && !hasPassedServicesHero;
 
@@ -69,14 +69,14 @@ const Navbar = () => {
               <li key={item.href}>
                 <Link
                   className={clsx(
-                    "tracking-wide px-2 py-1 relative transition text-black/85 hover:text-black after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-black/60 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
+                    "tracking-wide px-2 py-1 relative transition after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
                     isServicesHeroMode
-                      ? "text-white/80 hover:text-white after:bg-white/80"
+                      ? "text-white/85 hover:text-white after:bg-white/80"
                       : "text-black/85 hover:text-black after:bg-black/60",
                     location.pathname === item.href &&
-                      (isServicesHeroMode
-                        ? "font-semibold text-white after:scale-x-100 after:origin-bottom-left"
-                        : "font-semibold text-black after:scale-x-100 after:origin-bottom-left")
+                    (isServicesHeroMode
+                      ? "font-bold text-white"
+                      : "font-semibold text-black")
                   )}
                   to={item.href}
                 >
@@ -94,7 +94,7 @@ const Navbar = () => {
             className={clsx(
               "hidden md:flex ml-3 font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
               isServicesHeroMode
-                ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                ? "border border-[#aee0ff] bg-black/90 text-[#aee0ff] shadow-sm shadow-[#aee0ff] hover:shadow-[#aee0ff] hover:shadow-md"
                 : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
             )}
           >
@@ -108,7 +108,7 @@ const Navbar = () => {
             className={clsx(
               "hidden md:flex ml-3 font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
               isServicesHeroMode
-                ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                ? "border border-[#aee0ff] bg-black/90 text-[#aee0ff] shadow-sm shadow-[#aee0ff] hover:shadow-[#aee0ff] hover:shadow-md"
                 : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
             )}
           >
@@ -161,7 +161,7 @@ const Navbar = () => {
                       "tracking-wide px-2 py-1 block transition",
                       isServicesHeroMode ? "text-white/80 hover:text-white" : "text-black/85 hover:text-black",
                       location.pathname === item.href &&
-                        (isServicesHeroMode ? "font-semibold text-white" : "font-semibold text-black")
+                      (isServicesHeroMode ? "font-semibold text-white" : "font-semibold text-black")
                     )}
                     to={item.href}
                     onClick={() => setOpen(false)}

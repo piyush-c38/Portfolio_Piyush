@@ -67,7 +67,7 @@ const ServiceDetail = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {currentService.projects.map((project) => (
                 <div key={project.title} className="group">
-                  <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                  <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                     <div className="h-48 overflow-hidden">
                       <img
                         src={project.image}
@@ -123,7 +123,7 @@ const ServiceDetail = () => {
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <section className="py-20 bg-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Pricing</h2>
@@ -132,11 +132,11 @@ const ServiceDetail = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center ">
               {currentService.pricing.map((plan) => (
                 <div
                   key={plan.title}
-                  className="bg-white rounded-xl p-8 shadow-sm border border-gray-100"
+                  className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 max-w-96"
                 >
                   <h3 className="text-2xl font-semibold text-gray-900 mb-3">{plan.title}</h3>
                   {plan.description && (

@@ -48,12 +48,15 @@ const Services = () => {
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.4}>
+            <div className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto text-center my-20">
+              {servicesContent.hero_description}
+            </div>
+            <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8 justify-items-center" stagger={0.4}>
               {servicesContent.services.map((service) => (
                 <Reveal key={service.slug}>
                   <Link to={`/services/${service.slug}`}>
-                    <div className="group">
-                      <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                    <div className="group max-w-96">
+                      <div className="bg-white rounded-xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
                         <h3 className="text-xl font-semibold text-gray-900 mb-4">
                           {service.title}
                         </h3>
@@ -85,7 +88,7 @@ const Services = () => {
           </div>
         </section>
 
-        <Reveal className="py-20 bg-gray-50" delay={0.04}>
+        <Reveal className="py-20 bg-gray-100" delay={0.04}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">My Process</h2>
