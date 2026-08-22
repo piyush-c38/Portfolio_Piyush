@@ -22,8 +22,8 @@ const Services = () => {
           <div className="max-w-7xl w-[80%]">
             <ParticleText
               text={servicesContent.hero_title}
-              particleSize={2.2}
-              density={1}
+              particleSize={2.0}
+              density={4}
               color="#ffffff"
               highlightColor="#aee0ff"
               scatter={90}
@@ -33,7 +33,7 @@ const Services = () => {
               repelRadius={120}
               idleDrift={0.8}
               trigger="mount"
-              fontSize="clamp(3.5rem, 13vw, 9rem)"
+              fontSize="clamp(2.25rem, 9vw, 6rem)"
               fontWeight={800}
               fontFamily="inherit"
               glow

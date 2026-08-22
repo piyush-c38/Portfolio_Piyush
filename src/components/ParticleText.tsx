@@ -276,24 +276,51 @@ const ParticleText = ({
       const content = String(text || ' ');
       const maxTextWidth = width * 0.92;
       offCtx.font = font;
-      let metrics = offCtx.measureText(content);
-      const measuredWidth = Math.max(1, metrics.width);
-      if (measuredWidth > maxTextWidth) {
-        resolvedSize = Math.max(18, resolvedSize * (maxTextWidth / measuredWidth));
+      const wrapText = (): string[] => {
+        return content.split(/\n/).reduce<string[]>((lines, paragraph) => {
+          const words = paragraph.trim().split(/\s+/).filter(Boolean);
+          if (!words.length) {
+            lines.push('');
+            return lines;
+          }
+
+          let line = '';
+          words.forEach(word => {
+            const candidate = line ? `${line} ${word}` : word;
+            if (line && offCtx.measureText(candidate).width > maxTextWidth) {
+              lines.push(line);
+              line = word;
+            } else {
+              line = candidate;
+            }
+          });
+          lines.push(line);
+          return lines;
+        }, []);
+      };
+
+      let lines = wrapText();
+      const widestLine = Math.max(1, ...lines.map(line => offCtx.measureText(line).width));
+      if (widestLine > maxTextWidth) {
+        resolvedSize = Math.max(18, resolvedSize * (maxTextWidth / widestLine));
         font = `${fontWeight} ${resolvedSize}px ${resolvedFamily}`;
         await waitForFonts(font);
         if (currentBuild !== buildId) return;
         offCtx.font = font;
-        metrics = offCtx.measureText(content);
+        lines = wrapText();
       }
 
-      const left = Math.ceil(metrics.actualBoundingBoxLeft || 0);
-      const right = Math.ceil(metrics.actualBoundingBoxRight || metrics.width);
-      const ascent = Math.ceil(metrics.actualBoundingBoxAscent || resolvedSize * 0.78);
-      const descent = Math.ceil(metrics.actualBoundingBoxDescent || resolvedSize * 0.22);
+      const lineMetrics = lines.map(line => offCtx.measureText(line));
+      const textWidth = Math.max(1, ...lineMetrics.map(metrics => metrics.width));
+      const ascent = Math.ceil(
+        Math.max(...lineMetrics.map(metrics => metrics.actualBoundingBoxAscent || resolvedSize * 0.78))
+      );
+      const descent = Math.ceil(
+        Math.max(...lineMetrics.map(metrics => metrics.actualBoundingBoxDescent || resolvedSize * 0.22))
+      );
+      const lineHeight = Math.ceil(resolvedSize * 1.0);
+      const textHeight = Math.max(1, ascent + descent + (lines.length - 1) * lineHeight);
       const padding = Math.max(12, Math.ceil(resolvedSize * 0.08));
-      const textWidth = Math.max(1, left + right);
-      const textHeight = Math.max(1, ascent + descent);
 
       offscreen.width = textWidth + padding * 2;
       offscreen.height = textHeight + padding * 2;
@@ -302,7 +329,12 @@ const ParticleText = ({
       offCtx.textAlign = 'left';
       offCtx.textBaseline = 'alphabetic';
       offCtx.fillStyle = '#ffffff';
-      offCtx.fillText(content, padding - left, padding + ascent);
+      lines.forEach((line, index) => {
+        const lineWidth = offCtx.measureText(line).width;
+        const x = padding + (textWidth - lineWidth) / 2;
+        const y = padding + ascent + index * lineHeight;
+        offCtx.fillText(line, x, y);
+      });
 
       const imageData = offCtx.getImageData(0, 0, offscreen.width, offscreen.height);
       const targets: Target[] = [];
