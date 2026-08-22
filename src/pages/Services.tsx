@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import { servicesContent } from "@/lib/content";
 import { openEmailClient } from "@/lib/site";
 import { Reveal, RevealGroup } from "@/components/Reveal";
+import ParticleText from '../components/ParticleText';
 
 const Services = () => {
   useEffect(() => {
@@ -15,17 +16,32 @@ const Services = () => {
     <div className="min-h-screen bg-white">
       <Navbar />
 
-      <main className="pt-20">
-        <Reveal className="pt-28 pb-10 bg-gradient-to-br from-gray-50 to-white" distance={20}>
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-              {servicesContent.hero_title}
-            </h1>
-            <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
-              {servicesContent.hero_description}
-            </p>
+      <main className="pt-0">
+        <div className="w-full h-screen bg-[#09090f] flex flex-col justify-center items-center text-center">
+          <div className="max-w-7xl w-[80%]">
+            <ParticleText
+              text={servicesContent.hero_title}
+              particleSize={2.2}
+              density={1}
+              color="#ffffff"
+              highlightColor="#aee0ff"
+              scatter={90}
+              gatherDuration={1600}
+              stagger={660}
+              pointerRepel={42}
+              repelRadius={120}
+              idleDrift={0.8}
+              trigger="mount"
+              fontSize="clamp(3.5rem, 13vw, 9rem)"
+              fontWeight={800}
+              fontFamily="inherit"
+              glow
+            />
           </div>
-        </Reveal>
+          <p className="text-l sm:text-xl text-gray-200 max-w-3xl mx-auto mt-0 pt-0">
+            {servicesContent.hero_description}
+          </p>
+        </div>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
