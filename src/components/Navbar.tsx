@@ -1,6 +1,6 @@
 import { ExternalLink, Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Links from "../../public/data/link.js";
 
@@ -15,10 +15,32 @@ const NAV_ITEMS = [
 const Navbar = () => {
   const location = useLocation();
   const [open, setOpen] = useState(false);
+  const isServicesPage = location.pathname.startsWith("/services");
+  const [hasPassedServicesHero, setHasPassedServicesHero] = useState(false);
+  const isServicesHeroMode = isServicesPage && !hasPassedServicesHero;
+
+  useEffect(() => {
+    if (!isServicesPage) {
+      setHasPassedServicesHero(false);
+      return;
+    }
+
+    const handleScroll = () => {
+      setHasPassedServicesHero(window.scrollY >= window.innerHeight - 96);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    window.addEventListener("resize", handleScroll, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, [isServicesPage]);
 
   const handleConnect = (e) => {
     e.preventDefault();
-
     document.getElementById("contact")?.scrollIntoView({
       behavior: "smooth",
       block: "start",
@@ -27,10 +49,20 @@ const Navbar = () => {
   };
 
   return (
-    <header className="fixed left-0 top-0 w-full z-30 bg-white border-b border-gray-200/50">
+    <header
+      className={clsx(
+        "fixed left-0 top-0 w-full z-30 transition-all duration-300",
+        isServicesHeroMode
+          ? "backdrop-blur-xl border-b border-white/10"
+          : "bg-white border-b border-gray-200/50"
+      )}
+    >
       <nav className="max-w-[1200px] mx-auto flex items-center justify-between h-20 px-5 font-inter relative">
         <div className="flex items-center gap-10">
-          <span className="font-bold text-xl tracking-tight select-none">PC.</span>
+          <span className={clsx(
+            "font-bold text-xl tracking-tight select-none transition-colors duration-300",
+            isServicesHeroMode ? "text-white" : "text-black"
+          )}>PC.</span>
           {/* Desktop nav */}
           <ul className="hidden md:flex gap-7 text-base font-normal">
             {NAV_ITEMS.map(item => (
@@ -38,7 +70,13 @@ const Navbar = () => {
                 <Link
                   className={clsx(
                     "tracking-wide px-2 py-1 relative transition text-black/85 hover:text-black after:content-[''] after:absolute after:w-full after:scale-x-0 after:h-[2px] after:bottom-0 after:left-0 after:bg-black/60 after:origin-bottom-right after:transition-transform after:duration-300 hover:after:scale-x-100 hover:after:origin-bottom-left",
-                    location.pathname === item.href && "font-semibold text-black"
+                    isServicesHeroMode
+                      ? "text-white/80 hover:text-white after:bg-white/80"
+                      : "text-black/85 hover:text-black after:bg-black/60",
+                    location.pathname === item.href &&
+                      (isServicesHeroMode
+                        ? "font-semibold text-white after:scale-x-100 after:origin-bottom-left"
+                        : "font-semibold text-black after:scale-x-100 after:origin-bottom-left")
                   )}
                   to={item.href}
                 >
@@ -53,7 +91,12 @@ const Navbar = () => {
           <a
             href={`tel:${Links.phoneNumber}`}
             rel="noopener noreferrer"
-            className="hidden md:flex ml-3 font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+            className={clsx(
+              "hidden md:flex ml-3 font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
+              isServicesHeroMode
+                ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
+            )}
           >
             Contact
             <Phone size={18} />
@@ -62,7 +105,12 @@ const Navbar = () => {
             href="#"
             rel="noopener noreferrer"
             onClick={handleConnect}
-            className="hidden md:flex ml-3 font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+            className={clsx(
+              "hidden md:flex ml-3 font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
+              isServicesHeroMode
+                ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
+            )}
           >
             Connect
             <ExternalLink size={18} />
@@ -70,7 +118,12 @@ const Navbar = () => {
         </div>
         {/* Hamburger menu for mobile */}
         <button
-          className="md:hidden flex items-center p-2 rounded focus:outline-none hover:bg-gray-100 transition"
+          className={clsx(
+            "md:hidden flex items-center p-2 rounded transition",
+            isServicesHeroMode
+              ? "text-white hover:bg-white/10"
+              : "text-black focus:outline-none hover:bg-gray-100"
+          )}
           onClick={() => setOpen(v => !v)}
           aria-label={open ? "Close Menu" : "Open Menu"}
         >
@@ -79,11 +132,21 @@ const Navbar = () => {
 
         {/* Mobile menu */}
         {open && (
-          <div className="fixed inset-0 z-40 bg-white border-b border-gray-200 flex flex-col p-6 gap-7 animate-fadeinup md:hidden drop-shadow-lg">
+          <div
+            className={clsx(
+              "fixed inset-0 z-40 flex flex-col p-6 gap-7 animate-fadeinup md:hidden drop-shadow-lg",
+              isServicesHeroMode
+                ? "bg-[#09090f]/70 backdrop-blur-2xl border-b border-white/10 text-white"
+                : "bg-white border-b border-gray-200 text-black"
+            )}
+          >
             <div className="flex items-center justify-between mb-3">
               <span className="font-bold text-xl tracking-tight select-none">PC.</span>
               <button
-                className="p-2 rounded hover:bg-gray-100"
+                className={clsx(
+                  "p-2 rounded transition",
+                  isServicesHeroMode ? "hover:bg-white/10" : "hover:bg-gray-100"
+                )}
                 onClick={() => setOpen(false)}
                 aria-label="Close"
               >
@@ -95,8 +158,10 @@ const Navbar = () => {
                 <li key={item.href}>
                   <Link
                     className={clsx(
-                      "tracking-wide px-2 py-1 block transition text-black/85 hover:text-black",
-                      location.pathname === item.href && "font-semibold text-black"
+                      "tracking-wide px-2 py-1 block transition",
+                      isServicesHeroMode ? "text-white/80 hover:text-white" : "text-black/85 hover:text-black",
+                      location.pathname === item.href &&
+                        (isServicesHeroMode ? "font-semibold text-white" : "font-semibold text-black")
                     )}
                     to={item.href}
                     onClick={() => setOpen(false)}
@@ -105,11 +170,16 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <li className="pt-3 border-t border-gray-200">
+              <li className={clsx("pt-3 border-t", isServicesHeroMode ? "border-white/10" : "border-gray-200")}>
                 <a
                   href={`tel:${Links.phoneNumber}`}
                   rel="noopener noreferrer"
-                  className="flex justify-center font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+                  className={clsx(
+                    "flex justify-center font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
+                    isServicesHeroMode
+                      ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                      : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
+                  )}
                 >
                   Contact
                   <Phone size={18} />
@@ -120,7 +190,12 @@ const Navbar = () => {
                   href="#"
                   rel="noopener noreferrer"
                   onClick={handleConnect}
-                  className="flex justify-center font-medium border border-black/15 px-5 py-2 rounded-full items-center gap-2 bg-black/90 text-white hover:bg-black active:scale-100 transition shadow-none shadow-black/5"
+                  className={clsx(
+                    "flex justify-center font-medium px-5 py-2 rounded-full items-center gap-2 active:scale-100 transition",
+                    isServicesHeroMode
+                      ? "border border-white/25 bg-white text-black hover:bg-white/90"
+                      : "border border-black/15 bg-black/90 text-white hover:bg-black shadow-none shadow-black/5"
+                  )}
                 >
                   Connect
                   <ExternalLink size={18} />

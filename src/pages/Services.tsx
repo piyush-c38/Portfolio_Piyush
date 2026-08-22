@@ -6,6 +6,7 @@ import { servicesContent } from "@/lib/content";
 import { openEmailClient } from "@/lib/site";
 import { Reveal, RevealGroup } from "@/components/Reveal";
 import ParticleText from '../components/ParticleText';
+import ScrollIndicator from "@/components/ScrollIndicator";
 
 const Services = () => {
   useEffect(() => {
@@ -38,9 +39,11 @@ const Services = () => {
               glow
             />
           </div>
-          <p className="text-l sm:text-xl text-gray-200 max-w-3xl mx-auto mt-0 pt-0">
-            {servicesContent.hero_description}
-          </p>
+          <ScrollIndicator
+            textColor="text-[#e3f4ff]"
+            position="center"
+            hideAfterViewport
+          />
         </div>
 
         <section className="py-20">
