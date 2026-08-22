@@ -1,18 +1,20 @@
 import { ExternalLink } from "lucide-react";
 import { PortfolioTimelineItem } from "@/lib/content";
+import { Reveal, RevealGroup } from "./Reveal";
 
 type TimelineProps = {
   items: PortfolioTimelineItem[];
 };
 
 const Timeline = ({ items }: TimelineProps) => (
-  <div className="relative pl-4 max-w-xl mx-auto sm:pl-4">
+  <RevealGroup className="relative pl-4 max-w-xl mx-auto sm:pl-4" stagger={0.14}>
     <div className="absolute top-5 left-3 bottom-4 w-0.5 bg-gray-200 rounded hidden sm:block"></div>
     <div className="flex flex-col gap-7">
       {items.map((item, idx) => (
-        <div
+        <Reveal
           key={`${item.title}-${item.date}`}
           className="relative z-10 flex flex-row gap-4 sm:gap-5 mb-0 sm:mb-8 last:mb-0 group"
+          distance={36}
         >
           <div className="flex flex-col items-center pt-0.5">
             <span
@@ -50,10 +52,10 @@ const Timeline = ({ items }: TimelineProps) => (
               </a>
             )}
           </div>
-        </div>
+        </Reveal>
       ))}
     </div>
-  </div>
+  </RevealGroup>
 );
 
 export default Timeline;

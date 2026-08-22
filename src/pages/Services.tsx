@@ -4,6 +4,7 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { servicesContent } from "@/lib/content";
 import { openEmailClient } from "@/lib/site";
+import { Reveal, RevealGroup } from "@/components/Reveal";
 
 const Services = () => {
   useEffect(() => {
@@ -15,7 +16,7 @@ const Services = () => {
       <Navbar />
 
       <main className="pt-20">
-        <section className="pt-28 pb-10 bg-gradient-to-br from-gray-50 to-white">
+        <Reveal className="pt-28 pb-10 bg-gradient-to-br from-gray-50 to-white" distance={20}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
               {servicesContent.hero_title}
@@ -24,46 +25,48 @@ const Services = () => {
               {servicesContent.hero_description}
             </p>
           </div>
-        </section>
+        </Reveal>
 
         <section className="py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" stagger={0.4}>
               {servicesContent.services.map((service) => (
-                <Link to={`/services/${service.slug}`} key={service.slug}>
-                  <div className="group">
-                    <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
-                      <h3 className="text-xl font-semibold text-gray-900 mb-4">
-                        {service.title}
-                      </h3>
+                <Reveal key={service.slug}>
+                  <Link to={`/services/${service.slug}`}>
+                    <div className="group">
+                      <div className="bg-white rounded-xl p-8 shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1 border border-gray-100">
+                        <h3 className="text-xl font-semibold text-gray-900 mb-4">
+                          {service.title}
+                        </h3>
 
-                      <p className="text-gray-600 mb-6 leading-relaxed">
-                        {service.description}
-                      </p>
+                        <p className="text-gray-600 mb-6 leading-relaxed">
+                          {service.description}
+                        </p>
 
-                      <ul className="space-y-2 mb-6">
-                        {service.card_features.map((feature) => (
-                          <li key={feature} className="flex items-center text-gray-600 text-sm">
-                            <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
-                            {feature}
-                          </li>
-                        ))}
-                      </ul>
+                        <ul className="space-y-2 mb-6">
+                          {service.card_features.map((feature) => (
+                            <li key={feature} className="flex items-center text-gray-600 text-sm">
+                              <div className="w-1.5 h-1.5 bg-gray-400 rounded-full mr-3"></div>
+                              {feature}
+                            </li>
+                          ))}
+                        </ul>
 
-                      <div className="border-t border-gray-100 pt-6">
-                        <span className="text-lg font-semibold text-gray-900">
-                          Click for details
-                        </span>
+                        <div className="border-t border-gray-100 pt-6">
+                          <span className="text-lg font-semibold text-gray-900">
+                            Click for details
+                          </span>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Link>
+                  </Link>
+                </Reveal>
               ))}
-            </div>
+            </RevealGroup>
           </div>
         </section>
 
-        <section className="py-20 bg-gray-50">
+        <Reveal className="py-20 bg-gray-50" delay={0.04}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-gray-900 mb-4">My Process</h2>
@@ -72,21 +75,23 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <RevealGroup className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8" stagger={0.48}>
               {servicesContent.process.map((item) => (
-                <div key={item.step} className="text-center">
-                  <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-6">
-                    {item.step}
+                <Reveal key={item.step}>
+                  <div className="text-center">
+                    <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center text-white font-bold text-xl mx-auto mb-6">
+                      {item.step}
+                    </div>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
+                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-4">{item.title}</h3>
-                  <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                </div>
+                </Reveal>
               ))}
-            </div>
+            </RevealGroup>
           </div>
-        </section>
+        </Reveal>
 
-        <section className="py-20">
+        <Reveal className="py-20" delay={0.28}>
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 className="text-4xl font-bold text-gray-900 mb-6">
               {servicesContent.cta_title}
@@ -106,7 +111,7 @@ const Services = () => {
               </Link>
             </div>
           </div>
-        </section>
+        </Reveal>
       </main>
 
       <Footer />
