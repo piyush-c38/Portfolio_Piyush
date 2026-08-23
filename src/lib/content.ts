@@ -30,6 +30,16 @@ export type PortfolioTimelineItem = {
   demo_link?: string;
 };
 
+export type PortfolioProject = {
+  title: string;
+  description: string;
+  image: string;
+  technologies: string[];
+  completed_date: string;
+  project_link?: string;
+  demo_link?: string;
+};
+
 export type PortfolioContent = {
   profile: {
     image: string;
@@ -42,6 +52,7 @@ export type PortfolioContent = {
     heading: string;
     description: string;
   };
+  projects: PortfolioProject[];
   timeline: PortfolioTimelineItem[];
 };
 

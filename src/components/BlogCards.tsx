@@ -22,7 +22,7 @@ const BlogCards = () => (
         </Reveal>
       </div>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
-        {blogPosts.reverse().slice(0, 4).map((post, index) => (
+        {blogPosts.slice(0, 4).map((post, index) => (
           <Reveal key={post.slug} delay={index * 0.08}>
             <Link to={`/blog/${post.slug}`}>
               <article className="group cursor-pointer">

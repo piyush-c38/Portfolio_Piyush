@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import JourneySection from "@/components/JourneySection";
+import ProjectsSection from "@/components/ProjectsSection";
 import BlogCards from "@/components/BlogCards";
 import Footer from "@/components/Footer";
 import { Reveal } from "@/components/animation/Reveal";
@@ -22,6 +23,9 @@ const Index = () => {
           <JourneySection />
         </Reveal>
         <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.08}>
+          <ProjectsSection />
+        </Reveal>
+        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.12}>
           <BlogCards />
         </Reveal>
       </main>
