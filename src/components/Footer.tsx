@@ -7,8 +7,8 @@ import { siteContent } from "@/lib/content";
 const NAVS = [
   { label: "Home", to: "/" },
   { label: "Portfolio", to: "/portfolio" },
-  { label: "Blog", to: "/blog" },
   { label: "Services", to: "/services" },
+  { label: "Blog", to: "/blog" },
 ];
 
 const Footer = () => (

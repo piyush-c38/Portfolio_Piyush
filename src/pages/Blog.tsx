@@ -4,7 +4,8 @@ import Footer from '../components/Footer';
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { blogPosts } from "@/lib/content";
-import { Reveal, RevealGroup } from "@/components/Reveal";
+import { Reveal, RevealGroup } from "@/components/animation/Reveal";
+import SplitText from '@/components/animation/SplitText';
 
 const Blog = () => {
   const categories = ["All", ...new Set(blogPosts.map((post) => post.category))];
@@ -28,10 +29,22 @@ const Blog = () => {
         {/* Hero Section */}
         <Reveal className="py-20 bg-gradient-to-br from-gray-50 to-white" distance={20}>
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Blog</h1>
+            <SplitText
+              text="Blog"
+              className="text-4xl sm:text-5xl font-bold text-gray-900 mb-8"
+              delay={80}
+              duration={2}
+              ease="power3.out"
+              splitType="chars"
+              from={{ opacity: 0, y: 40 }}
+              to={{ opacity: 1, y: 0 }}
+              threshold={0.1}
+              rootMargin="-100px"
+              textAlign="center"
+              onLetterAnimationComplete={undefined}
+            />
             <p className="text-l sm:text-xl text-gray-600 max-w-3xl mx-auto">
               Thoughts, insights, and experiences from my journey in Product development.
-              Sharing knowledge about modern technologies, best practices, and industry trends.
             </p>
           </div>
         </Reveal>
@@ -52,13 +65,15 @@ const Blog = () => {
                       />
                     </div>
                     <div className="md:w-1/2 p-8">
-                      <div className="flex items-center justify-between mb-4">
-                        <span className="text-sm font-medium text-white bg-gray-900 px-3 py-1 rounded-full">
+                      <div className="flex items-center justify-between gap-8 mb-4">
+                        <span className="text-sm text-center font-medium text-white bg-gray-900 px-3 py-1  rounded-xl sm:rounded-full">
                           {featuredPost.category}
                         </span>
                         <div className="flex items-center text-gray-500 text-sm">
                           <Clock size={14} className="mr-1" />
-                          {featuredPost.readTime}
+                          <p className="text-center">
+                            {featuredPost.readTime}
+                          </p>
                         </div>
                       </div>
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">
@@ -112,7 +127,7 @@ const Blog = () => {
                 <Reveal key={post.slug}>
                   <Link to={`/blog/${post.slug}`}>
                     <article className="group cursor-pointer">
-                      <div className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                      <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                         <div className="h-48 overflow-hidden">
                           <img
                             src={post.image}

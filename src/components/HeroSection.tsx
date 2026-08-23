@@ -1,7 +1,9 @@
 import StatsCounters from "./StatsCounters";
 import ScrollIndicator from "./ScrollIndicator";
 import TechStack from "./TechStack";
-import { Reveal, RevealGroup } from "./Reveal";
+import { Reveal, RevealGroup } from "./animation/Reveal";
+import SplitText from "./animation/SplitText";
+import DarkVeil from "./animation/DarkVeil";
 
 const HeroSection = () => (
   <section className="relative w-full flex flex-col min-h-[420px] justify-center pb-8 md:min-h-[505px]">
@@ -15,9 +17,20 @@ const HeroSection = () => (
       </Reveal>
       {/* Main Heading */}
       <Reveal className="flex flex-col items-start w-full max-w-full sm:max-w-[600px] px-8" delay={0.06}>
-        <h1 className="text-[44px] sm:text-[62px] md:text-[70px] lg:text-[130px] font-light font-inter tracking-tight mb-2 animate-fadeinup leading-[1.03] sm:leading-[0.95] text-black">
-          Hello
-        </h1>
+        <SplitText
+          text="Hello"
+          className="text-[44px] sm:text-[62px] md:text-[70px] lg:text-[130px] font-light font-inter tracking-tight mb-2 leading-[1.03] sm:leading-[0.95] text-black"
+          delay={110}
+          duration={2}
+          ease="power3.out"
+          splitType="chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={undefined}
+        />
         <p className="text-base sm:text-xl font-inter font-light text-black/60 mt-2 animate-fadeinup" style={{ animationDelay: "120ms" }}>
           — It’s Piyush, a Full-Stack Developer
         </p>

@@ -1,8 +1,21 @@
+import CountUp from "./animation/CountUp";
+
 const StatsCounters = () => (
   <div className="flex flex-row md:flex-col gap-7 md:gap-10 mt-0 md:mt-6 w-full justify-center md:justify-start">
     <div>
       <div className="text-xl sm:text-2xl font-normal text-black/80 tracking-tight mb-1">
-        <span className="font-semibold text-[26px] sm:text-[32px] md:text-[36px]">+13</span>
+        <span className="font-semibold text-[26px] sm:text-[32px] md:text-[36px]">
+          +<CountUp
+            from={0}
+            to={13}
+            separator=","
+            direction="up"
+            duration={0.5}
+            className="count-up-text"
+            delay={0}
+          />
+
+        </span>
       </div>
       <div className="text-xs sm:text-base font-light text-black/50">
         Clients Served

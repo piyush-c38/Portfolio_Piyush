@@ -12,11 +12,24 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import ServiceDetail from "./pages/ServiceDetails";
 import CaseStudy from "./pages/CaseStudy";
+import SplashCursor from "./components/animation/SplashCursor";
 
 const queryClient = new QueryClient();
 
 const App = () => (
   <QueryClientProvider client={queryClient}>
+    <SplashCursor
+      DENSITY_DISSIPATION={3.5}
+      VELOCITY_DISSIPATION={2}
+      PRESSURE={0.1}
+      CURL={3}
+      SPLAT_RADIUS={0.2}
+      SPLAT_FORCE={6000}
+      COLOR_UPDATE_SPEED={10}
+      SHADING
+      RAINBOW_MODE={false}
+      COLOR="#aee0ff"
+    />
     <TooltipProvider>
       <Toaster />
       <Sonner />

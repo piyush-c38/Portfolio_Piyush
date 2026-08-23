@@ -1,7 +1,7 @@
 import { Calendar, Clock, ArrowRight } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { blogPosts } from "@/lib/content";
-import { Reveal, RevealGroup } from "./Reveal";
+import { Reveal, RevealGroup } from "./animation/Reveal";
 
 const BlogCards = () => (
   <section className="px-2 sm:px-0">

@@ -4,7 +4,7 @@ import HeroSection from "@/components/HeroSection";
 import JourneySection from "@/components/JourneySection";
 import BlogCards from "@/components/BlogCards";
 import Footer from "@/components/Footer";
-import { Reveal } from "@/components/Reveal";
+import { Reveal } from "@/components/animation/Reveal";
 
 
 const Index = () => {

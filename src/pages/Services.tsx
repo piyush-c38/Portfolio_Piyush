@@ -4,8 +4,8 @@ import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
 import { servicesContent } from "@/lib/content";
 import { openEmailClient } from "@/lib/site";
-import { Reveal, RevealGroup } from "@/components/Reveal";
-import ParticleText from '../components/ParticleText';
+import { Reveal, RevealGroup } from "@/components/animation/Reveal";
+import ParticleText from '../components/animation/ParticleText';
 import ScrollIndicator from "@/components/ScrollIndicator";
 
 const Services = () => {
@@ -26,7 +26,7 @@ const Services = () => {
               density={2}
               color="#ffffff"
               highlightColor="#aee0ff"
-              scatter={190}
+              scatter={90}
               gatherDuration={1600}
               stagger={660}
               pointerRepel={42}

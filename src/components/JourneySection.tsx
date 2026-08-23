@@ -1,6 +1,6 @@
 import Timeline from "./Timeline";
 import { portfolioContent } from "@/lib/content";
-import { Reveal, RevealGroup } from "./Reveal";
+import { Reveal, RevealGroup } from "./animation/Reveal";
 
 const JourneySection = () => (
   <RevealGroup className="w-full flex flex-col gap-8 sm:gap-9" stagger={0.16}>

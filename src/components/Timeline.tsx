@@ -1,6 +1,6 @@
 import { ExternalLink } from "lucide-react";
 import { PortfolioTimelineItem } from "@/lib/content";
-import { Reveal, RevealGroup } from "./Reveal";
+import { Reveal, RevealGroup } from "./animation/Reveal";
 
 type TimelineProps = {
   items: PortfolioTimelineItem[];

@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 import clsx from "clsx";
 import Links from "../../public/data/link.js";
+import ShinyText from "./animation/ShinyText.js";
 
 const NAV_ITEMS = [
   { name: "Home", href: "/" },
@@ -59,10 +60,27 @@ const Navbar = () => {
     >
       <nav className="max-w-[1200px] mx-auto flex items-center justify-between h-20 px-5 font-inter relative">
         <div className="flex items-center gap-10">
-          <span className={clsx(
-            "font-bold text-xl tracking-tight select-none transition-colors duration-300",
-            isServicesHeroMode ? "text-white" : "text-black"
-          )}>PC.</span>
+          <Link to="/">
+            <span className={clsx(
+              "font-bold text-xl tracking-tight select-none transition-colors duration-300",
+
+            )}>
+              <ShinyText
+                text="PC."
+                speed={5}
+                delay={0}
+                color={(isServicesHeroMode) ? "#ffffff" : "#000000"}
+                shineColor="#aee0ff"
+                spread={135}
+                direction="left"
+                yoyo={false}
+                pauseOnHover={true}
+                disabled={true}
+                className="font-bold text-xl tracking-tight select-none transition-colors duration-300"
+              />
+
+            </span>
+          </Link>
           {/* Desktop nav */}
           <ul className="hidden md:flex gap-7 text-base font-normal">
             {NAV_ITEMS.map(item => (

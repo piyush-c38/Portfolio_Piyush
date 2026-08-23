@@ -6,7 +6,7 @@ import SocialIcons from "@/components/SocialIcons";
 import Timeline from "@/components/Timeline";
 import { portfolioContent, siteContent } from "@/lib/content";
 import MarkdownContent from "@/components/MarkdownContent";
-import { Reveal, RevealGroup } from "@/components/Reveal";
+import { Reveal, RevealGroup } from "@/components/animation/Reveal";
 
 const Portfolio = () => {
   useEffect(() => {
