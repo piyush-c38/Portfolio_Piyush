@@ -6,6 +6,7 @@ import ProjectsSection from "@/components/ProjectsSection";
 import BlogCards from "@/components/BlogCards";
 import Footer from "@/components/Footer";
 import { Reveal } from "@/components/animation/Reveal";
+import { DivideCircle } from "lucide-react";
 
 
 const Index = () => {
@@ -19,13 +20,13 @@ const Index = () => {
         <Reveal className="w-full max-w-[1200px] my-12 px-4 sm:px-6 md:px-8" distance={18}>
           <HeroSection />
         </Reveal>
-        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.04}>
+        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.02}>
           <JourneySection />
         </Reveal>
-        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.08}>
+        <div className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24">
           <ProjectsSection />
-        </Reveal>
-        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.12}>
+        </div>
+        <Reveal className="w-full max-w-[1200px] px-4 sm:px-6 md:px-8 mt-24" delay={0.02}>
           <BlogCards />
         </Reveal>
       </main>

@@ -7,6 +7,7 @@ import Timeline from "@/components/Timeline";
 import { portfolioContent, siteContent } from "@/lib/content";
 import MarkdownContent from "@/components/MarkdownContent";
 import { Reveal, RevealGroup } from "@/components/animation/Reveal";
+import ProjectsSection from "@/components/ProjectsSection";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -17,10 +18,10 @@ const Portfolio = () => {
     <div className="bg-white min-h-screen font-inter text-black flex flex-col">
       <Navbar />
 
-      <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-8 mt-20 sm:px-4 md:px-8">
+      <main className="flex-1 w-full flex flex-col items-center pt-[80px] pb-12 px-4 mt-20 sm:px-4 md:px-8">
         <RevealGroup className="w-full max-w-5xl flex flex-col md:flex-row gap-12 md:gap-8" stagger={0.14}>
           <div className="md:w-1/3 w-full md:max-w-xs">
-            <aside className="flex flex-col items-center bg-white rounded-2xl border border-gray-100 p-6 shadow-sm mb-4 md:mb-0">
+            <aside className="flex flex-col items-center bg-white rounded-2xl border border-gray-100 p-6 shadow-lg mb-4 md:mb-0">
               <Avatar className="h-48 w-48 mx-auto mb-4 shadow">
                 <AvatarImage
                   src={portfolioContent.profile.image}
@@ -65,9 +66,9 @@ const Portfolio = () => {
           <section className="flex-1 flex flex-col gap-9">
             <Reveal>
               <div>
-                <h2 className="text-2xl font-semibold mb-3">About Me</h2>
+                <h2 className="text-2xl font-light font-inter tracking-tight mb-3 sm:text-[2rem]">About Me</h2>
                 <MarkdownContent
-                  className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90 [&_p]:leading-6 [&_li]:leading-6 [&_a]:text-blue-600 [&_a]:no-underline"
+                  className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90 [&_p]:leading-6 [&_li]:leading-6 [&_a]:text-slate-800 [&_a]:no-underline"
                   content={portfolioContent.about_markdown}
 
                 />
@@ -75,14 +76,17 @@ const Portfolio = () => {
             </Reveal>
             <Reveal delay={0.08}>
               <div>
-                <h2 className="text-2xl font-semibold mb-3">My Works</h2>
+                <h2 className="text-2xl font-light font-inter tracking-tight my-6 sm:text-[2rem]">My Journey</h2>
                 <Timeline items={portfolioContent.timeline} />
               </div>
             </Reveal>
           </section>
         </RevealGroup>
+        <div className="w-full max-w-[1200px] px-0 sm:px-6 md:px-8 mt-24">
+          <ProjectsSection />
+        </div>
+        <Footer />
       </main>
-      <Footer />
     </div>
   );
 };

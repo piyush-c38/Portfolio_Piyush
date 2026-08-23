@@ -54,7 +54,7 @@ const Navbar = () => {
       className={clsx(
         "fixed left-0 top-0 w-full z-30 transition-all duration-300",
         isServicesHeroMode
-          ? "backdrop-blur-xl border-b border-white/10"
+          ? "bg-[#09090f] border-b border-white/10"
           : "bg-white border-b border-gray-200/50"
       )}
     >
@@ -154,7 +154,7 @@ const Navbar = () => {
             className={clsx(
               "fixed inset-0 z-40 flex flex-col p-6 gap-7 animate-fadeinup md:hidden drop-shadow-lg",
               isServicesHeroMode
-                ? "bg-[#09090f]/70 backdrop-blur-2xl border-b border-white/10 text-white"
+                ? "bg-[#09090f] border-b border-white/10 text-white"
                 : "bg-white border-b border-gray-200 text-black"
             )}
           >

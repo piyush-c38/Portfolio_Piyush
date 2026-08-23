@@ -6,7 +6,7 @@ const JourneySection = () => (
   <RevealGroup className="w-full flex flex-col gap-8 sm:gap-9" stagger={0.16}>
     <div className="w-full flex flex-col md:flex-row md:justify-between md:items-start gap-4 md:gap-8 px-2 sm:px-0">
       <Reveal className="md:max-w-[45%]">
-        <h2 className="md:leading-[3rem] text-xl sm:text-2xl md:text-[2.5rem] font-light font-inter tracking-tight mb-2">
+        <h2 className="md:leading-[3rem] text-2xl sm:text-[2rem] md:text-[2.5rem] font-light font-inter tracking-tight mb-2">
           {portfolioContent.journey.heading}
         </h2>
       </Reveal>
