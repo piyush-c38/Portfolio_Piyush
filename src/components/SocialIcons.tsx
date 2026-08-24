@@ -41,7 +41,7 @@ const ICONS = [
 ];
 
 const SocialIcons = ({ variant = "footer", className = "" }: Props) => (
-  <div className={`flex flex-row flex-wrap justify-center gap-3 ${className}`}>
+  <div className={`flex flex-row flex-wrap justify-center gap-2 ${className}`}>
     {ICONS.map(({ icon: Icon, label, onClick }) => (
       <button
         key={label}

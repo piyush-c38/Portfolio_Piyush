@@ -85,8 +85,8 @@ const Portfolio = () => {
         <div className="w-full max-w-[1200px] px-0 sm:px-6 md:px-8 mt-24">
           <ProjectsSection />
         </div>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 };
