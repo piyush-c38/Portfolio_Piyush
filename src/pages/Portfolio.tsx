@@ -13,7 +13,13 @@ const Portfolio = () => {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
   }, []);
-
+  const handleConnect = (e) => {
+    e.preventDefault();
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
   return (
     <div className="bg-white min-h-screen font-inter text-black flex flex-col">
       <Navbar />
@@ -67,11 +73,19 @@ const Portfolio = () => {
             <Reveal>
               <div>
                 <h2 className="text-2xl font-light font-inter tracking-tight mb-3 sm:text-[2rem]">About Me</h2>
-                <MarkdownContent
-                  className="prose prose-neutral prose-sm sm:prose-base max-w-none border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90 [&_p]:leading-6 [&_li]:leading-6 [&_a]:text-slate-800 [&_a]:no-underline"
-                  content={portfolioContent.about_markdown}
+                <div className="border border-gray-100 rounded-xl p-5 bg-gray-50 text-black/90">
+                  <MarkdownContent
+                    className="prose prose-neutral prose-sm sm:prose-base max-w-none text-black/90 [&_p]:leading-6 [&_li]:leading-6 [&_a]:text-slate-800 [&_a]:no-underline"
+                    content={portfolioContent.about_markdown}
 
-                />
+                  />
+                  <p className="mt-4">
+                    <span onClick={handleConnect} className="hover:no-underline font-semibold cursor-pointer">
+                      Reach out {" "}
+                    </span>
+                    if you have an interesting idea to build or would like to collaborate.
+                  </p>
+                </div>
               </div>
             </Reveal>
             <Reveal delay={0.08}>
