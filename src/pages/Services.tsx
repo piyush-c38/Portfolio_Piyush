@@ -33,7 +33,7 @@ const Services = () => {
               repelRadius={120}
               idleDrift={0.0}
               trigger="mount"
-              fontSize="clamp(3.0rem, 9vw, 6rem)"
+              fontSize="clamp(3.0rem, 9vw, 5.5rem)"
               fontWeight={650}
               fontFamily="inherit"
               glow
